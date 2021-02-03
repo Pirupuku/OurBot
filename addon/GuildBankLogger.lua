@@ -3,7 +3,6 @@ SlashCmdList["SLASH_GBL"] = function(flag) end
 SLASH_GBL1 = "/gblog"
 function SlashCmdList.GBL(args)
 	log = ""
-	--Bags
 	for bag = -1, 10 do
 		local slots = GetContainerNumSlots(bag)
 		for slot = 1, slots do
@@ -11,7 +10,7 @@ function SlashCmdList.GBL(args)
 			if itemLink then
 				local icon, itemCount = GetContainerItemInfo(bag, slot)
 				local itemName = GetItemName(itemLink)
-				log = table.concat({log, itemCount, " ", itemName, ","})
+				log = table.concat({log, itemCount, "~", itemName, "*"})
 			end
 		end
 	end
@@ -24,3 +23,5 @@ function GetItemName(some_string)
 	return string.sub(some_string, name_start, name_end)
 end
 
+
+	
