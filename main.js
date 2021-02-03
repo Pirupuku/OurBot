@@ -38,8 +38,35 @@ bot.on('message', message =>{
            //    'whalecum'
             //const attachment = new Discord.Attachment('https://i.redd.it/u1uz1jkyshjy.jpg');
             //message.channel.send(message.author, attachment);
-
-   
+     else if (command == 'gbl') {
+        var bank = [];
+        var text = fs.readFileSync('GuildBankLogger.lua', 'utf-8').slice(9);
+        text = text.slice(0, -3);
+        text = text.split('*');
+        for (i = 0; i < text.length; i++) {
+            text[i] = text[i].split('~');
+            var new_item = true;
+            for (j = 0; j < bank.length; j++) {
+                if (text[i][1] == bank[j].name) {
+                    new_item = false;
+                    bank[j].quantity += parseInt(text[i][0]);
+                }
+            }
+            if (new_item == true) {
+                bank.push(new item(text[i][1], parseInt(text[i][0])));
+            }
+        }
+        for (i = 0; i < bank.length - 1; i++) {
+            message.channel.send(bank[i].quantity + " x " + bank[i].name);
+        }
+    }
 });
+
+class item {
+     constructor(name, quantity) {
+         this.name = name;
+         this.quantity = quantity;
+     }
+ }
 
 bot.login(token);
