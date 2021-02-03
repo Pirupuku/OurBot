@@ -5,4 +5,3 @@
 ## Author: Dieken and me
 ## SavedVariables: log
 GuildBankLogger.lua
-GuildBankLogger.xml
