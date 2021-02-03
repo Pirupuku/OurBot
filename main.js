@@ -36,6 +36,8 @@ bot.on('message', message =>{
           bot.commands.get('fokya').execute(message, args);
      } else if (command == 'thistime'){
          bot.commands.get('thistime').execute(message, args);
+     } else if (command == 'where'){
+         bot.commands.get('where').execute(message, args);
      } else if (command == 'gbl') {
         var bank = [];
         var text = fs.readFileSync('GuildBankLogger.lua', 'utf-8').slice(9);
