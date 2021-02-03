@@ -34,11 +34,9 @@ bot.on('message', message =>{
           bot.commands.get('ping').execute(message, args);
      } else if (command == 'fokya'){
           bot.commands.get('fokya').execute(message, args);
-     }
-           //    'whalecum'
-            //const attachment = new Discord.Attachment('https://i.redd.it/u1uz1jkyshjy.jpg');
-            //message.channel.send(message.author, attachment);
-     else if (command == 'gbl') {
+     } else if (command == 'this_time'){
+         bot.commands.get('this_time').execute(message, args);
+     } else if (command == 'gbl') {
         var bank = [];
         var text = fs.readFileSync('GuildBankLogger.lua', 'utf-8').slice(9);
         text = text.slice(0, -3);
@@ -66,6 +64,10 @@ bot.on('message', message =>{
         }
         message.channel.send(content);
     }
+
+    //    'whalecum'
+            //const attachment = new Discord.Attachment('https://i.redd.it/u1uz1jkyshjy.jpg');
+            //message.channel.send(message.author, attachment);
 });
 
 class item {
