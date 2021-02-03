@@ -34,7 +34,6 @@ bot.on('message', message =>{
           bot.commands.get('ping').execute(message, args);
      } else if (command == 'fokya'){
           bot.commands.get('fokya').execute(message, args);
-     } else if (command == 'this_time'){
          bot.commands.get('this_time').execute(message, args);
      } else if (command == 'gbl') {
         var bank = [];
