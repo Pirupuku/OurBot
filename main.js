@@ -19,7 +19,7 @@ for(const file of commandFiles){
 
 var version = '1.0.0';
 
-bot.once('ready', () => {
+bot.on('ready', () => {
      console.log('MemberCounter is currently counting..');
      bot.user.setActivity('the slaves', { type: 'WATCHING'}).catch(console.error);
 });
