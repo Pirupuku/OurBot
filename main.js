@@ -56,9 +56,15 @@ bot.on('message', message =>{
                 bank.push(new item(text[i][1], parseInt(text[i][0])));
             }
         }
+        var content = "Guild Bank";
         for (i = 0; i < bank.length - 1; i++) {
-            message.channel.send(bank[i].quantity + " x " + bank[i].name);
+          content = content + '\n' + bank[i].quantity + "x " + bank[i].name;
+          if (content.length >= 1900) {
+               message.channel.send(content);
+               content = "";
+          }
         }
+        message.channel.send(content);
     }
 });
 
