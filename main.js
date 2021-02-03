@@ -39,6 +39,8 @@ bot.on('message', message =>{
          bot.commands.get('thistime').execute(message, args);
      } else if (command == 'where'){
          bot.commands.get('where').execute(message, args);
+     } else if (command == 'whalecum'){
+        bot.commands.get('whalecum').execute(message, args);
      } else if (command == 'gbl') {
         var bank = [];
         var text = fs.readFileSync('GuildBankLogger.lua', 'utf-8').slice(9);
@@ -67,10 +69,6 @@ bot.on('message', message =>{
         }
         message.channel.send(content);
     }
-
-    //    'whalecum'
-            //const attachment = new Discord.Attachment('https://i.redd.it/u1uz1jkyshjy.jpg');
-            //message.channel.send(message.author, attachment);
 });
 
 class item {
