@@ -41,7 +41,31 @@ bot.on('message', message =>{
          bot.commands.get('where').execute(message, args);
      } else if (command == 'whalecum'){
         bot.commands.get('whalecum').execute(message, args);
-     } 
+     } else if (command == 'dps'){
+        bot.commands.get('dps').execute(message, args);
+     } else if (command == 'druid'){
+        bot.commands.get('druid').execute(message, args);
+     } else if (command == 'healer'){
+        bot.commands.get('healer').execute(message, args);
+     } else if (command == 'mage'){
+        bot.commands.get('mage').execute(message, args);
+     } else if (command == 'paladin'){
+        bot.commands.get('paladin').execute(message, args);
+     } else if (command == 'priest'){
+        bot.commands.get('priest').execute(message, args);
+     } else if (command == 'rogue'){
+        bot.commands.get('rogue').execute(message, args);
+     } else if (command == 'shaman'){
+        bot.commands.get('shaman').execute(message, args);
+     } else if (command == 'tank'){
+        bot.commands.get('tank').execute(message, args);
+     } else if (command == 'warlock'){
+        bot.commands.get('warlock').execute(message, args);
+     } else if (command == 'warrior'){
+        bot.commands.get('warrior').execute(message, args);
+     } else if (command == 'hunter'){
+        bot.commands.get('hunter').execute(message, args);
+     }
     else if (command == 'gbl_load') {
         Logs.loadData();
         message.channel.send("Data has been updated");
