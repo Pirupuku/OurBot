@@ -2,7 +2,12 @@ module.exports = {
     name: 'rogue',
     description: "give discord role of ROGUE",
     execute(message, args){
-        message.author.send('You are a ROGUE now!');
-        message.member.roles.add('798497604035805184').catch(console.error);
+        
+        if (message.member.roles.cache.has('798497604035805184')){
+            message.author.send('You already are a ROGUE!')
+        } else {
+            message.author.send('You are a ROGUE now!');
+            message.member.roles.add('798497604035805184').catch(console.error);
+        }
     }
 }
