@@ -3,6 +3,6 @@ module.exports = {
     description: "give discord role of HEALER",
     execute(message, args){
         message.author.send('You are a HEALER now!');
-        message.member.roles.add('798507050752933909');
+        message.member.roles.add('798507050752933909').catch(console.error);
     }
 }
