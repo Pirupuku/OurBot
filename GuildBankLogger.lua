@@ -1,3 +1,43 @@
+SlashCmdList["SLASH_GBL"] = function(flag) end
+SLASH_GBL1 = "/gblog"
+function SlashCmdList.GBL(args)
+	local i = 0
+	blog = ""
+	for bag = -1, 10 do
+		local slots = GetContainerNumSlots(bag)
+		for slot = 1, slots do
+			local itemLink = GetContainerItemLink(bag,slot)
+			if itemLink then
+				local icon, itemCount = GetContainerItemInfo(bag, slot)
+				local itemName = GetItemName(itemLink)
+				blog = table.concat({blog, itemCount, "~", itemName, "*"})
+				i = i + 1
+			end
+		end
+	end
+	DEFAULT_CHAT_FRAME:AddMessage("Bag logs have been updated, " .. i .. " entries")
+end
 
-blog = "10~Really Sticky Glue*1~Petrified Bark*2~Morning Glory Dew*3~Truesilver Bar*1~Huge Emerald*1~Tiger Meat*10~Mystery Meat*12~Winterfall Spirit Beads*11~Purple Lotus*8~Firebloom*6~Encrypted Twilight Text*1~Deadwood Ritual Totem*1~Winterfall Ritual Totem*3~Runecloth*1~Whistle of the Turquoise Raptor*3~Major Healing Potion*1~Mining Pick*1~Important Blackrock Documents*1~Blackhand's Command*18~Moonberry Juice*11~Icecap*1~Kurinnaxx's Venom Sac*1~Dried King Bolete*10~Thorium Ore*2~Dense Stone*5~Thorium Ore*1~Winterfall Firewater*8~Roasted Quail*175~Thorium Headed Arrow*200~Thorium Headed Arrow*200~Thorium Headed Arrow*200~Thorium Headed Arrow*200~Thorium Headed Arrow*200~Thorium Headed Arrow*200~Thorium Headed Arrow*200~Thorium Headed Arrow*200~Thorium Headed Arrow*200~Thorium Headed Arrow*200~Thorium Headed Arrow*200~Thorium Headed Arrow*200~Thorium Headed Arrow*200~Thorium Headed Arrow*200~Thorium Headed Arrow*1~Hearthstone*"
-mlog = "Ajso~250000~Ajso~0~Greater Arcane Protection Potion~5*"
+SlashCmdList["SLASH_GML"] = function(flag) end
+SLASH_GML1 = "/gmlog"
+function SlashCmdList.GML(args)
+	local i = 0
+	mlog = ""
+	CheckInbox();
+	for mailcount = 1, GetInboxNumItems() do
+		local packageIcon, stationeryIcon, sender, subject, money, CODAmount, daysLeft, hasItem, wasRead, wasReturned, textCreated, canReply, isGM = GetInboxHeaderInfo(mailcount);
+		local name, itemTexture, count, quality, canUse = GetInboxItem(mailcount);
+		mlog = table.concat({mlog, sender, "~", money, "~", name, "~", count, "*"})
+		i = i + 1
+	end
+	DEFAULT_CHAT_FRAME:AddMessage("Mail logs have been updated, " .. i .. " entries")
+end
+
+function GetItemName(some_string)
+	local name_start = string.find(some_string, "%[") + 1
+	local name_end = string.find(some_string, "%]") - 1
+	return string.sub(some_string, name_start, name_end)
+end
+
+
+	

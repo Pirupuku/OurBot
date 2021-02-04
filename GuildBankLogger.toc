@@ -1,0 +1,7 @@
+## Interface: 11200
+## Title: GuildBankLogger
+## Version: 0.1
+## Notes:
+## Author: Dieken and me
+## SavedVariables: blog, mlog
+GuildBankLogger.lua
