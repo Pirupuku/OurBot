@@ -3,7 +3,7 @@ module.exports = {
     description: "give discord role of DPS",
     execute(message, args){
         
-        if (message.member.roles.find('798507075353182218')){
+        if (message.member.roles.cache.has('798507075353182218')){
             message.author.send('You already are a DPS!')
         } else {
             message.author.send('You are a DPS now!');
