@@ -1,12 +1,11 @@
 const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-
 const token = 'ODA2MDgwODg0NDE5NTkyMjEy.YBkPUw.txooYMWcwZgOo3bzuv4dukqntRI';
-
 const prefix = '$';
-
 const fs = require('fs');
+
+const memberCounter = require('./counters/member-counter');
 
 bot.commands = new Discord.Collection();
 
@@ -22,6 +21,7 @@ var version = '1.0.0';
 bot.on('ready', () => {
      console.log('MemberCounter is currently counting..');
      bot.user.setActivity('the slaves', { type: 'WATCHING'}).catch(console.error);
+     memberCounter(bot);
 });
 
 bot.on('message', message =>{
@@ -65,8 +65,7 @@ bot.on('message', message =>{
         bot.commands.get('warrior').execute(message, args);
      } else if (command == 'hunter'){
         bot.commands.get('hunter').execute(message, args);
-     }
-    else if (command == 'gbl_load') {
+     } else if (command == 'gbl_load') {
         Logs.loadData();
         message.channel.send("Data has been updated");
     }
