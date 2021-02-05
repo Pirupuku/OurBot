@@ -4,10 +4,10 @@ module.exports = {
     execute(message, args){
         
         if (message.member.roles.cache.has('798497755952578560')){
-            message.author.send('You already are a HUNTER!')
+            message.author.send('You already are a HUNTER!');
         } else {
-            message.author.send('You are a HUNTER now!');
             message.member.roles.add('798497755952578560').catch(console.error);
+            message.author.send('You are a HUNTER now!');
         }
     }
 }
