@@ -1,6 +1,6 @@
 module.exports = {
     name: 'nodruid',
-    description: "delete discord role of DRUID",
+    description: "remove discord role of DRUID",
     execute(message, args){
 
         if (message.member.roles.cache.has('798497796541513759')){
