@@ -31,12 +31,19 @@ bot.on('message', message =>{
      const args = message.content.slice(prefix.length).split(/ +/);
      const command = args.shift().toLowerCase();
 
-     if (command == 'class') {
+     if (command == 'class'){
         if (args[0] != '') {
             bot.commands.get('class').execute(message, args);
+        } else {
+           message.author.send('Please enter the class you are playing with your main! (eg: $class rogue)');
         }
-     }
-     if(command === 'ping'){
+     } else if (command == 'role'){
+         if (args[0] != '') {
+            bot.commands.get('role').execute(message, args);
+         } else {
+            message.author.send('Please enter the role you are playing with your main! (eg: $role healer)');
+         }
+     } else if(command === 'ping'){
           bot.commands.get('ping').execute(message, args);
      } else if (command == 'fokya'){
           bot.commands.get('fokya').execute(message, args);
