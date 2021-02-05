@@ -20,7 +20,7 @@ var version = '1.0.0';
 
 bot.on('ready', () => {
      console.log('MemberCounter is currently counting..');
-     bot.user.setActivity('the slaves', { type: 'WATCHING'}).catch(console.error);
+     bot.user.setActivity('commands with $', { type: 'WATCHING'}).catch(console.error);
      memberCounter(bot);
 });
 
