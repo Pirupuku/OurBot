@@ -65,6 +65,30 @@ bot.on('message', message =>{
         bot.commands.get('warrior').execute(message, args);
      } else if (command == 'hunter'){
         bot.commands.get('hunter').execute(message, args);
+     } else if (command == 'nodps'){
+        bot.commands.get('nodps').execute(message, args);
+     } else if (command == 'nohealer'){
+        bot.commands.get('nohealer').execute(message, args);
+     } else if (command == 'notank'){
+        bot.commands.get('notank').execute(message, args);
+     } else if (command == 'nodruid'){
+        bot.commands.get('nodruid').execute(message, args);
+     } else if (command == 'nohunter'){
+        bot.commands.get('nohunter').execute(message, args);
+     } else if (command == 'nowarrior'){
+        bot.commands.get('nowarrior').execute(message, args);
+     } else if (command == 'nowarlock'){
+        bot.commands.get('nowarlock').execute(message, args);
+     } else if (command == 'norogue'){
+        bot.commands.get('norogue').execute(message, args);
+     } else if (command == 'nopriest'){
+        bot.commands.get('nopriest').execute(message, args);
+     } else if (command == 'nomage'){
+        bot.commands.get('nomage').execute(message, args);
+     } else if (command == 'noshaman'){
+        bot.commands.get('noshaman').execute(message, args);
+     } else if (command == 'nopaladin'){
+        bot.commands.get('nopaladin').execute(message, args);
      } else if (command == 'gbl_load') {
         Logs.loadData();
         message.channel.send("Data has been updated");
