@@ -4,10 +4,10 @@ module.exports = {
     execute(message, args){
         
         if (message.member.roles.cache.has('798497653058830339')){
-            message.author.send('You already are a PRIEST!')
+            message.author.send('You already are a PRIEST!');
         } else {
-            message.author.send('You are a PRIEST now!');
             message.member.roles.add('798497653058830339').catch(console.error);
+            message.author.send('You are a PRIEST now!');
         }
     }
 }
