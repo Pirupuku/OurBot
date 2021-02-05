@@ -31,6 +31,11 @@ bot.on('message', message =>{
      const args = message.content.slice(prefix.length).split(/ +/);
      const command = args.shift().toLowerCase();
 
+     if (command == 'class') {
+        if (args[0] != '') {
+            bot.commands.get('class').execute(message, args);
+        }
+     }
      if(command === 'ping'){
           bot.commands.get('ping').execute(message, args);
      } else if (command == 'fokya'){
