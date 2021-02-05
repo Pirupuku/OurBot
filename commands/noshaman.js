@@ -6,7 +6,7 @@ module.exports = {
         if (!message.member.roles.cache.has('798497547642863626')){
             message.author.send('You are not a SHAMAN!');
         } else {
-            message.member.roles.delete('798497547642863626').catch(console.error);
+            message.member.roles.remove('798497547642863626').catch(console.error);
             message.author.send('You are not a SHAMAN anymore!');
         }
     }
