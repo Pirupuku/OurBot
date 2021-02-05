@@ -7,7 +7,7 @@ module.exports = {
             message.author.send('You are not a DPS!');
         } else {
             message.member.roles.add('798507075353182218').catch(console.error);  
-            message.author.send('You are no longer a DPS!');
+            message.author.send('You are not a DPS anymore!');
         }  
     }
 }
