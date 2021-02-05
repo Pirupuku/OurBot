@@ -6,7 +6,7 @@ module.exports = {
         if (!message.member.roles.cache.has('798497338561789993')){
             message.author.send('You are not a WARLOCK!');
         } else {
-            message.member.roles.delete('798497338561789993').catch(console.error);
+            message.member.roles.remove('798497338561789993').catch(console.error);
             message.author.send('You are not a WARLOCK anymore!');
         }
     }
