@@ -4,10 +4,10 @@ module.exports = {
     execute(message, args){
         
         if (message.member.roles.cache.has('798507075353182218')){
-            message.author.send('You already are a DPS!')
+            message.author.send('You already are a DPS!');
         } else {
-            message.author.send('You are a DPS now!');
             message.member.roles.add('798507075353182218').catch(console.error);
+            message.author.send('You are a DPS now!');
         }  
     }
 }
