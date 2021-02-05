@@ -6,7 +6,7 @@ module.exports = {
         if (!message.member.roles.cache.has('798497796541513759')){
             message.author.send('You are not a DRUID!');
         } else {
-            message.member.roles.delete('798497796541513759').catch(console.error);
+            message.member.roles.remove('798497796541513759').catch(console.error);
             message.author.send('You are not a DRUID anymore!');
         }  
     }
