@@ -1,6 +1,6 @@
 module.exports = {
     name: 'nodps',
-    description: "delete discord role of DPS",
+    description: "remove discord role of DPS",
     execute(message, args){
         
         if (!message.member.roles.cache.has('798507075353182218')){
