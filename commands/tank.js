@@ -4,10 +4,10 @@ module.exports = {
     execute(message, args){
         
         if (message.member.roles.cache.has('798507023020589066')){
-            message.author.send('You already are a TANK!')
+            message.author.send('You already are a TANK!');
         } else {
-            message.author.send('You are a TANK now!');
             message.member.roles.add('798507023020589066').catch(console.error);
+            message.author.send('You are a TANK now!');
         }
     }
 }
