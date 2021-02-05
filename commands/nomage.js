@@ -6,7 +6,7 @@ module.exports = {
         if (!message.member.roles.cache.has('798497704976056350')){
             message.author.send('You are not a MAGE!');
         } else {
-            message.member.roles.delete('798497704976056350').catch(console.error);
+            message.member.roles.remove('798497704976056350').catch(console.error);
             message.author.send('You are not a MAGE anymore!');
         }
     }
