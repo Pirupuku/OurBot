@@ -4,10 +4,10 @@ module.exports = {
     execute(message, args){
         
         if (message.member.roles.cache.has('784698785586348032')){
-            message.author.send('You already are a WARRIOR!')
+            message.author.send('You already are a WARRIOR!');
         } else {
-            message.author.send('You are a WARRIOR now!');
             message.member.roles.add('784698785586348032').catch(console.error);
+            message.author.send('You are a WARRIOR now!');
         }
     }
 }

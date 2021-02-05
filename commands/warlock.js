@@ -4,10 +4,10 @@ module.exports = {
     execute(message, args){
         
         if (message.member.roles.cache.has('798497338561789993')){
-            message.author.send('You already are a WARLOCK!')
+            message.author.send('You already are a WARLOCK!');
         } else {
-            message.author.send('You are a WARLOCK now!');
             message.member.roles.add('798497338561789993').catch(console.error);
+            message.author.send('You are a WARLOCK now!');
         }
     }
 }

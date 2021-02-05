@@ -4,10 +4,10 @@ module.exports = {
     execute(message, args){
         
         if (message.member.roles.cache.has('798497547642863626')){
-            message.author.send('You already are a SHAMAN!')
+            message.author.send('You already are a SHAMAN!');
         } else {
-            message.author.send('You are a SHAMAN now!');
             message.member.roles.add('798497547642863626').catch(console.error);
+            message.author.send('You are a SHAMAN now!');
         }
     }
 }

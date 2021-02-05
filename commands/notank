@@ -1,0 +1,13 @@
+module.exports = {
+    name: 'notank',
+    description: "remove discord role of TANK",
+    execute(message, args){
+        
+        if (!message.member.roles.cache.has('798507023020589066')){
+            message.author.send('You are not a TANK!');
+        } else {
+            message.member.roles.remove('798507023020589066').catch(console.error);
+            message.author.send('You are not a TANK anymore!');
+        }
+    }
+}
