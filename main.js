@@ -34,7 +34,7 @@ bot.on('message', message =>{
      if (command == 'class'){
         if (args[0] != '') {
             bot.commands.get('class').execute(message, args);
-        } else {
+        } else if (args[0] == ''){
            message.author.send('Please enter the class you are playing with your main! (eg: $class rogue)');
         }
      } else if (command == 'role'){
