@@ -5,7 +5,7 @@ const token = 'ODA2MDgwODg0NDE5NTkyMjEy.YBkPUw.txooYMWcwZgOo3bzuv4dukqntRI';
 const prefix = '$';
 const fs = require('fs');
 
-const memberCounter = require('./counters/member-counter');
+const manyWhelps = require('./counters/member-counter');
 
 bot.commands = new Discord.Collection();
 
@@ -19,9 +19,9 @@ for(const file of commandFiles){
 var version = '1.0.0';
 
 bot.on('ready', () => {
-     console.log('MemberCounter is currently counting..');
+     console.log('Many Whelps hands out 50 DKP minus');
      bot.user.setActivity('commands with $', { type: 'WATCHING'}).catch(console.error);
-     memberCounter(bot);
+     manyWhelps(bot);
 });
 
 bot.on('message', message =>{
