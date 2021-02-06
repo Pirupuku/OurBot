@@ -61,38 +61,12 @@ bot.on('message', message =>{
          if (i < args.length - 1)
             some_var += ' ';
       }
-      image(message, some_var);
+      bot.commands.get('image').execute(message, some_var);
+   } else if (command == 'clear') {
+      bot.commands.get('clear').execute(message, args);
    }
 });
 
-function image(message, some_var){        
-   var options = {
-      url: "http://results.dogpile.com/serp?qc=images&q=" + `${some_var}`,
-      method: "GET",
-      headers: {
-         "Accept": "text/html",
-         "User-Agent": "Chrome"
-      }
-   };
 
-   request(options, function(error, response, responseBody) {
-      if (error) {
-         return;
-      }
-
-      $ = cheerio.load(responseBody);
-
-      var links = $(".image a.link");
-
-      var urls = new Array(links.length).fill(0).map((v, i) => links.eq(i).attr("href"));
-
-      console.log(urls);
-      if (!urls.length) {
-         return;
-      }
-      
-      message.channel.send( urls[Math.floor(Math.random() * urls.length)] + " " + message.guild.members.cache.random());
-   });
-}
 
 bot.login(token);
