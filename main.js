@@ -33,9 +33,9 @@ bot.on('message', message =>{
 
      if (command == 'class'){
         console.log(args[0]);
-        if (args[0] != 'undefined') {
+        if (args[0] !== undefined) {
             bot.commands.get('class').execute(message, args);
-        } else if (args[0] == 'undefined') {
+        } else if (args[0] === undefined) {
            message.author.send('Please enter the class you are playing with your main! (eg: $class rogue)');
         }
      } else if (command == 'role'){
