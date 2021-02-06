@@ -28,7 +28,7 @@ module.exports = {
                 message.author.send('You already are a HEALER!');
             } else {
                 message.member.roles.add(roleHealer).catch(console.error);
-                message.member.roles.remove(roletank).catch(console.error);
+                message.member.roles.remove(roleTank).catch(console.error);
                 message.member.roles.remove(roleDps).catch(console.error);
                 message.author.send('You are a HEALER now!');
             }
@@ -45,7 +45,7 @@ module.exports = {
             } else {
                 message.member.roles.add(roleDps).catch(console.error);
                 message.member.roles.remove(roleHealer).catch(console.error);
-                message.member.roles.remove(roletank).catch(console.error);
+                message.member.roles.remove(roleTank).catch(console.error);
                 message.author.send('You are a DPS now!');
             }
         } else if (args[0] == 'nodps'){
