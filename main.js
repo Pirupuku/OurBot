@@ -25,7 +25,6 @@ bot.on('ready', () => {
      manyWhelps(bot);
 });
 
-const some_var = args[0];
 bot.on('message', message =>{
    if(!message.content.startsWith(prefix) || message.author.bot) return;
    if (message.content.startsWith(prefix)) message.delete();
@@ -56,11 +55,12 @@ bot.on('message', message =>{
    } else if (command == 'whalecum'){
       bot.commands.get('whalecum').execute(message, args);
    } else if (command == 'image') {
-      image(message);
+      const some_var = args[0];
+      image(message, some_var);
    }
 });
 
-function image(message){        
+function image(message, some_var){        
    var options = {
       url: "http://results.dogpile.com/serp?qc=images&q=" + `${some_var}`,
       method: "GET",
