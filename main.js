@@ -4,7 +4,8 @@ const bot = new Discord.Client();
 const token = 'ODA2MDgwODg0NDE5NTkyMjEy.YBkPUw.txooYMWcwZgOo3bzuv4dukqntRI';
 const prefix = '$';
 const fs = require('fs');
-
+const cheerio = require('cheerio');
+const request = require('request');
 const manyWhelps = require('./counters/member-counter');
 
 bot.commands = new Discord.Collection();
@@ -58,6 +59,8 @@ bot.on('message', message =>{
         message.channel.send("Data has been updated");
      } else if (command == 'gb') {
         bot.commands.get('gb').execute(message, args);
+     } else if (commmand == 'random') {
+        bot.commands.get('random').execute(message, args);
      }
 });
 
