@@ -14,7 +14,7 @@ module.exports = {
         const classMage = '798497704976056350';
 
         if (args[0] == 'druid'){
-            if (message.member.roles.cache.has(classDruid){
+            if (message.member.roles.cache.has(classDruid)){
                 message.author.send('You already are a DRUID!')
             } else {
                 message.member.roles.add(classDruid).catch(console.error);
@@ -36,7 +36,7 @@ module.exports = {
                 message.author.send('You are not a DRUID anymore!');
             } 
         } else if(args[0] == 'hunter'){
-            if (message.member.roles.cache.has(classHunter){
+            if (message.member.roles.cache.has(classHunter)){
                 message.author.send('You already are a HUNTER!');
             } else {
                 message.member.roles.add(classHunter).catch(console.error);
