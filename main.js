@@ -60,7 +60,11 @@ bot.on('message', message =>{
    } else if (command == 'gb') {
       bot.commands.get('gb').execute(message, args);
    } else if (commmand == 'random') {
-      image(message);
+      if (args[0] === undefined) {
+         message.channel.send('Please enter an argument for that command like $random food.');
+      } else if (args[0] !== undefined) {
+         image(message);
+      }
    }
 });
 
