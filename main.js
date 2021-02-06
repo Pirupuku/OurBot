@@ -32,16 +32,15 @@ bot.on('message', message =>{
      const command = args.shift().toLowerCase();
 
      if (command == 'class'){
-        console.log(args[0]);
         if (args[0] !== undefined) {
             bot.commands.get('class').execute(message, args);
         } else if (args[0] === undefined) {
            message.author.send('Please enter the class you are playing with your main! (eg: $class rogue)');
         }
      } else if (command == 'role'){
-         if (args != null) {
+         if (args[0] !== undefined) {
             bot.commands.get('role').execute(message, args);
-         } else if (args == null) {
+         } else if (args[0] === undefined) {
             message.author.send('Please enter the role you are playing with your main! (eg: $role healer)');
          }
      } else if(command === 'ping'){
