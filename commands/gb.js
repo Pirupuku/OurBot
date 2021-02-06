@@ -5,7 +5,7 @@ module.exports = {
         
         if (args[0] == 'search'){
             if (args[1] == 'assiss'){
-                message.channel.send('This is an item of poor quality. You do not want that!');
+                message.channel.send('Assiss is an item of poor quality. You do not want that!');
             }
         }
     }
