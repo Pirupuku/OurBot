@@ -56,7 +56,7 @@ bot.on('message', message =>{
       bot.commands.get('whalecum').execute(message, args);
    } else if (command == 'image') {
       var some_var = '';
-      for (var I = 0; i < args.length; i++) {
+      for (var i = 0; i < args.length; i++) {
          some_var += args[i];
          if (i < args.length - 1)
             some_var += ' ';
