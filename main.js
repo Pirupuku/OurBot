@@ -59,9 +59,9 @@ bot.on('message', message =>{
       message.channel.send("Data has been updated");
    } else if (command == 'gb') {
       bot.commands.get('gb').execute(message, args);
-   } else if (commmand == 'random') {
+   } else if (commmand == 'image') {
       if (args[0] === undefined) {
-         message.channel.send('Please enter an argument for that command like $random food.');
+         message.channel.send('Please enter an argument for that command like $image food.');
       } else if (args[0] !== undefined) {
          image(message);
       }
