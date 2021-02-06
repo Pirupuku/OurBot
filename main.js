@@ -60,17 +60,13 @@ bot.on('message', message =>{
    } else if (command == 'gb') {
       bot.commands.get('gb').execute(message, args);
    } else if (command == 'image') {
-      if (args[0] === undefined) {
-         message.channel.send('Please enter an argument for that command like $image food.');
-      } else if (args[0] !== undefined) {
-         image(message);
-      }
+      image(message);
    }
 });
 
 function image(message){        
    var options = {
-      url:"http://results.dogpile.com/serp?qc=images&q=" + "meme",
+      url: "http://results.dogpile.com/serp?qc=images&q=" + "meme",
       method: "GET",
       headers: {
          "Accept": "text/html",
@@ -94,7 +90,7 @@ function image(message){
          return;
       }
       
-      message.channel.send(urls[Math.floor(Math.random() * urls.length)] + " " + message.guild.members.random());
+      message.channel.send( urls[Math.floor(Math.random() * urls.length)] + " " + message.guild.members.random());
    });
 }
 
