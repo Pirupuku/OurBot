@@ -25,6 +25,7 @@ bot.on('ready', () => {
      manyWhelps(bot);
 });
 
+const some_var = args[0];
 bot.on('message', message =>{
    if(!message.content.startsWith(prefix) || message.author.bot) return;
    if (message.content.startsWith(prefix)) message.delete();
