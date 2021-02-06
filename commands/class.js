@@ -18,7 +18,7 @@ module.exports = {
                 message.author.send('You already are a DRUID!')
             } else {
                 message.member.roles.add('798497796541513759').catch(console.error);
-                message.member.roles.remove('798497755952578560).catch(console.error);
+                message.member.roles.remove('798497755952578560').catch(console.error);
                 message.member.roles.remove(classMage).catch(console.error);
                 message.member.roles.remove(classPaladin).catch(console.error);
                 message.member.roles.remove(classPriest).catch(console.error);
