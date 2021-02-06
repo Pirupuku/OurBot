@@ -32,7 +32,7 @@ bot.on('message', message =>{
      const command = args.shift().toLowerCase();
 
      if (command == 'class'){
-        console.log(args);
+        console.log(args[0]);
         if (args != null) {
             bot.commands.get('class').execute(message, args);
         } else if (args == null) {
