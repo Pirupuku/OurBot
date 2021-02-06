@@ -3,29 +3,29 @@ module.exports = {
     description: "give discord role of a class of WoW",
     execute(message, args){
         
-        const classDruid = 798497796541513759;
-        const classHunter = 798497755952578560;
-        const classWarrior = 784698785586348032;
-        const classWarlock = 798497338561789993;
-        const classShaman = 798497547642863626;
-        const classPaladin = 799233980570402816;
-        const classPriest = 798497653058830339;
-        const classRogue = 798497604035805184;
-        const classMage = 798497704976056350;
+        const classDruid = '798497796541513759';
+        const classHunter = '798497755952578560';
+        const classWarrior = '784698785586348032';
+        const classWarlock = '798497338561789993';
+        const classShaman = '798497547642863626';
+        const classPaladin = '799233980570402816';
+        const classPriest = '798497653058830339';
+        const classRogue = '798497604035805184';
+        const classMage = '798497704976056350';
 
         if (args[0] == 'druid'){
-            if (message.member.roles.cache.has(classDruid)){
+            if (message.member.roles.cache.has('798497796541513759')){
                 message.author.send('You already are a DRUID!')
             } else {
-                message.member.roles.add(classDruid).catch(console.error);
-                message.member.roles.remove(classHunter).catch(console.error);
+                message.member.roles.add('798497796541513759').catch(console.error);
+                message.member.roles.remove('798497755952578560).catch(console.error);
                 message.member.roles.remove(classMage).catch(console.error);
                 message.member.roles.remove(classPaladin).catch(console.error);
                 message.member.roles.remove(classPriest).catch(console.error);
-                message.member.roles.remove(classRogue).catch(console.error);
-                message.member.roles.remove(classShaman).catch(console.error);
-                message.member.roles.remove(classWarlock).catch(console.error);
-                message.member.roles.remove(classWarrior).catch(console.error); 
+                message.member.roles.remove('798497604035805184').catch(console.error);
+                message.member.roles.remove('798497547642863626').catch(console.error);
+                message.member.roles.remove('798497338561789993').catch(console.error);
+                message.member.roles.remove('784698785586348032').catch(console.error); 
                 message.author.send('You are a DRUID now!');
             }  
         }  else if(args[0] == 'nodruid'){
