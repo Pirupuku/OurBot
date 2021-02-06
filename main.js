@@ -54,11 +54,6 @@ bot.on('message', message =>{
       bot.commands.get('where').execute(message, args);
    } else if (command == 'whalecum'){
       bot.commands.get('whalecum').execute(message, args);
-   } else if (command == 'gbl_load') {
-      Logs.loadData();
-      message.channel.send("Data has been updated");
-   } else if (command == 'gb') {
-      bot.commands.get('gb').execute(message, args);
    } else if (command == 'image') {
       image(message);
    }
