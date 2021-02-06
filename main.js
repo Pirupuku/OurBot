@@ -55,7 +55,12 @@ bot.on('message', message =>{
    } else if (command == 'whalecum'){
       bot.commands.get('whalecum').execute(message, args);
    } else if (command == 'image') {
-      const some_var = args[0];
+      var some_var = '';
+      for (var I = 0; i < args.length; i++) {
+         some_var += args[i];
+         if (i < args.length - 1)
+            some_var += ' ';
+      }
       image(message, some_var);
    }
 });
