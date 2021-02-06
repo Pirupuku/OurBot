@@ -32,6 +32,7 @@ bot.on('message', message =>{
      const command = args.shift().toLowerCase();
 
      if (command == 'class'){
+        console.log(args);
         if (args != null) {
             bot.commands.get('class').execute(message, args);
         } else if (args == null) {
@@ -56,7 +57,9 @@ bot.on('message', message =>{
      } else if (command == 'gbl_load') {
         Logs.loadData();
         message.channel.send("Data has been updated");
-    }
+     } else if (command == 'gb') {
+        bot.commands.get('gb').execute(message, args);
+     }
 });
 
 bot.login(token);
