@@ -11,7 +11,7 @@ module.exports = {
         }
 
         if (isNaN(args[0]) || parseInt(args[0]) <= 0) {
-            return message.reply("That is not a number and I ca not delete 0 messages.").then(m => m.delete(5000));
+            return message.reply("That is not a number and I can not delete 0 messages.").then(m => m.delete(5000));
         }
         
         if (!message.guild.me.hasPermission("MANAGE_MESSAGES")) {
