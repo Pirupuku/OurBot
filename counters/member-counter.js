@@ -15,7 +15,7 @@ module.exports = async(bot, message) =>{
     const memberStatus = '773548993040482346';
     const trialStatus = '798498129661263882';
     setInterval(() =>{
-        const memberCounter = guild.members.cache.filter(member => !member.user.bot).size;
+        const memberCounter = guild.members.cache.filter(m => !m.user.bot).size;
         const channel = guild.channels.cache.get('805473191177748491');
         channel.setName(`Total Members: ${memberCounter}`);
 
@@ -26,6 +26,7 @@ module.exports = async(bot, message) =>{
                 }
             }
         } 
+        
         console.log('Updating Member Count');
     }, 900000);
 }
