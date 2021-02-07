@@ -64,6 +64,9 @@ bot.on('message', message =>{
       bot.commands.get('image').execute(message, args, some_var, request, cheerio);
    } else if (command == 'clear') {
       bot.commands.get('clear').execute(bot, message, args);
+   } else if (command == 'test') {
+      const trialStatus = bot.guilds.cache.get('798498129661263882');
+      console.log(trialStatus);
    }
 });
 
