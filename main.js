@@ -63,7 +63,7 @@ bot.on('message', message =>{
       }
       bot.commands.get('image').execute(message, args, some_var, request, cheerio);
    } else if (command == 'clear') {
-      bot.commands.get('clear').execute(message, args);
+      bot.commands.get('clear').run(client, message, args);
    }
 });
 
