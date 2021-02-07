@@ -3,7 +3,7 @@ const { del } = require("request");
 module.exports = {
     name: 'clear',
     description: "clear discord messages",
-    run: async (bot, message, args) => {
+    execute(bot, message, args) {
         if (message.deletable) {
              message.delete();
         }
