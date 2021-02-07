@@ -1,7 +1,7 @@
 module.exports = {
     name: 'image',
     description: "sends random image from google search",
-    execute(message, args, some_var){
+    execute(message, args, some_var, request, cheerio){
       
         var options = {
         url: "http://results.dogpile.com/serp?qc=images&q=" + `${some_var}`,

@@ -61,7 +61,7 @@ bot.on('message', message =>{
          if (i < args.length - 1)
             some_var += ' ';
       }
-      bot.commands.get('image').execute(message, args, some_var);
+      bot.commands.get('image').execute(message, args, some_var, request, cheerio);
    } else if (command == 'clear') {
       bot.commands.get('clear').execute(message, args);
    }
