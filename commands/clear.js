@@ -1,5 +1,3 @@
-const { del } = require("request");
-
 module.exports = {
     name: 'clear',
     description: "clear discord messages",
@@ -9,15 +7,15 @@ module.exports = {
         }
         
         if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-            return message.reply("You don't have the permission to delete messages.").then(m => m.delete(5000));
+            return message.reply("You do not have the permission to delete messages.").then(m => m.delete(5000));
         }
 
         if (isNaN(args[0]) || parseInt(args[0]) <= 0) {
-            return message.reply("That's not a number and I can't delete 0 messages.").then(m => m.delete(5000));
+            return message.reply("That is not a number and I ca not delete 0 messages.").then(m => m.delete(5000));
         }
         
         if (!message.guild.me.hasPermission("MANAGE_MESSAGES")) {
-            return message.reply("I don't have the permission to delete messages.").then(m => m.delete(5000));
+            return message.reply("I do not have the permission to delete messages.").then(m => m.delete(5000));
         }
 
         let deleteAmount;
