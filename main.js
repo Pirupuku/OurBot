@@ -66,7 +66,9 @@ bot.on('message', message =>{
       bot.commands.get('clear').execute(bot, message, args);
    } else if (command == 'test') {
       const trialStatus = bot.guilds.cache.get('798498129661263882');
+      const trialAmount = guild.members.cache.filter(m => !m.user.bot).size
       console.log(trialStatus);
+      console.log(trialAmount);
    }
 });
 
