@@ -20,17 +20,17 @@ const tankID = '798507023020589066';
 const healerID = '798507050752933909';
 const dpsID = '798507075353182218';
 
-const druidEmoji = '808303286339764225';
-const hunterEmoji = '808303320854560768';
-const warriorEmoji = '808303170472247306';
-const warlockEmoji = '808303398834405406';
-const paladinEmoji = '808303306521968661';
-const priestEmoji = '808303419546402836';
-const rogueEmoji = '808303296535724072';
-const mageEmoji = '808303367880966166';
-const tankEmoji = '808303426676457492';
-const healerEmoji = '808303449581158451';
-const dpsEmoji = '808303435408605184';
+const druidEmoji = '808301207206494228';
+const hunterEmoji = '808302350162591784';
+const warriorEmoji = '808301549712572426';
+const warlockEmoji = '808301265388830730';
+const paladinEmoji = '808301574761742346';
+const priestEmoji = '808301254677495848';
+const rogueEmoji = '808302389223489557';
+const mageEmoji = '808301245877059604';
+const tankEmoji = '808302563530768394';
+const healerEmoji = '808302584103305236';
+const dpsEmoji = '808302546677923860';
 
 bot.commands = new Discord.Collection();
 
