@@ -53,7 +53,7 @@ bot.on('guildMemberAdd', async guildMember => {
    let welcomeRole = guildMember.guild.roles.cache.has('798498129661263882');
    //works
    let dmEmbed = new Discord.MessageEmbed()
-      .setcolor('#004A94')
+      .setColor('#004A94')
       .setTitle('Choose the class of your main!')
       .setDescription('Choosing your class is a must to get "Member" status later.\n\n'
          + `${druidEmoji} for druid\n`
