@@ -22,7 +22,7 @@ var version = '1.0.0';
 bot.on('ready', () => {
      console.log('Many Whelps hands out 50 DKP minus');
      bot.user.setActivity('commands with $', { type: 'WATCHING'}).catch(console.error);
-     manyWhelps(bot, message);
+     manyWhelps(bot);
 });
 
 bot.on('message', message =>{
