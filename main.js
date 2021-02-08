@@ -74,28 +74,28 @@ bot.on('guildMemberAdd', async guildMember => {
       if (!reaction.message.currentguild) return;
 
       if (reaction.emoji.name === '<:druid:808301207206494228>') {
-         await bot.guilds.get(myguildID).members.get(message.author.id).addRole(druidID);
+         await bot.guilds.get(myguildID).members.get(message.author.id).add(druidID);
       }
       if (reaction.emoji.name === '<:hunter:808302350162591784>') {
-         await bot.guilds.get(myguildID).members.get(message.author.id).addRole(hunterID);
+         await bot.guilds.get(myguildID).members.get(message.author.id).add(hunterID);
       }
       if (reaction.emoji.name === '<:warrior:808301549712572426>') {
-         await bot.guilds.get(myguildID).members.get(message.author.id).addRole(warriorID);
+         await bot.guilds.get(myguildID).members.get(message.author.id).add(warriorID);
       }
       if (reaction.emoji.name === '<:warlock:808301265388830730>') {
-         await bot.guilds.get(myguildID).members.get(message.author.id).addRole(warlockID);
+         await bot.guilds.get(myguildID).members.get(message.author.id).add(warlockID);
       }
       if (reaction.emoji.name === '<:paladin:808301574761742346>') {
-         await bot.guilds.get(myguildID).members.get(message.author.id).addRole(paladinID);
+         await bot.guilds.get(myguildID).members.get(message.author.id).add(paladinID);
       }
       if (reaction.emoji.name === '<:priest:808301254677495848>') {
-         await bot.guilds.get(myguildID).members.get(message.author.id).addRole(priestID);
+         await bot.guilds.get(myguildID).members.get(message.author.id).add(priestID);
       }
       if (reaction.emoji.name === '<:rogue:808302389223489557>') {
-         await bot.guilds.get(myguildID).members.get(message.author.id).addRole(rogueID);
+         await bot.guilds.get(myguildID).members.get(message.author.id).add(rogueID);
       }
       if (reaction.emoji.name === '<:mage:798497704976056350>') {
-         await bot.guilds.get(myguildID).members.get(message.author.id).addRole(mageID);
+         await bot.guilds.get(myguildID).members.get(message.author.id).add(mageID);
       }
    });
 });
