@@ -1,6 +1,6 @@
 const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 const token = 'ODA2MDgwODg0NDE5NTkyMjEy.YBkPUw.txooYMWcwZgOo3bzuv4dukqntRI';
 const prefix = '$';
 const fs = require('fs');
@@ -26,57 +26,7 @@ bot.on('ready', () => {
 });
 
 bot.on('guildMemberAdd', guildMember => {
-   let welcomeRole = guildMember.guild.roles.cache.has('798498129661263882');
-
-   const druid = message.guild.roles.cache.has('798497796541513759');
-   const hunter = message.guild.roles.cache.has('798497755952578560');
-   const warrior = message.guild.roles.cache.has('784698785586348032');
-   const warlock = message.guild.roles.cache.has('798497338561789993');
-   const paladin = message.guild.roles.cache.has('799233980570402816');
-   const priest = message.guild.roles.cache.has('798497653058830339');
-   const rogue = message.guild.roles.cache.has('798497604035805184');
-   const mage = message.guild.roles.cache.has('798497704976056350');
-   const tank = message.guild.roles.cache.has('798507023020589066');
-   const healer = message.guild.roles.cache.has('798507050752933909');
-   const dps = message.guild.roles.cache.has('798507075353182218');
-
-   const druidEmoji = '808303286339764225';
-   const hunterEmoji = '808303320854560768';
-   const warriorEmoji = '808303170472247306';
-   const warlockEmoji = '808303398834405406';
-   const paladinEmoji = '808303306521968661';
-   const priestEmoji = '808303419546402836';
-   const rogueEmoji = '808303296535724072';
-   const mageEmoji = '808303367880966166';
-   const tankEmoji = '808303426676457492';
-   const healerEmoji = '808303449581158451';
-   const dpsEmoji = '808303435408605184';
-
-   let embed = new Discord.MessageEmbed()
-   .setcolor('#004A94')
-   .setTitle('Choose the class of your main!')
-   .setDescription('Choosing your class is a must to get "Member" status later.\n\n'
-      + `${druidEmoji} for druid\n`
-      + `${hunterEmoji} for hunter\n`
-      + `${warriorEmoji} for warrior\n`
-      + `${warlockEmoji} for warlock\n`
-      + `${paladinEmoji} for paladin\n`
-      + `${priestEmoji} for priest\n`
-      + `${rogueEmoji} for rogue\n`
-      + `${mageEmoji} for mage\n`);
-
-   let messageEmbed = await member.guild.cache.get(`${member.id}`).send(embed);
-   messageEmbed.react(druidEmoji);
-   messageEmbed.react(hunterEmoji);
-   messageEmbed.react(warriorEmoji);
-   messageEmbed.react(warlockEmoji);
-   messageEmbed.react(paladinEmoji);
-   messageEmbed.react(priestEmoji);
-   messageEmbed.react(rogueEmoji);
-   messageEmbed.react(mageEmoji);
-
-   guildMember.roles.add(welcomeRole);
-   guildMember.guild.auther.send
+   bot.commands.get('joinserver').execute(message, args, Discord, bot, guildMember);
 });
 
 bot.on('message', message =>{
