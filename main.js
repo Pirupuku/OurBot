@@ -65,9 +65,8 @@ bot.on('message', message =>{
    } else if (command == 'clear') {
       bot.commands.get('clear').execute(bot, message, args);
    } else if (command == 'test') {
-      let guild = message.guild.fetchMembers();
       let trialID = '798498129661263882';
-      let trialCount = guild.roles.get(trialID).members.size;
+      let trialCount = message.guild.roles.get(trialID).members.size;
       console.log(trialCount);
    }
 });
