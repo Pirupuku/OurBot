@@ -25,9 +25,9 @@ bot.on('ready', () => {
      manyWhelps(bot);
 });
 
-bot.on('guildMemberAdd', guildMember => {
-   bot.commands.get('joinserver').execute(message, args, Discord, bot, guildMember);
-});
+//bot.on('guildMemberAdd', guildMember => {
+//   bot.commands.get('joinserver').execute(message, args, Discord, bot, guildMember);
+//});
 
 bot.on('message', message =>{
    if(!message.content.startsWith(prefix) || message.author.bot) return;
