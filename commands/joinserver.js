@@ -1,7 +1,7 @@
 module.exports = {
     name: 'joinserver',
     description: "Class and Role on joining the server.",
-    async execute(message, args, Discord, bot) {
+    async execute(args, Discord, bot) {
         let welcomeRole = guildMember.guild.roles.cache.has('798498129661263882');
 
         const druid = guildMember.guild.roles.cache.has('798497796541513759');
