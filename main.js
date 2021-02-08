@@ -54,7 +54,7 @@ bot.on('guildMemberAdd', async guildMember => {
    //works
    let dmEmbed = new Discord.MessageEmbed()
       .setTitle("Choose the class of your main!")
-      .setDescription("Choosing your class is a must to get **Member** status later.\n<:druid:808301207206494228> for druid\n:lemon: for hunter\n<:hunter:808302350162591784> for rogue\n:lemon: for warrior\n:lemon: for warlock\n:lemon: for paladin\n:lemon: for priest\n:lemon: for mage")
+      .setDescription("Choosing your class is a must to get **Member** status later.\n<:druid:808301207206494228> for druid\n<:hunter:808302350162591784> for hunter\n<:warrior:808301549712572426> for warrior\n<:warlock:808301265388830730> for warlock\n<:paladin:808301574761742346> for paladin\n<:priest:808301254677495848> for priest\n<:rogue:808302389223489557> for rogue\n<:mage:808301245877059604> for mage")
       .setColor('#004A94')
    
    let messageEmbed = await guildMember.send(dmEmbed);
