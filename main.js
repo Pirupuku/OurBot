@@ -26,7 +26,7 @@ bot.on('ready', () => {
 });
 
 bot.on('guildMemberAdd', guildMember => {
-   message.guildMember.send('Hello');
+   guildMember.send('Hello');
 });
 
 bot.on('message', message =>{
