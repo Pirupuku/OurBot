@@ -56,7 +56,7 @@ bot.on('guildMemberAdd', async guildMember => {
       .setColor('#004A94')
       .setTitle('Choose the class of your main!')
       .addFields(
-         { name: 'Choosing your class is a must to get "Member" status later.', value: '<:druid:808301207206494228>'});
+         { name: 'Choosing your class is a must to get "Member" status later.', value: '<:druid:808301207206494228> for druid', value: '<:hunter:808302350162591784> for hunter'});
 
    let messageEmbed = await guildMember.send(dmEmbed);
    messageEmbed.react(druidEmoji);
