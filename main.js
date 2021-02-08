@@ -74,28 +74,28 @@ bot.on('guildMemberAdd', async guildMember => {
       if (!reaction.message.currentguild) return;
 
       if (reaction.emoji.name === '<:druid:808301207206494228>') {
-         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).add(druidID);
+         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).roles.add(druidID);
       }
       if (reaction.emoji.name === '<:hunter:808302350162591784>') {
-         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).add(hunterID);
+         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).roles.add(hunterID);
       }
       if (reaction.emoji.name === '<:warrior:808301549712572426>') {
-         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).add(warriorID);
+         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).roles.add(warriorID);
       }
       if (reaction.emoji.name === '<:warlock:808301265388830730>') {
-         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).add(warlockID);
+         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).roles.add(warlockID);
       }
       if (reaction.emoji.name === '<:paladin:808301574761742346>') {
-         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).add(paladinID);
+         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).roles.add(paladinID);
       }
       if (reaction.emoji.name === '<:priest:808301254677495848>') {
-         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).add(priestID);
+         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).roles.add(priestID);
       }
       if (reaction.emoji.name === '<:rogue:808302389223489557>') {
-         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).add(rogueID);
+         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).roles.add(rogueID);
       }
       if (reaction.emoji.name === '<:mage:798497704976056350>') {
-         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).add(mageID);
+         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).roles.add(mageID);
       }
    });
 });
