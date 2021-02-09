@@ -52,7 +52,7 @@ bot.on('ready', () => {
 bot.on('message', message =>{
    if (!message.content.startsWith(prefix) || message.author.bot) return;
    if (message.content.startsWith(prefix)) {
-      message.delete(10000);
+      message.delete({ timeout: 10000 });
    } else {
       return;
    }
