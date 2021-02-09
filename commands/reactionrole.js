@@ -59,7 +59,7 @@ module.exports = {
       if (reaction.message.partial) await reaction.message.fetch();
       if (reaction.partial) await reaction.fetch();
       if (user.bot) return;
-      ir (!reaction.message.guild) return;
+      if (!reaction.message.guild) return;
       
       if (reaction.message.channel.id == channel) {
         if (reaction.emoji.name === druidEmoji) {
