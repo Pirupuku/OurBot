@@ -51,10 +51,15 @@ bot.on('ready', () => {
 
 bot.on('message', message =>{
    if (!message.content.startsWith(prefix) || message.author.bot) return;
-   if (message.content.startsWith(prefix)) message.delete(10000);
-      else return;
+   if (message.content.startsWith(prefix)) {
+      message.delete(10000);
+   } else {
+      return;
+   }
    if (message.channel.id == '808820077561774100') {
-      message.delete(6000);
+      if(!message.content.startsWith(prefix)) {
+         message.delete(10000);
+      }
    }
    const args = message.content.slice(prefix.length).split(/ +/);
    const command = args.shift().toLowerCase();
