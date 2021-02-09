@@ -49,61 +49,13 @@ bot.on('ready', () => {
      manyWhelps(bot);
 });
 
-//bot.on('guildMemberAdd', async guildMember => {
-//   const myguildID = '773542499049668608';
-   //works
-//   let dmEmbed = new Discord.MessageEmbed()
-//      .setTitle("Choose the class of your main!")
-//      .setDescription("Choosing your class is a must to get **Member** status later.\n<:druid:808301207206494228> for druid\n<:hunter:808302350162591784> for hunter\n<:warrior:808301549712572426> for warrior\n<:warlock:808301265388830730> for warlock\n<:paladin:808301574761742346> for paladin\n<:priest:808301254677495848> for priest\n<:rogue:808302389223489557> for rogue\n<:mage:808301245877059604> for mage")
-//      .setColor('#004A94')
-   
-//   let messageEmbed = await guildMember.send(dmEmbed);
-//   messageEmbed.react(druidEmoji);
-//   messageEmbed.react(hunterEmoji);
-//   messageEmbed.react(warriorEmoji);
-//   messageEmbed.react(warlockEmoji);
-//   messageEmbed.react(paladinEmoji);
-//   messageEmbed.react(priestEmoji);
-//   messageEmbed.react(rogueEmoji);
-//   messageEmbed.react(mageEmoji);
-
-//   bot.on('messageReactionAdd', async (reaction, user) => {
-//      if (reaction.message.partial) await reaction.message.fetch();
-//      if (reaction.partial) await reaction.fetch();
-//      if (user.bot) return;
-//      if (!reaction.message.currentguild) return;
-
-//      if (reaction.emoji.name === '<:druid:808301207206494228>') {
-//         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).roles.add(druidID);
-//      }
-//      if (reaction.emoji.name === '<:hunter:808302350162591784>') {
-//         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).roles.add(hunterID);
-//      }
-//      if (reaction.emoji.name === '<:warrior:808301549712572426>') {
-//         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).roles.add(warriorID);
-//      }
-//      if (reaction.emoji.name === '<:warlock:808301265388830730>') {
-//         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).roles.add(warlockID);
-//      }
-//      if (reaction.emoji.name === '<:paladin:808301574761742346>') {
-//         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).roles.add(paladinID);
-//      }
-//      if (reaction.emoji.name === '<:priest:808301254677495848>') {
-//         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).roles.add(priestID);
-//      }
-//      if (reaction.emoji.name === '<:rogue:808302389223489557>') {
-//         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).roles.add(rogueID);
-//      }
-//      if (reaction.emoji.name === '<:mage:798497704976056350>') {
-//         await bot.guilds.cache.get(myguildID).members.cache.get(reaction.author.id).roles.add(mageID);
-//      }
-//   });
-//});
-
 bot.on('message', message =>{
-   if(!message.content.startsWith(prefix) || message.author.bot) return;
-   if (message.content.startsWith(prefix)) message.delete();
+   if (!message.content.startsWith(prefix) || message.author.bot) return;
+   if (message.content.startsWith(prefix)) message.delete(10000);
       else return;
+   if (message.channel.id == '808820077561774100') {
+      message.delete(6000);
+   }
    const args = message.content.slice(prefix.length).split(/ +/);
    const command = args.shift().toLowerCase();
 
@@ -140,14 +92,7 @@ bot.on('message', message =>{
    } else if (command == 'clear') {
       bot.commands.get('clear').execute(bot, message, args);
    } else if (command == 'test') {
-      let trialID = '798498129661263882';
-      let officerID = '798497871376547881';
-      let trialCount = message.guild.roles.cache.get(trialID).members.size;
-      let officerCount = message.guild.roles.cache.get(officerID).members.size;
-      console.log(trialCount);
-      console.log(officerCount);
-   } else if (command == 'reactionrole') {
-      bot.commands.get('reactionrole').execute(message,args, Discord, bot);
+      
    }
 });
 
