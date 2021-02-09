@@ -56,11 +56,11 @@ bot.on('message', message =>{
    } else {
       return;
    }
-  //if (message.channel.id == '808820077561774100') {
-  //    if(!message.content.startsWith(prefix)) {
-  //       message.delete(10000);
-  //    }
-  // }
+   if (message.channel.id == '808820077561774100') {
+      if(!message.content.startsWith(prefix)) {
+         message.delete({ timeout: 10000 });
+      }
+   }
    const args = message.content.slice(prefix.length).split(/ +/);
    const command = args.shift().toLowerCase();
 
