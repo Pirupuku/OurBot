@@ -3,7 +3,7 @@ module.exports = {
   description: "Sets up a reaction role message!",
   execute(message, args, Discord, client) {
   
-    const channel = '';
+    const channel = '808584658765348865';
   
   }
 
