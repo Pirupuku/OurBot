@@ -1,7 +1,7 @@
 module.exports = {
   name: 'reactionrole',
   description: "Sets up a reaction role message!",
-  async execute(message, args, Discord, client) {
+  async execute(message, args, Discord, bot) {
   
     const channel = '808584658765348865';
     const druidID = '798497796541513759';
