@@ -62,29 +62,28 @@ module.exports = {
       if (!reaction.message.guild) return;
       
       if (reaction.message.channel.id == channel) {
-        console.log(reaction.emoji.name);
-        if (reaction.emoji.name === druidEmoji) {
+        if (reaction.emoji.name === 'druid') {
           await reaction.message.guild.members.cache.get(user.id).roles.add(druidID);
         }
-        if (reaction.emoji.name === hunterEmoji) {
+        if (reaction.emoji.name === 'hunter') {
           await reaction.message.guild.members.cache.get(user.id).roles.add(hunterID);
         }
-        if (reaction.emoji.name === warriorEmoji) {
+        if (reaction.emoji.name === 'warrior') {
           await reaction.message.guild.members.cache.get(user.id).roles.add(warriorID);
         }
-        if (reaction.emoji.name === warlockEmoji) {
+        if (reaction.emoji.name === 'warrior') {
           await reaction.message.guild.members.cache.get(user.id).roles.add(warlockID);
         }
-        if (reaction.emoji.name === paladinEmoji) {
+        if (reaction.emoji.name === 'paladin') {
           await reaction.message.guild.members.cache.get(user.id).roles.add(paladinID);
         }
-        if (reaction.emoji.name === priestEmoji) {
+        if (reaction.emoji.name === 'priest') {
           await reaction.message.guild.members.cache.get(user.id).roles.add(priestID);
         }
-        if (reaction.emoji.name === rogueEmoji) {
+        if (reaction.emoji.name === 'rogue') {
           await reaction.message.guild.members.cache.get(user.id).roles.add(rogueID);
         }
-        if (reaction.emoji.name === mageEmoji) {
+        if (reaction.emoji.name === 'mage') {
           await reaction.message.guild.members.cache.get(user.id).roles.add(mageID);
         }
       } else {
