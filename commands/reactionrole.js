@@ -62,6 +62,7 @@ module.exports = {
       if (!reaction.message.guild) return;
       
       if (reaction.message.channel.id == channel) {
+        console.log(reaction.emoji.name);
         if (reaction.emoji.name === druidEmoji) {
           await reaction.message.guild.members.cache.get(user.id).roles.add(druidID);
         }
