@@ -99,7 +99,9 @@ bot.on('message', message => {
          let guild = bot.guilds.cache.get('773542499049668608');
          let member = guild.member(message.author);
          let nickname = member ? member.displayName : null;
-
+         console.log(message.author.username);
+         console.log(nickname);
+         
          bot.commands.get('ping').execute(message, args, nickname);
 
       } else if (command == 'fokya'){
