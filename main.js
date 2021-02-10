@@ -1,5 +1,5 @@
 const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
-const Discord = require('discord.js');
+const {Discord, MessageAttachment} = require('discord.js');
 const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 const token = 'ODA2MDgwODg0NDE5NTkyMjEy.YBkPUw.txooYMWcwZgOo3bzuv4dukqntRI';
 const prefix = '$';
@@ -47,6 +47,7 @@ bot.on('ready', () => {
      console.log('Many Whelps hands out 50 DKP minus');
      bot.user.setActivity('$help', { type: 'WATCHING'}).catch(console.error);
      manyWhelps(bot);
+     bot.user.setAvatar('https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png');
 });
 
 bot.on('message', message => {
