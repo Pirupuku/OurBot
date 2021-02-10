@@ -1,5 +1,5 @@
 const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
-const {Discord, MessageAttachment} = require('discord.js');
+const Discord = require('discord.js');
 const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 const token = 'ODA2MDgwODg0NDE5NTkyMjEy.YBkPUw.txooYMWcwZgOo3bzuv4dukqntRI';
 const prefix = '$';
