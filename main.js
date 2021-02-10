@@ -89,13 +89,12 @@ bot.on('message', message =>{
          }
       }
    }
-   if (message.member.hasPermission('CHANGE_NICKNAME')) {
+   if (message.member.cache.hasPermission('CHANGE_NICKNAME')) {
       if (message.content.startsWith(prefix)) {
          message.delete({ timeout: 10000 });
       } else {
          return;
       }
-
       if(command === 'ping'){
          bot.commands.get('ping').execute(message, args);
       } else if (command == 'fokya'){
@@ -116,6 +115,8 @@ bot.on('message', message =>{
          bot.commands.get('image').execute(message, args, some_var, request, cheerio);
       } else if (command == 'clear') {
          bot.commands.get('clear').execute(bot, message, args);
+      } else if (command == 'help') {
+         bot.commands.get('help').execute(Discord, message, args);
       }
    } else {
       message.author.send('You don not have the permission to use commands!');
