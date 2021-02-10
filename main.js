@@ -54,7 +54,7 @@ bot.on('message', message =>{
    const command = args.shift().toLowerCase();
    
    if (message.channel.id === '808820077561774100') {
-      if(!message.content.startsWith(prefix)) {
+      if (!message.content.startsWith(prefix) && !message.author.bot) {
          message.delete({ timeout: 10000 });
       }
       if (command == 'newmember') {
