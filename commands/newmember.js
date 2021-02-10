@@ -3,6 +3,7 @@ module.exports = {
     description: "embed for new members",
     execute(message, args){
         const embedTrialGuest = {
+            "description": "test",
             "color": 19092,
             "fields": [
                 {
