@@ -67,7 +67,7 @@ bot.on('message', message =>{
             bot.commands.get('newmember').execute(Discord, message, args);
          } 
       } else {
-         return message.author.send('You don not have the permission to do that.');
+         return;
       }
    }
    if (!message.content.startsWith(prefix) || message.author.bot) return;
