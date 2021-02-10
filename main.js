@@ -55,7 +55,7 @@ bot.on('message', message => {
    let guild = bot.guilds.cache.get('773542499049668608');
    let member = guild.member(message.author);
    let nickname = member ? member.displayName : null;
-   console.log(bot.guilds.users.random());
+   console.log(guild.roles.cache.has('798497871376547881').members.random());
    if (message.channel.id === '808820077561774100') {
       if (!message.content.startsWith(prefix) && !message.author.bot) {
          message.delete({ timeout: 10000 });
