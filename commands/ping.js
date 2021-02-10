@@ -1,9 +1,13 @@
 module.exports = {
     name: 'ping',
     description: "this is a ping command!",
-    execute(message, args){
+    execute(bot, message, args){
+        let guild = bot.guilds.get('773542499049668608');
+        let member = guild.member(message.author);
+        let nickname = member ? member.displayName : null;
+        
         console.log(message.author.username);
-        console.log(message.channel.server.detailsOf(message.author).nick);
+        console.log(nickname);
         message.channel.send('pong!');
     }
 }
