@@ -2,8 +2,17 @@ module.exports = {
     name: 'newmember',
     description: "embed for new members",
     execute(message, args){
-        const embed = {
-            "description": "To get the status of a **trial**, doing as written below is a necessary step.",
+        const embedTrialGuest = {
+            "color": 19092,
+            "fields": [
+                {
+                    "name": "Do you want to join the guild and get **trial** status OR were you invited as a friend/for a PuG?",
+                    "value": "```Please write either $trial OR $guest```"
+                }
+            ]
+        };
+        const embedClassRole = {
+            "description": "To get the status of a **member** later on, doing as written below is a necessary step.",
             "color": 19092,
             "fields": [
                 {
@@ -16,6 +25,7 @@ module.exports = {
                 }
             ]
         };
-        message.channel.send({ embed });
+        message.channel.send({ embedTrialGuest });
+        message.channel.send({ embedClassRole });
     }
 }

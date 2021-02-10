@@ -59,47 +59,58 @@ bot.on('message', message =>{
       }
       if (command == 'newmember') {
          bot.commands.get('newmember').execute(message, args);
+      } else if (command == 'trial') {
+         bot.commands.get('trial').execute(message, args);
+      } else if (command == 'guest') {
+         bot.commands.get('guest').execute(message, args);
       }
    }
    if (!message.content.startsWith(prefix) || message.author.bot) return;
-   if (message.content.startsWith(prefix)) {
-      message.delete({ timeout: 10000 });
-   } else {
-      return;
+   if (message.member.roles.cache.get('798498129661263882')) {
+      if (command == 'class'){
+         if (args[0] !== undefined) {
+            bot.commands.get('class').execute(message, args);
+         } else if (args[0] === undefined) {
+            message.author.send('Please enter the class you are playing with your main! (eg: $class rogue)');
+         }
+      } else if (command == 'role'){
+         if (args[0] !== undefined) {
+            bot.commands.get('role').execute(message, args);
+         } else if (args[0] === undefined) {
+            message.author.send('Please enter the role you are playing with your main! (eg: $role healer)');
+         }
+      }
    }
+   if (message.member.hasPermission("CHANGE_NICKNAME")) {
+      if (message.content.startsWith(prefix)) {
+         message.delete({ timeout: 10000 });
+      } else {
+         return;
+      }
 
-   if (command == 'class'){
-      if (args[0] !== undefined) {
-         bot.commands.get('class').execute(message, args);
-      } else if (args[0] === undefined) {
-         message.author.send('Please enter the class you are playing with your main! (eg: $class rogue)');
+      if(command === 'ping'){
+         bot.commands.get('ping').execute(message, args);
+      } else if (command == 'fokya'){
+         bot.commands.get('fokya').execute(message, args);
+      } else if (command == 'thistime'){
+         bot.commands.get('thistime').execute(message, args);
+      } else if (command == 'where'){
+         bot.commands.get('where').execute(message, args);
+      } else if (command == 'whalecum'){
+         bot.commands.get('whalecum').execute(message, args);
+      } else if (command == 'image') {
+         var some_var = '';
+         for (var i = 0; i < args.length; i++) {
+            some_var += args[i];
+            if (i < args.length - 1)
+               some_var += ' ';
+         }
+         bot.commands.get('image').execute(message, args, some_var, request, cheerio);
+      } else if (command == 'clear') {
+         bot.commands.get('clear').execute(bot, message, args);
       }
-   } else if (command == 'role'){
-      if (args[0] !== undefined) {
-         bot.commands.get('role').execute(message, args);
-      } else if (args[0] === undefined) {
-         message.author.send('Please enter the role you are playing with your main! (eg: $role healer)');
-      }
-   } else if(command === 'ping'){
-      bot.commands.get('ping').execute(message, args);
-   } else if (command == 'fokya'){
-      bot.commands.get('fokya').execute(message, args);
-   } else if (command == 'thistime'){
-      bot.commands.get('thistime').execute(message, args);
-   } else if (command == 'where'){
-      bot.commands.get('where').execute(message, args);
-   } else if (command == 'whalecum'){
-      bot.commands.get('whalecum').execute(message, args);
-   } else if (command == 'image') {
-      var some_var = '';
-      for (var i = 0; i < args.length; i++) {
-         some_var += args[i];
-         if (i < args.length - 1)
-            some_var += ' ';
-      }
-      bot.commands.get('image').execute(message, args, some_var, request, cheerio);
-   } else if (command == 'clear') {
-      bot.commands.get('clear').execute(bot, message, args);
+   } else {
+      message.author.send('You don not have the permission to use commands!');
    }
 });
 

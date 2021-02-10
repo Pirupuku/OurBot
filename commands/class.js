@@ -1,7 +1,7 @@
 module.exports = {
     name: 'class',
     description: "give discord role of a class of WoW",
-    execute(message, args){
+    execute(message, args) {
         
         const classDruid = '798497796541513759';
         const classHunter = '798497755952578560';
