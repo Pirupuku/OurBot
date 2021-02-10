@@ -13,7 +13,7 @@ module.exports = {
                     inline: false
                 },
                 {
-                    name: '$fokya, $image {what to search for}, $thistime, $where',
+                    name: '$fokya, $image {what to search for}, $thistime, $where, $whalecum',
                     value: 'Try them out to see what the bot can do!\nFor the image command you write e.g. `$image many whelps` to print random images for the topic you want.',
                     inline: false
                 },
