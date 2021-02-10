@@ -26,7 +26,7 @@ module.exports = {
                     '```Please write $role {yourrole} so that the bot gives you the specific role, which you want to have in raids.\n\nEg: $role healer -> you get the discord role of a healer```',
                     false
             )
-        //message.channel.send( embedTrialGuest );
+        message.channel.send( embedTrialGuest );
         message.channel.send( embedClassRole );
     }
 }
