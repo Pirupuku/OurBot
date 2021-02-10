@@ -50,13 +50,12 @@ bot.on('ready', () => {
 });
 
 bot.on('message', message =>{
-   console.log(message.channel.id);
    if (message.channel.id === '808820077561774100') {
       if(!message.content.startsWith(prefix)) {
          message.delete({ timeout: 10000 });
       }
-      if (message.author.bot) {
-         message.delete({ timeout: 10000 });
+      if (command == 'newmember') {
+         bot.commands.get('newmember').execute(message, args);
       }
    }
    if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -100,8 +99,6 @@ bot.on('message', message =>{
       bot.commands.get('image').execute(message, args, some_var, request, cheerio);
    } else if (command == 'clear') {
       bot.commands.get('clear').execute(bot, message, args);
-   } else if (command == 'test') {
-      
    }
 });
 
