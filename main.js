@@ -103,6 +103,8 @@ bot.on('message', message => {
       } else if (command == 'fokya'){
          bot.commands.get('fokya').execute(message, args, nickname);
       } else if (command == 'thistime'){
+         var user = message.guild.members.random();
+         console.log(`${user.user}`);
          bot.commands.get('thistime').execute(message, args, nickname);
       } else if (command == 'where'){
          bot.commands.get('where').execute(message, args, nickname);
