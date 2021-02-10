@@ -101,13 +101,13 @@ bot.on('message', message => {
       if(command === 'ping') {
          bot.commands.get('ping').execute(message, args, nickname);
       } else if (command == 'fokya'){
-         bot.commands.get('fokya').execute(message, args);
+         bot.commands.get('fokya').execute(message, args, nickname);
       } else if (command == 'thistime'){
          bot.commands.get('thistime').execute(message, args, nickname);
       } else if (command == 'where'){
-         bot.commands.get('where').execute(message, args);
+         bot.commands.get('where').execute(message, args, nickname);
       } else if (command == 'whalecum'){
-         bot.commands.get('whalecum').execute(message, args);
+         bot.commands.get('whalecum').execute(message, args, nickname);
       } else if (command == 'image') {
          var some_var = '';
          for (var i = 0; i < args.length; i++) {

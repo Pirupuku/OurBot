@@ -1,7 +1,7 @@
 module.exports = {
     name: 'where',
     description: "where the fuck are you all!",
-    execute(message, args){
-        message.channel.send('https://imgur.com/gallery/mKKAr')
+    execute(message, args, nickname){
+        message.channel.send(`${nickname} is looking for his friends.\n` +'https://imgur.com/gallery/mKKAr')
     }
 }
