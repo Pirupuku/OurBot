@@ -26,7 +26,7 @@ module.exports = {
                 }
             ]
         };
-        message.channel.send({ embedTrialGuest });
+        //message.channel.send({ embedTrialGuest });
         message.channel.send({ embedClassRole });
     }
 }
