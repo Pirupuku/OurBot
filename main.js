@@ -57,9 +57,11 @@ bot.on('message', message =>{
       if (!message.content.startsWith(prefix) && !message.author.bot) {
          message.delete({ timeout: 10000 });
       }
-      if (message.member.hasPermission('MANAGE_MESSAGE')) {
+      if (message.member.hasPermission('MANAGE_MESSAGES')) {
          if (command == 'newmember') {
             bot.commands.get('newmember').execute(Discord, message, args);
+         } else {
+            return message.author.send('You don not have the permission to do that.');
          }
       }
       if (command == 'trial') {
