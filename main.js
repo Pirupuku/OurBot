@@ -50,6 +50,9 @@ bot.on('ready', () => {
 });
 
 bot.on('message', message =>{
+   const args = message.content.slice(prefix.length).split(/ +/);
+   const command = args.shift().toLowerCase();
+   
    if (message.channel.id === '808820077561774100') {
       if(!message.content.startsWith(prefix)) {
          message.delete({ timeout: 10000 });
@@ -64,8 +67,6 @@ bot.on('message', message =>{
    } else {
       return;
    }
-   const args = message.content.slice(prefix.length).split(/ +/);
-   const command = args.shift().toLowerCase();
 
    if (command == 'class'){
       if (args[0] !== undefined) {
