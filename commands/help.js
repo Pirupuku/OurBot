@@ -5,6 +5,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
             .setTitle('How to use the Guild Bot aka ManyWhelps')
             .setColor('#004A94')
+            .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
             .addFields (
                 {
                     name: '$help',
