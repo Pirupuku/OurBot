@@ -56,6 +56,7 @@ bot.on('message', message =>{
    } else {
       return;
    }
+   console.log(message.channel.id);
    if (message.channel.id === '808820077561774100') {
       if(!message.content.startsWith(prefix)) {
          message.delete({ timeout: 10000 });
