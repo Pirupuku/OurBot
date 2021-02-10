@@ -49,7 +49,7 @@ bot.on('ready', () => {
      manyWhelps(bot);
 });
 
-bot.on('message', message =>{
+bot.on('message', message => {
    const args = message.content.slice(prefix.length).split(/ +/);
    const command = args.shift().toLowerCase();
    
@@ -89,7 +89,7 @@ bot.on('message', message =>{
          }
       }
    }
-   if (message.member.cache.hasPermission('CHANGE_NICKNAME')) {
+   if (message.member.hasPermission('CHANGE_NICKNAME')) {
       if (message.content.startsWith(prefix)) {
          message.delete({ timeout: 10000 });
       } else {
