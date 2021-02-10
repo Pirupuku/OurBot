@@ -16,6 +16,6 @@ module.exports = {
                 }
             ]
         };
-        channel.send({ embed });
+        message.channel.send({ embed });
     }
 }
