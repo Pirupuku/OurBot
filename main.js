@@ -52,7 +52,10 @@ bot.on('ready', () => {
 bot.on('message', message => {
    const args = message.content.slice(prefix.length).split(/ +/);
    const command = args.shift().toLowerCase();
-   
+   let guild = bot.guilds.cache.get('773542499049668608');
+   let member = guild.member(message.author);
+   let nickname = member ? member.displayName : null;
+
    if (message.channel.id === '808820077561774100') {
       if (!message.content.startsWith(prefix) && !message.author.bot) {
          message.delete({ timeout: 10000 });
@@ -95,15 +98,8 @@ bot.on('message', message => {
       } else {
          return;
       }
-      if(command === 'ping'){
-         let guild = bot.guilds.cache.get('773542499049668608');
-         let member = guild.member(message.author);
-         let nickname = member ? member.displayName : null;
-         console.log(message.author.username);
-         console.log(nickname);
-         
+      if(command === 'ping') {
          bot.commands.get('ping').execute(message, args, nickname);
-
       } else if (command == 'fokya'){
          bot.commands.get('fokya').execute(message, args);
       } else if (command == 'thistime'){
