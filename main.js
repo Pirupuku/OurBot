@@ -59,7 +59,7 @@ bot.on('message', message =>{
       }
       if (message.member.hasPermission("MANAGE_MESSAGE")) {
          if (command == 'newmember') {
-            bot.commands.get('newmember').execute(message, args);
+            bot.commands.get('newmember').execute(Discord, message, args);
          }
       }
       if (command == 'trial') {
