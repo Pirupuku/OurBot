@@ -57,7 +57,7 @@ bot.on('message', message =>{
       if (!message.content.startsWith(prefix) && !message.author.bot) {
          message.delete({ timeout: 10000 });
       }
-      if (message.member.hasPermission("MANAGE_MESSAGE")) {
+      if (message.member.hasPermission('MANAGE_MESSAGE')) {
          if (command == 'newmember') {
             bot.commands.get('newmember').execute(Discord, message, args);
          }
@@ -84,7 +84,7 @@ bot.on('message', message =>{
          }
       }
    }
-   if (message.member.hasPermission("CHANGE_NICKNAME")) {
+   if (message.member.hasPermission('CHANGE_NICKNAME')) {
       if (message.content.startsWith(prefix)) {
          message.delete({ timeout: 10000 });
       } else {
