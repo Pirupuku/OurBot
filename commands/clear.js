@@ -1,7 +1,7 @@
 module.exports = {
     name: 'clear',
     description: "clear discord messages",
-    execute(bot, message, args) {
+    execute(bot, message, args, nickname) {
         if (message.deletable) {
              message.delete();
         }
@@ -27,7 +27,7 @@ module.exports = {
         }
 
         message.channel.bulkDelete(deleteAmount, true)
-            .then(deleted => message.channel.send(`I deleted ${deleted.size}/${deleteAmount} messages.`))
+            .then(deleted => message.channel.send(`I deleted ${deleted.size}/${deleteAmount} messages, ${nickname}.`))
             .catch(() => message.reply(`Something went wrong... ${err}`));
     }
 }

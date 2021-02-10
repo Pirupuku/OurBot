@@ -1,7 +1,7 @@
 module.exports = {
     name: 'image',
     description: "sends random image from google search",
-    execute(message, args, some_var, request, cheerio){
+    execute(message, args, some_var, request, cheerio, nickname){
       
         var options = {
         url: "http://results.dogpile.com/serp?qc=images&q=" + `${some_var}`,
@@ -28,7 +28,7 @@ module.exports = {
             return;
         }
         
-        message.channel.send( urls[Math.floor(Math.random() * urls.length)] + " " + message.guild.members.cache.random());
+        message.channel.send(`I found this image for you, ${nickname}.\n`, urls[Math.floor(Math.random() * urls.length)] + " " + message.guild.members.cache.random());
         });
     }
 }

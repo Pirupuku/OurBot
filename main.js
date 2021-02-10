@@ -103,7 +103,7 @@ bot.on('message', message => {
       } else if (command == 'fokya'){
          bot.commands.get('fokya').execute(message, args);
       } else if (command == 'thistime'){
-         bot.commands.get('thistime').execute(message, args);
+         bot.commands.get('thistime').execute(message, args, nickname);
       } else if (command == 'where'){
          bot.commands.get('where').execute(message, args);
       } else if (command == 'whalecum'){
@@ -115,9 +115,9 @@ bot.on('message', message => {
             if (i < args.length - 1)
                some_var += ' ';
          }
-         bot.commands.get('image').execute(message, args, some_var, request, cheerio);
+         bot.commands.get('image').execute(message, args, some_var, request, cheerio, nickname);
       } else if (command == 'clear') {
-         bot.commands.get('clear').execute(bot, message, args);
+         bot.commands.get('clear').execute(bot, message, args, nickname);
       } else if (command == 'help') {
          bot.commands.get('help').execute(Discord, message, args);
       }
