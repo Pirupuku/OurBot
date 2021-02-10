@@ -96,7 +96,12 @@ bot.on('message', message => {
          return;
       }
       if(command === 'ping'){
-         bot.commands.get('ping').execute(message, args);
+         let guild = bot.guilds.cache.get('773542499049668608');
+         let member = guild.member(message.author);
+         let nickname = member ? member.displayName : null;
+
+         bot.commands.get('ping').execute(message, args, nickname);
+
       } else if (command == 'fokya'){
          bot.commands.get('fokya').execute(message, args);
       } else if (command == 'thistime'){
