@@ -17,7 +17,7 @@ module.exports = {
 
         if (classrole == 'druid') {
             const embedList = new Discord.MessageEmbed()
-                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -29,7 +29,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'hunter') {
             const embedList = new Discord.MessageEmbed()
-                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -41,7 +41,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'mage') {
             const embedList = new Discord.MessageEmbed()
-                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -53,7 +53,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'paladin') {
             const embedList = new Discord.MessageEmbed()
-                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -65,7 +65,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'priest') {
             const embedList = new Discord.MessageEmbed()
-                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -77,7 +77,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'rogue') {
             const embedList = new Discord.MessageEmbed()
-                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -89,7 +89,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'warlock') {
             const embedList = new Discord.MessageEmbed()
-                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -101,7 +101,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'warrior') {
             const embedList = new Discord.MessageEmbed()
-                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -113,7 +113,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'tank') {
             const embedList = new Discord.MessageEmbed()
-                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -125,7 +125,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'healer') {
             const embedList = new Discord.MessageEmbed()
-                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -137,7 +137,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'dps') {
             const embedList = new Discord.MessageEmbed()
-                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
