@@ -120,6 +120,8 @@ bot.on('message', message => {
          bot.commands.get('clear').execute(bot, message, args, nickname);
       } else if (command == 'help') {
          bot.commands.get('help').execute(Discord, message, args);
+      } else if (command == 'list') {
+         bot.commands.get('list').execute(Discord, message, args, nickname);
       }
    } else {
       message.author.send('You don not have the permission to use commands!');

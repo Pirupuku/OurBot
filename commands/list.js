@@ -1,0 +1,131 @@
+module.exports = {
+    name: 'list',
+    description: "list all the members of a ceratin roll",
+    execute(Discord, message, args, nickname) {
+        const druidName = message.guild.roles.cache.get('798497796541513759').members.map(m=>m.displayName);
+        const hunterName = message.guild.roles.cache.get('798497755952578560').members.map(m=>m.displayName);
+        const mageName = message.guild.roles.cache.get('798497704976056350').members.map(m=>m.displayName);
+        const paladinName = message.guild.roles.cache.get('799233980570402816').members.map(m=>m.displayName);
+        const priestName = message.guild.roles.cache.get('798497653058830339').members.map(m=>m.displayName);
+        const rogueName = message.guild.roles.cache.get('798497604035805184').members.map(m=>m.displayName);
+        const warlockName = message.guild.roles.cache.get('798497338561789993').members.map(m=>m.displayName);
+        const warriorName = message.guild.roles.cache.get('784698785586348032').members.map(m=>m.displayName);
+        const tankName = message.guild.roles.cache.get('798507023020589066').members.map(m=>m.displayName);
+        const healerName = message.guild.roles.cache.get('798507050752933909').members.map(m=>m.displayName);
+        const dpsName = message.guild.roles.cache.get('798507075353182218').members.map(m=>m.displayName);
+        const classrole = args[0];
+
+        if (classrole == 'druid') {
+            const embedList = new Discord.MessageEmbed()
+                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setDescription(`Hey ${nickname}, those are all the ${classrole}s I found.`)
+                .setColor('#004A94')
+                .addFields (
+                    {
+                        value: `${druidName}`
+                    }
+                )
+        } else if (classrole == 'hunter') {
+            const embedList = new Discord.MessageEmbed()
+                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setDescription(`Hey ${nickname}, those are all the ${classrole}s I found.`)
+                .setColor('#004A94')
+                .addFields (
+                    {
+                        value: `${hunterName}`
+                    }
+                )
+        } else if (classrole == 'mage') {
+            const embedList = new Discord.MessageEmbed()
+                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setDescription(`Hey ${nickname}, those are all the ${classrole}s I found.`)
+                .setColor('#004A94')
+                .addFields (
+                    {
+                        value: `${mageName}`
+                    }
+                )
+        } else if (classrole == 'paladin') {
+            const embedList = new Discord.MessageEmbed()
+                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setDescription(`Hey ${nickname}, those are all the ${classrole}s I found.`)
+                .setColor('#004A94')
+                .addFields (
+                    {
+                        value: `${paladinName}`
+                    }
+                )
+        } else if (classrole == 'priest') {
+            const embedList = new Discord.MessageEmbed()
+                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setDescription(`Hey ${nickname}, those are all the ${classrole}s I found.`)
+                .setColor('#004A94')
+                .addFields (
+                    {
+                        value: `${priestName}`
+                    }
+                )
+        } else if (classrole == 'rogue') {
+            const embedList = new Discord.MessageEmbed()
+                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setDescription(`Hey ${nickname}, those are all the ${classrole}s I found.`)
+                .setColor('#004A94')
+                .addFields (
+                    {
+                        value: `${rogueName}`
+                    }
+                )
+        } else if (classrole == 'warlock') {
+            const embedList = new Discord.MessageEmbed()
+                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setDescription(`Hey ${nickname}, those are all the ${classrole}s I found.`)
+                .setColor('#004A94')
+                .addFields (
+                    {
+                        value: `${warlockName}`
+                    }
+                )
+        } else if (classrole == 'warrior') {
+            const embedList = new Discord.MessageEmbed()
+                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setDescription(`Hey ${nickname}, those are all the ${classrole}s I found.`)
+                .setColor('#004A94')
+                .addFields (
+                    {
+                        value: `${warriorName}`
+                    }
+                )
+        } else if (classrole == 'tank') {
+            const embedList = new Discord.MessageEmbed()
+                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setDescription(`Hey ${nickname}, those are all the ${classrole}s I found.`)
+                .setColor('#004A94')
+                .addFields (
+                    {
+                        value: `${tankName}`
+                    }
+                )
+        } else if (classrole == 'healer') {
+            const embedList = new Discord.MessageEmbed()
+                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setDescription(`Hey ${nickname}, those are all the ${classrole}s I found.`)
+                .setColor('#004A94')
+                .addFields (
+                    {
+                        value: `${healerName}`
+                    }
+                )
+        } else if (classrole == 'dps') {
+            const embedList = new Discord.MessageEmbed()
+                .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setDescription(`Hey ${nickname}, those are all the ${classrole}s I found.`)
+                .setColor('#004A94')
+                .addFields (
+                    {
+                        value: `${dpsName}`
+                    }
+                )
+        }
+        message.author.send(embedList);
+    }
+}
