@@ -4,11 +4,11 @@ module.exports = {
     execute(Discord, message, args){
         const embedNewmember = new Discord.MessageEmbed()
             .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
-            .setDescription('To get the status of a **member** later on, doing as written below is a necessary step.')
+            .setDescription('Hey there! If you are here to join the guiles as Trial or you came as a friend who wants to chat or as a PuG for a raid, you are in the right place.')
             .setColor('#004A94')
             .addFields (
                 {
-                    name: '**1.** Do you want to join the guild and get **trial** status OR were you invited as a friend/for a PuG?',
+                    name: '**1.** Let us know: Trial to join the guild OR Guest either friend or PuG?',
                     value: '```Please write either $trial OR $guest```',
                     inline: false
                 },
