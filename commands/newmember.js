@@ -4,7 +4,7 @@ module.exports = {
     execute(Discord, message, args){
         const embedNewmember = new Discord.MessageEmbed()
             .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
-            .setDescription('Hey there! If you are here to join the guiles as Trial or you came as a friend who wants to chat or as a PuG for a raid, you are in the right place.')
+            .setDescription('Hey there! If you are here to join the guild as Trial or you came as a friend who wants to chat or as a PuG for a raid, you are in the right place.')
             .setColor('#004A94')
             .addFields (
                 {
@@ -13,7 +13,7 @@ module.exports = {
                     inline: false
                 },
                 {
-                    name: '**2.** If you choosed TRIAL -> write the Class of your main character',
+                    name: '**2.** If you have chosen TRIAL -> write the Class of your main character',
                     value: '```Please write $class {yourclass} so you get the role of your class.\n\nEg: $class druid -> you get the discord role of a druid```',
                     inline: false
                 },

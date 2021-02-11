@@ -184,10 +184,10 @@ module.exports = {
             }
         } else if(args[0] == 'nowarlock'){
             if (!message.member.roles.cache.has(classWarlock)){
-                message.author.send('You are not a WARLOCK!');
+                message.author.send("You aren't a WARLOCK!");
             } else {
                 message.member.roles.remove(classWarlock).catch(console.error);
-                message.author.send('You are not a WARLOCK anymore!');
+                message.author.send("You aren't a WARLOCK anymore!");
             }
         } else if(args[0] == 'warrior'){
             if (message.member.roles.cache.has(classWarrior)){
