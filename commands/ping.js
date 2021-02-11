@@ -3,7 +3,7 @@ module.exports = {
     description: "this is a ping command!",
     execute(message, args, nickname){
         message.channel.send(`Here is your pong, ${nickname}!`);
-        console.log(message.guild.roles.cache.get('798497796541513759').members.map(m=>m.user.displayName));
+        console.log(message.guild.roles.cache.get('798497796541513759').member.displayName);
         console.log(message.guild.roles.cache.get('798497755952578560').members.map(m=>m.user.tag));
         console.log(message.guild.roles.cache.get('798497704976056350').members.map(m=>m.user.tag));
         console.log(message.guild.roles.cache.get('799233980570402816').members.map(m=>m.user.tag));
