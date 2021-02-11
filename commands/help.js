@@ -19,7 +19,7 @@ module.exports = {
                 },
                 {
                     name: '$list {class or role}',
-                    value: 'Sends you a DM with all the names of the class or role!\nClass: Druid, Hunter, Mage, Paladin, Priest, Rogue, Warlock, Warrior\nRole: Tank, Healer, DPS\n```e.g. $list mage -> all mages\ne.g. $list tank -> all tanks```',
+                    value: 'Sends you a DM with all the names of the class or role!\nClass: Druid, Hunter, Mage, Paladin, Priest, Rogue, Warlock, Warrior\nRole: Tank, Healer, DPS\n' + '`e.g. $list mage -> all mages\n`'+'`e.g. $list tank -> all tanks`',
                     inline: false
                 },
                 {
