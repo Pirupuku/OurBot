@@ -18,6 +18,11 @@ module.exports = {
                     inline: false
                 },
                 {
+                    name: '$list {class or role}',
+                    value: 'Sends you a DM with all the names of the class or role!\n`e.g. $list mage -> all mages\ne.g. $list tank -> all tanks`',
+                    inline: false
+                },
+                {
                     name: 'Suggestions!!!',
                     value: 'Let the officer know (best you write into #suggestions) if there is anything good we should implement to the bot.',
                     inline: false
