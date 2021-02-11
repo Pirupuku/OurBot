@@ -25,6 +25,7 @@ module.exports = {
                         value: `${druidName}`
                     }
                 )
+            message.author.send(embedList);
         } else if (classrole == 'hunter') {
             const embedList = new Discord.MessageEmbed()
                 .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
@@ -35,6 +36,7 @@ module.exports = {
                         value: `${hunterName}`
                     }
                 )
+            message.author.send(embedList);
         } else if (classrole == 'mage') {
             const embedList = new Discord.MessageEmbed()
                 .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
@@ -45,6 +47,7 @@ module.exports = {
                         value: `${mageName}`
                     }
                 )
+            message.author.send(embedList);
         } else if (classrole == 'paladin') {
             const embedList = new Discord.MessageEmbed()
                 .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
@@ -55,6 +58,7 @@ module.exports = {
                         value: `${paladinName}`
                     }
                 )
+            message.author.send(embedList);
         } else if (classrole == 'priest') {
             const embedList = new Discord.MessageEmbed()
                 .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
@@ -65,6 +69,7 @@ module.exports = {
                         value: `${priestName}`
                     }
                 )
+            message.author.send(embedList);
         } else if (classrole == 'rogue') {
             const embedList = new Discord.MessageEmbed()
                 .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
@@ -75,6 +80,7 @@ module.exports = {
                         value: `${rogueName}`
                     }
                 )
+            message.author.send(embedList);
         } else if (classrole == 'warlock') {
             const embedList = new Discord.MessageEmbed()
                 .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
@@ -85,6 +91,7 @@ module.exports = {
                         value: `${warlockName}`
                     }
                 )
+            message.author.send(embedList);
         } else if (classrole == 'warrior') {
             const embedList = new Discord.MessageEmbed()
                 .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
@@ -95,6 +102,7 @@ module.exports = {
                         value: `${warriorName}`
                     }
                 )
+            message.author.send(embedList);
         } else if (classrole == 'tank') {
             const embedList = new Discord.MessageEmbed()
                 .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
@@ -105,6 +113,7 @@ module.exports = {
                         value: `${tankName}`
                     }
                 )
+            message.author.send(embedList);
         } else if (classrole == 'healer') {
             const embedList = new Discord.MessageEmbed()
                 .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
@@ -115,6 +124,7 @@ module.exports = {
                         value: `${healerName}`
                     }
                 )
+            message.author.send(embedList);
         } else if (classrole == 'dps') {
             const embedList = new Discord.MessageEmbed()
                 .setAuthor('ManyWhelps', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
@@ -125,7 +135,7 @@ module.exports = {
                         value: `${dpsName}`
                     }
                 )
+            message.author.send(embedList);
         }
-        message.author.send(embedList);
     }
 }
