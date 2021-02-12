@@ -5,7 +5,7 @@ module.exports = {
         var embedLogs = new Discord.MessageEmbed;
         console.log(args[0]);
         console.log(args[1]);
-        
+
         if (args[0] == 'mc') {
             embedLogs
                 .setAuthor(`${args[0]}`)
@@ -123,5 +123,6 @@ module.exports = {
                 .setColor('#004A94')
                 .setTimestamp()
         }
+        message.channel.send(embedLogs);
     }
 }
