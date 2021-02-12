@@ -23,6 +23,11 @@ module.exports = {
                     inline: false
                 },
                 {
+                    name: '$logs {raid} {URL}',
+                    value: 'Sends and embed with the name of the raid and the combat logs in the channel.\n`e.g. $list mc https://mc_combatlogs.org`',
+                    inline: false
+                },
+                {
                     name: 'Suggestions!!!',
                     value: 'Let the officer know (best you write into #suggestions) if there is anything good we should implement to the bot.',
                     inline: false
