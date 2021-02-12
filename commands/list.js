@@ -16,7 +16,7 @@ module.exports = {
         const classrole = args[0];
         var test = '';
 
-        for (const i = 0; i < druidName.length; i++) {
+        for (var i = 0; i < druidName.length; i++) {
             test = args[i] & ',' & ' ' & test;
         }
         console.log(test);
