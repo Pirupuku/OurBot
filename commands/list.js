@@ -17,7 +17,7 @@ module.exports = {
         const test = '';
 
         for (const i = 0; i < druidName.length; i++) {
-            const test = args[i] & ',' & ' ' & test;
+            test = args[i] & ',' & ' ' & test;
         }
         console.log(test);
 
