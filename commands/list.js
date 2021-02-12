@@ -15,50 +15,50 @@ module.exports = {
         const dpsName = message.guild.roles.cache.get('798507075353182218').members.map(m=>m.displayName);
         const classrole = args[0];
         var druids = druidName[0];
-        var hunters = '';
-        var mages = '';
-        var paladins = '';
-        var priests = '';
-        var rogues = '';
-        var warlocks = '';
-        var warriors = '';
-        var tanks = '';
-        var healers = '';
-        var dps = '';
+        var hunters = hunterName[0];
+        var mages = mageName[0];
+        var paladins = paladinName[0];
+        var priests = priestName[0];
+        var rogues = rogueName[0];
+        var warlocks = warlockName[0];
+        var warriors = warriorName[0];
+        var tanks = tankName[0];
+        var healers = healerName[0];
+        var dps = dpsName[0];
         var embedList = new Discord.MessageEmbed();
 
         for (var i = 1; i < druidName.length; i++) {
             druids = druids + ', ' + druidName[i];
         }
-        for (var i = 0; i < hunterName.length; i++) {
-            hunters = hunterName[i] + ', ' + hunters;
+        for (var i = 1; i < hunterName.length; i++) {
+            hunters = hunters + ', ' + hunterName[i];
         }
-        for (var i = 0; i < mageName.length; i++) {
-            mages = mageName[i] + ', ' + mages;
+        for (var i = 1; i < mageName.length; i++) {
+            mages = mages + ', ' + mageName[i];
         }
-        for (var i = 0; i < paladinName.length; i++) {
-            paladins = paladinName[i] + ', ' + paladins;
+        for (var i = 1; i < paladinName.length; i++) {
+            paladins = paladins + ', ' + paladinName[i];
         }
-        for (var i = 0; i < priestName.length; i++) {
-            priests = priestName[i] + ', ' + priests;
+        for (var i = 1; i < priestName.length; i++) {
+            priests = priests + ', ' + priestName[i];
         }
-        for (var i = 0; i < rogueName.length; i++) {
-            rogues = rogueName[i] + ', ' + rogues;
+        for (var i = 1; i < rogueName.length; i++) {
+            rogues = rogues + ', ' + rogueName[i];
         }
-        for (var i = 0; i < warlockName.length; i++) {
-            warlocks = warlockName[i] + ', ' + warlocks;
-        }        
-        for (var i = 0; i < warriorName.length; i++) {
-            warriors = warriorName[i] + ', ' + warriors;
+        for (var i = 1; i < warlockName.length; i++) {
+            warlocks = warlocks + ', ' + warlockName[i];
+        }       
+        for (var i = 1; i < warriorName.length; i++) {
+            warriors = warriors + ', ' + warriorName[i];
         }
-        for (var i = 0; i < tankName.length; i++) {
-            tanks = tankName[i] + ', ' + tanks;
+        for (var i = 1; i < tankName.length; i++) {
+            tanks = tanks + ', ' + tankName[i];
         }
-        for (var i = 0; i < healerName.length; i++) {
-            healers = healerName[i] + ', ' + healers;
+        for (var i = 1; i < healerName.length; i++) {
+            healers = healers + ', ' + healerName[i];
         }
-        for (var i = 0; i < dpsName.length; i++) {
-            dps = dpsName[i] + ', ' + dps;
+        for (var i = 1; i < dpsName.length; i++) {
+            dps = dps + ', ' + dpsName[i];
         }
         if (classrole == 'druid') {
             embedList
@@ -73,121 +73,121 @@ module.exports = {
                 )
             message.author.send(embedList);
         } else if (classrole == 'hunter') {
-            const embedList = new Discord.MessageEmbed()
+            embedList
                 .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
                         name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
-                        value: `${hunterName}`,
+                        value: `${hunters}`,
                         inline: false
                     }
                 )
             message.author.send(embedList);
         } else if (classrole == 'mage') {
-            const embedList = new Discord.MessageEmbed()
+            embedList
                 .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
                         name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
-                        value: `${mageName}`,
+                        value: `${mages}`,
                         inline: false
                     }
                 )
             message.author.send(embedList);
         } else if (classrole == 'paladin') {
-            const embedList = new Discord.MessageEmbed()
+            embedList
                 .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
                         name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
-                        value: `${paladinName}`,
+                        value: `${paladins}`,
                         inline: false
                     }
                 )
             message.author.send(embedList);
         } else if (classrole == 'priest') {
-            const embedList = new Discord.MessageEmbed()
+            embedList
                 .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
                         name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
-                        value: `${priestName}`,
+                        value: `${priests}`,
                         inline: false
                     }
                 )
             message.author.send(embedList);
         } else if (classrole == 'rogue') {
-            const embedList = new Discord.MessageEmbed()
+            embedList
                 .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
                         name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
-                        value: `${rogueName}`,
+                        value: `${rogues}`,
                         inline: false
                     }
                 )
             message.author.send(embedList);
         } else if (classrole == 'warlock') {
-            const embedList = new Discord.MessageEmbed()
+            embedList
                 .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
                         name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
-                        value: `${warlockName}`,
+                        value: `${warlocks}`,
                         inline: false
                     }
                 )
             message.author.send(embedList);
         } else if (classrole == 'warrior') {
-            const embedList = new Discord.MessageEmbed()
+            embedList
                 .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
                         name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
-                        value: `${warriorName}`,
+                        value: `${warriors}`,
                         inline: false
                     }
                 )
             message.author.send(embedList);
         } else if (classrole == 'tank') {
-            const embedList = new Discord.MessageEmbed()
+            embedList
                 .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
                         name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
-                        value: `${tankName}`,
+                        value: `${tanks}`,
                         inline: false
                     }
                 )
             message.author.send(embedList);
         } else if (classrole == 'healer') {
-            const embedList = new Discord.MessageEmbed()
+            embedList
                 .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
                         name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
-                        value: `${healerName}`,
+                        value: `${healers}`,
                         inline: false
                     }
                 )
             message.author.send(embedList);
         } else if (classrole == 'dps') {
-            const embedList = new Discord.MessageEmbed()
+            embedList
                 .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
                         name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
-                        value: `${dpsName}`,
+                        value: `${dps}`,
                         inline: false
                     }
                 )
