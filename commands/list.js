@@ -14,7 +14,7 @@ module.exports = {
         const healerName = message.guild.roles.cache.get('798507050752933909').members.map(m=>m.displayName);
         const dpsName = message.guild.roles.cache.get('798507075353182218').members.map(m=>m.displayName);
         const classrole = args[0];
-        var druids = '';
+        var druids = druidName[0];
         var hunters = '';
         var mages = '';
         var paladins = '';
@@ -27,8 +27,8 @@ module.exports = {
         var dps = '';
         var embedList = new Discord.MessageEmbed();
 
-        for (var i = 0; i < druidName.length; i++) {
-            druids = druidName[i] + ', ' + druids;
+        for (var i = 1; i < druidName.length; i++) {
+            druids = druids + ', ' + druidName[i];
         }
         for (var i = 0; i < hunterName.length; i++) {
             hunters = hunterName[i] + ', ' + hunters;
