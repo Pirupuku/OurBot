@@ -1,7 +1,7 @@
 module.exports = {
     name: 'logs',
     description: "creates an embed for combat logs",
-    execute(Discord, message, args, nickname) {
+    execute(Discord, bot, message, args, nickname) {
         var embedLogs = new Discord.MessageEmbed;
 
         if (args[0] == 'mc') {
@@ -134,6 +134,7 @@ module.exports = {
                 .setColor('#004A94')
                 .setTimestamp()
         }
+        bot.channels.cache.get('809669171734380544')send(embedLogs);
         message.channel.send(embedLogs);
     }
 }
