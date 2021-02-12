@@ -14,20 +14,60 @@ module.exports = {
         const healerName = message.guild.roles.cache.get('798507050752933909').members.map(m=>m.displayName);
         const dpsName = message.guild.roles.cache.get('798507075353182218').members.map(m=>m.displayName);
         const classrole = args[0];
+        var druids = '';
+        var hunters = '';
+        var mages = '';
+        var paladins = '';
+        var priests = '';
+        var rogues = '';
+        var warlocks = '';
+        var warriors = '';
+        var tanks = '';
+        var healers = '';
+        var dps = '';
+        var embedList = new Discord.MessageEmbed();
 
         for (var i = 0; i < druidName.length; i++) {
-            var test = druidName[i] + ', ' + test;
+            druids = druidName[i] + ', ' + druids;
         }
-        console.log(test);
-
+        for (var i = 0; i < hunterName.length; i++) {
+            hunters = hunterName[i] + ', ' + hunters;
+        }
+        for (var i = 0; i < mageName.length; i++) {
+            mages = mageName[i] + ', ' + mages;
+        }
+        for (var i = 0; i < paladinName.length; i++) {
+            paladins = paladinName[i] + ', ' + paladins;
+        }
+        for (var i = 0; i < priestName.length; i++) {
+            priests = priestName[i] + ', ' + priests;
+        }
+        for (var i = 0; i < rogueName.length; i++) {
+            rogues = rogueName[i] + ', ' + rogues;
+        }
+        for (var i = 0; i < warlockName.length; i++) {
+            warlocks = warlockName[i] + ', ' + warlocks;
+        }        
+        for (var i = 0; i < warriorName.length; i++) {
+            warriors = warriorName[i] + ', ' + warriors;
+        }
+        for (var i = 0; i < tankName.length; i++) {
+            tanks = tankName[i] + ', ' + tanks;
+        }
+        for (var i = 0; i < healerName.length; i++) {
+            healers = healerName[i] + ', ' + healers;
+        }
+        for (var i = 0; i < dpsName.length; i++) {
+            dps = dpsName[i] + ', ' + dps;
+        }
         if (classrole == 'druid') {
-            const embedList = new Discord.MessageEmbed()
+            embedList
                 .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
                         name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
-                        value: `${druidName}`,
+                        value: `${druids}`,
                         inline: false
                     }
                 )
