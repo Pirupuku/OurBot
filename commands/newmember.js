@@ -23,6 +23,6 @@ module.exports = {
                     inline: false
                 },
             );
-        message.channel.send( embedNewmember );
+        bot.channels.cache.get('808820077561774100').send(embedNewmember);
     }
 }
