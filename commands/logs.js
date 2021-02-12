@@ -135,6 +135,5 @@ module.exports = {
                 .setTimestamp()
         }
         bot.channels.cache.get('809669171734380544').send(embedLogs);
-        message.channel.send(embedLogs);
     }
 }
