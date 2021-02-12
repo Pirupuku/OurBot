@@ -23,7 +23,6 @@ module.exports = {
     
         var urls = new Array(links.length).fill(0).map((v, i) => links.eq(i).attr("href"));
     
-        console.log(urls);
         if (!urls.length) {
             return;
         }
