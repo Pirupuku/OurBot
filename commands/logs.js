@@ -8,7 +8,7 @@ module.exports = {
 
         if (args[0] == 'mc') {
             embedLogs
-                .setAuthor(`${args[0]}`)
+                .setAuthor("Molten Core")
                 .setURL(`${args[1]}`)
                 .setThumbnail('https://www.warcrafttavern.com/wp-content/uploads/2020/10/WoW-Classic-Molten-Core-Guide-1024x729.jpg')
                 .setDescription(`${nickname} uploaded the logs for the raid.`)
@@ -17,7 +17,7 @@ module.exports = {
         }
         if (args[0] == 'ony') {
             embedLogs
-                .setAuthor(`${args[0]}`)
+                .setAuthor("Onyxia")
                 .setURL(`${args[1]}`)
                 .setThumbnail('https://www.warcrafttavern.com/wp-content/uploads/2020/10/WoW-Classic-Onyxias-Lair-Guide.jpg')
                 .setDescription(`${nickname} uploaded the logs for the raid.`)
@@ -26,7 +26,7 @@ module.exports = {
         }
         if (args[0] == 'azuregos') {
             embedLogs
-                .setAuthor(`${args[0]}`)
+                .setAuthor("Azuregos")
                 .setURL(`${args[1]}`)
                 .setThumbnail('')
                 .setDescription(`${nickname} uploaded the logs for the raid.`)
@@ -35,7 +35,7 @@ module.exports = {
         }
         if (args[0] == 'kazzak') {
             embedLogs
-                .setAuthor(`${args[0]}`)
+                .setAuthor("Kazzak")
                 .setURL(`${args[1]}`)
                 .setThumbnail('')
                 .setDescription(`${nickname} uploaded the logs for the raid.`)
@@ -44,7 +44,7 @@ module.exports = {
         }
         if (args[0] == 'bwl') {
             embedLogs
-                .setAuthor(`${args[0]}`)
+                .setAuthor("Blackwing Lair")
                 .setURL(`${args[1]}`)
                 .setThumbnail('')
                 .setDescription(`${nickname} uploaded the logs for the raid.`)
@@ -53,7 +53,7 @@ module.exports = {
         }
         if (args[0] == 'ysondre') {
             embedLogs
-                .setAuthor(`${args[0]}`)
+                .setAuthor("Ysondre")
                 .setURL(`${args[1]}`)
                 .setThumbnail('')
                 .setDescription(`${nickname} uploaded the logs for the raid.`)
@@ -62,7 +62,7 @@ module.exports = {
         }
         if (args[0] == 'lethon') {
             embedLogs
-                .setAuthor(`${args[0]}`)
+                .setAuthor("Lethon")
                 .setURL(`${args[1]}`)
                 .setThumbnail('')
                 .setDescription(`${nickname} uploaded the logs for the raid.`)
@@ -71,7 +71,7 @@ module.exports = {
         }
         if (args[0] == 'taerar') {
             embedLogs
-                .setAuthor(`${args[0]}`)
+                .setAuthor("Taerar")
                 .setURL(`${args[1]}`)
                 .setThumbnail('')
                 .setDescription(`${nickname} uploaded the logs for the raid.`)
@@ -80,7 +80,7 @@ module.exports = {
         }
         if (args[0] == 'emeriss') {
             embedLogs
-                .setAuthor(`${args[0]}`)
+                .setAuthor("Emeriss")
                 .setURL(`${args[1]}`)
                 .setThumbnail('')
                 .setDescription(`${nickname} uploaded the logs for the raid.`)
@@ -89,7 +89,7 @@ module.exports = {
         }
         if (args[0] == 'aq40') {
             embedLogs
-                .setAuthor(`${args[0]}`)
+                .setAuthor("Temple of Ahn'Qiraji")
                 .setURL(`${args[1]}`)
                 .setThumbnail('')
                 .setDescription(`${nickname} uploaded the logs for the raid.`)
@@ -98,7 +98,7 @@ module.exports = {
         }
         if (args[0] == 'naxx') {
             embedLogs
-                .setAuthor(`${args[0]}`)
+                .setAuthor("Naxxramas")
                 .setURL(`${args[1]}`)
                 .setThumbnail('')
                 .setDescription(`${nickname} uploaded the logs for the raid.`)
@@ -107,7 +107,7 @@ module.exports = {
         }
         if (args[0] == 'zg') {
             embedLogs
-                .setAuthor(`${args[0]}`)
+                .setAuthor("Zul Gurub")
                 .setURL(`${args[1]}`)
                 .setThumbnail('')
                 .setDescription(`${nickname} uploaded the logs for the raid.`)
@@ -116,7 +116,7 @@ module.exports = {
         }
         if (args[0] == 'aq20') {
             embedLogs
-                .setAuthor(`${args[0]}`)
+                .setAuthor("Ruines of Ahn'Qiraji")
                 .setURL(`${args[1]}`)
                 .setThumbnail('')
                 .setDescription(`${nickname} uploaded the logs for the raid.`)
