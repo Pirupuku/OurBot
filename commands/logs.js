@@ -136,8 +136,8 @@ module.exports = {
                     .setTimestamp()
             }
             bot.channels.cache.get('809669171734380544').send(embedLogs);
-        } esle {
-            message.author.send("The URL you provided isn't valid.")
+        } else {
+            message.author.send("The URL you provided isn't valid.");
         }
     }
 }
