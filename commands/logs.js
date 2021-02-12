@@ -1,5 +1,3 @@
-const { DiscordAPIError } = require("discord.js")
-
 module.exports = {
     name: 'logs',
     description: "creates an embed for combat logs",
