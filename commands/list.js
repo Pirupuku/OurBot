@@ -17,7 +17,7 @@ module.exports = {
         var test = '';
 
         for (var i = 0; i < druidName.length; i++) {
-            test = args[i] & ',' & ' ' & test;
+            test = args[i] + ',' + ' ' + test;
         }
         console.log(test);
 
