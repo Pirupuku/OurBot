@@ -134,7 +134,7 @@ module.exports = {
                 .setColor('#004A94')
                 .setTimestamp()
         }
-        bot.channels.cache.get('809669171734380544')send(embedLogs);
+        bot.channels.cache.get('809669171734380544').send(embedLogs);
         message.channel.send(embedLogs);
     }
 }
