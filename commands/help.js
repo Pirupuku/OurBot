@@ -2,7 +2,7 @@ module.exports = {
     name: 'help',
     description: "shows all available commands for members",
     execute(Discord, message, args){
-        const embed = new Discord.MessageEmbed()
+        const embedHelp = new Discord.MessageEmbed()
             .setTitle('How to use the Guild Bot aka ManyWhelps')
             .setColor('#004A94')
             .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
@@ -33,6 +33,6 @@ module.exports = {
                     inline: false
                 },
             );
-        message.channel.send( embed );
+        message.channel.send( embedHelp );
     }
 }
