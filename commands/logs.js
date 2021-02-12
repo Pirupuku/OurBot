@@ -3,8 +3,6 @@ module.exports = {
     description: "creates an embed for combat logs",
     execute(Discord, message, args, nickname) {
         var embedLogs = new Discord.MessageEmbed;
-        console.log(args[0]);
-        console.log(args[1]);
 
         if (args[0] == 'mc') {
             embedLogs
