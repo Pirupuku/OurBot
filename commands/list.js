@@ -14,10 +14,9 @@ module.exports = {
         const healerName = message.guild.roles.cache.get('798507050752933909').members.map(m=>m.displayName);
         const dpsName = message.guild.roles.cache.get('798507075353182218').members.map(m=>m.displayName);
         const classrole = args[0];
-        var test = '';
 
         for (var i = 0; i < druidName.length; i++) {
-            test = druidName[i] + ', ' + test;
+            var test = druidName[i] + ', ' + test;
         }
         console.log(test);
 
