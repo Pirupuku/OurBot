@@ -4,7 +4,7 @@ module.exports = {
     execute(Discord, bot, message, args, nickname) {
         var embedLogs = new Discord.MessageEmbed;
 
-        if (message.content.includes("legacyplayers.com")) {
+        if (message.content.includes("https://legacyplayers.com")) {
             if (args[0] == 'mc') {
                 embedLogs
                     .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
