@@ -24,7 +24,7 @@ module.exports = {
                 },
                 {
                     name: '$logs {raid} {URL}',
-                    value: 'Sends and embed with the name of the raid and the combat logs in the channel #logs.\n`e.g. $list mc https://mc_combatlogs.org`',
+                    value: 'Sends and embed with the name of the raid and the combat logs in the channel #logs.\n{raid}: mc, ony, azuregos, kazzak, bwl, ysondre, lethon, taerar, emeriss, aq40, naxx, zg, aq20\n`e.g. $list mc https://mc_combatlogs.org`',
                     inline: false
                 },
                 {
