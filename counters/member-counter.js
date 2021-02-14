@@ -3,7 +3,7 @@ module.exports = async(bot, message) =>{
     
     setInterval(() =>{
         const memberCounter = guildbot.members.cache.filter(m => !m.user.bot).size;
-        const channel = guildbot.channels.cache.get('805473191177748491');
+        const channel = guildbot.channels.cache.get('773671242393714728');
         channel.setName(`Total Members: ${memberCounter}`);
         console.log('Updating Member Count');
     }, 900000);
