@@ -26,8 +26,8 @@ module.exports = {
         if (!urls.length) {
             return;
         }
-        
-        message.channel.send(`I found this image for you, ${nickname}.\n` + urls[Math.floor(Math.random() * urls.length)] + " " + message.guild.members.cache.random());
+
+        bot.channels.cache.get('798877748117635122').send(`I found this image for you, ${nickname}.\n` + urls[Math.floor(Math.random() * urls.length)] + " " + message.guild.members.cache.random());
         });
     }
 }
