@@ -94,15 +94,15 @@ bot.on('message', message => {
          return;
       }
       if(command === 'ping') {
-         bot.commands.get('ping').execute(message, args, nickname);
+         bot.commands.get('ping').execute(bot, message, args, nickname);
       } else if (command == 'fokya'){
-         bot.commands.get('fokya').execute(message, args, nickname);
+         bot.commands.get('fokya').execute(bot, message, args, nickname);
       } else if (command == 'thistime'){
-         bot.commands.get('thistime').execute(message, args, nickname);
+         bot.commands.get('thistime').execute(bot, message, args, nickname);
       } else if (command == 'where'){
-         bot.commands.get('where').execute(message, args, nickname);
+         bot.commands.get('where').execute(bot, message, args, nickname);
       } else if (command == 'whalecum'){
-         bot.commands.get('whalecum').execute(message, args, nickname);
+         bot.commands.get('whalecum').execute(bot, message, args, nickname);
       } else if (command == 'image') {
          var some_var = '';
          for (var i = 0; i < args.length; i++) {
@@ -110,7 +110,7 @@ bot.on('message', message => {
             if (i < args.length - 1)
                some_var += ' ';
          }
-         bot.commands.get('image').execute(message, args, some_var, request, cheerio, nickname);
+         bot.commands.get('image').execute(bot, message, args, some_var, request, cheerio, nickname);
       } else if (command == 'clear') {
          bot.commands.get('clear').execute(bot, message, args, nickname);
       } else if (command == 'help') {
