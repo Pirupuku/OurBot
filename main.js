@@ -124,7 +124,9 @@ bot.on('message', message => {
             bot.commands.get('newmember').execute(Discord, bot, message, args);
          } 
       } else if (command == 'class'){
+         console.log('hello world');
          if (args[0] !== undefined) {
+            console.log('bye world');
             bot.commands.get('class').execute(message, args);
          } else if (args[0] === undefined) {
             message.author.send('Please enter the class you are playing with your main! (eg: $class rogue)');
