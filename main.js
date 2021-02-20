@@ -123,6 +123,10 @@ bot.on('message', message => {
          if (command == 'newmember') {
             bot.commands.get('newmember').execute(Discord, bot, message, args);
          } 
+      } else if (command == 'class') {
+         bot.commands.get('class').execute(message, args);
+      } else if (command == 'role') {
+         bot.commands.get('role').execute(message, args);
       } else {
          message.author.send("That command doesn't exist. Please type $help in any of <Many Whelps>' channel to see a list of all my commands.")
       }
