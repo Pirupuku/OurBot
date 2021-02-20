@@ -88,12 +88,13 @@ bot.on('message', message => {
    }
    if (!message.content.startsWith(prefix) || message.author.bot) return;
    if (message.member.hasPermission('CHANGE_NICKNAME')) {
+      console.log('here i am');
       if (message.content.startsWith(prefix)) {
          message.delete({ timeout: 10000 });
       } else {
          return;
       }
-      if(command === 'ping') {
+      if (command === 'ping') {
          bot.commands.get('ping').execute(bot, message, args, nickname);
       } else if (command == 'fokya'){
          bot.commands.get('fokya').execute(bot, message, args, nickname);
