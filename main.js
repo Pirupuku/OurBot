@@ -97,6 +97,20 @@ bot.on('message', message => {
       console.log('i am still here')
       if (command === 'ping') {
          bot.commands.get('ping').execute(bot, message, args, nickname);
+      } else if (command == 'class') {
+         console.log('hello world');
+         if (args[0] !== undefined) {
+            console.log('bye world');
+            bot.commands.get('class').execute(message, args);
+         } else if (args[0] === undefined) {
+            message.author.send('Please enter the class you are playing with your main! (eg: $class rogue)');
+         }
+      } else if (command == 'role') {
+         if (args[0] !== undefined) {
+            bot.commands.get('role').execute(message, args);
+         } else if (args[0] === undefined) {
+            message.author.send('Please enter the role you are playing with your main! (eg: $role healer)');
+         }
       } else if (command == 'fokya'){
          bot.commands.get('fokya').execute(bot, message, args, nickname);
       } else if (command == 'thistime'){
@@ -125,20 +139,6 @@ bot.on('message', message => {
          if (command == 'newmember') {
             bot.commands.get('newmember').execute(Discord, bot, message, args);
          } 
-      } else if (command == 'class') {
-         console.log('hello world');
-         if (args[0] !== undefined) {
-            console.log('bye world');
-            bot.commands.get('class').execute(message, args);
-         } else if (args[0] === undefined) {
-            message.author.send('Please enter the class you are playing with your main! (eg: $class rogue)');
-         }
-      } else if (command == 'role') {
-         if (args[0] !== undefined) {
-            bot.commands.get('role').execute(message, args);
-         } else if (args[0] === undefined) {
-            message.author.send('Please enter the role you are playing with your main! (eg: $role healer)');
-         }
       } else {
          message.author.send("That command doesn't exist. Please type $help in any of <Many Whelps>' channel to see a list of all my commands.")
       }
