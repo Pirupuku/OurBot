@@ -88,19 +88,15 @@ bot.on('message', message => {
    }
    if (!message.content.startsWith(prefix) || message.author.bot) return;
    if (message.member.hasPermission('CHANGE_NICKNAME')) {
-      console.log('here i am');
       if (message.content.startsWith(prefix)) {
          message.delete({ timeout: 10000 });
       } else {
          return;
       }
-      console.log('i am still here')
       if (command === 'ping') {
          bot.commands.get('ping').execute(bot, message, args, nickname);
       } else if (command == 'class') {
-         console.log('hello world');
          if (args[0] !== undefined) {
-            console.log('bye world');
             bot.commands.get('class').execute(message, args);
          } else if (args[0] === undefined) {
             message.author.send('Please enter the class you are playing with your main! (eg: $class rogue)');
