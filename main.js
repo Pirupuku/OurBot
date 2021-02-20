@@ -94,6 +94,7 @@ bot.on('message', message => {
       } else {
          return;
       }
+      console.log('i am still here')
       if (command === 'ping') {
          bot.commands.get('ping').execute(bot, message, args, nickname);
       } else if (command == 'fokya'){
@@ -124,7 +125,7 @@ bot.on('message', message => {
          if (command == 'newmember') {
             bot.commands.get('newmember').execute(Discord, bot, message, args);
          } 
-      } else if (command == 'class'){
+      } else if (command == 'class') {
          console.log('hello world');
          if (args[0] !== undefined) {
             console.log('bye world');
@@ -132,7 +133,7 @@ bot.on('message', message => {
          } else if (args[0] === undefined) {
             message.author.send('Please enter the class you are playing with your main! (eg: $class rogue)');
          }
-      } else if (command == 'role'){
+      } else if (command == 'role') {
          if (args[0] !== undefined) {
             bot.commands.get('role').execute(message, args);
          } else if (args[0] === undefined) {
