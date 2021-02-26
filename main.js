@@ -1,17 +1,10 @@
 const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
 const Discord = require('discord.js');
-const mongoose = require('mongoose');
+const mongo = require('mongodb');
+const MongoClient = mongo.MongoClient;
 const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 
-const mongoPath = 'mongodb+srv://professions:m4n1wh3lpsprofession@professions.r1p0r.mongodb.net/database'
-module.exports = async () => {
-   await mongoose.connect(mongoPath, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-   })
-   console.log('Connected to MongoDB.');
-   return mongoose
-}
+const mongoPath = 'mongodb+srv://professions:m4n1wh3lpsprofession@professions.r1p0r.mongodb.net'
 
 const token = 'ODA2MDgwODg0NDE5NTkyMjEy.YBkPUw.txooYMWcwZgOo3bzuv4dukqntRI';
 const prefix = '$';
@@ -59,6 +52,7 @@ bot.on('ready', () => {
      console.log('Many Whelps hands out 50 DKP minus');
      bot.user.setActivity('$help', { type: 'WATCHING'}).catch(console.error);
      manyWhelps(bot);
+      
 });
 
 bot.on('message', message => {
@@ -120,9 +114,9 @@ bot.on('message', message => {
             message.author.send('Please enter the role you are playing with your main! (eg: $role healer)');
          }
       } else if (command == 'recipeadd') {
-         bot.commands.get('recipeadd').execute(message, args);
+         bot.commands.get('recipeadd').execute(MongoClient, mongoPath, message, nickname, args);
       } else if (command == 'recipesearch') {
-         bot.commands.get('recipesearch').execute(message, args);
+         bot.commands.get('recipesearch').execute(MongoClient, mongoPath, message, nickname, args);
       } else if (command == 'fokya'){
          bot.commands.get('fokya').execute(bot, message, args, nickname);
       } else if (command == 'thistime'){
