@@ -1,6 +1,17 @@
 const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
 const Discord = require('discord.js');
+const mongoose = require('mongoose');
 const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
+
+const mongoPath = 'mongodb+srv://professions:m4n1wh3lpsprofession@professions.r1p0r.mongodb.net/database'
+module.exports = async () => {
+   await mongoose.connect(mongoPath, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+   })
+   return mongoose
+}
+
 const token = 'ODA2MDgwODg0NDE5NTkyMjEy.YBkPUw.txooYMWcwZgOo3bzuv4dukqntRI';
 const prefix = '$';
 const fs = require('fs');
