@@ -116,7 +116,7 @@ bot.on('message', message => {
       } else if (command == 'addrecipe') {
          bot.commands.get('addrecipe').execute(MongoClient, mongoPath, message, nickname, args);
       } else if (command == 'searchrecipe') {
-         bot.commands.get('searchrecipe').execute(MongoClient, mongoPath, message, nickname, args);
+         bot.commands.get('searchrecipe').execute(MongoClient, mongoPath, message, nickname, args, bot);
       } else if (command == 'fokya'){
          bot.commands.get('fokya').execute(bot, message, args, nickname);
       } else if (command == 'thistime'){

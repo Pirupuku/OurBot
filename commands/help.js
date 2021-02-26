@@ -23,6 +23,16 @@ module.exports = {
                     inline: false
                 },
                 {
+                    name: '$addrecipe {recipe}',
+                    value: 'Adds a recipe you can craft.\n`e.g. $addrecipe Major Mana Potion`',
+                    inline: false
+                },
+                {
+                    name: '$searchrecipe {recipe}',
+                    value: 'Searchs through all recipes and sends you a personal message with all the crafters.\n`e.g. $searchrecipe Devilsaur` will send you everyone you can craft either Devilsaur Gauntlets or Devilsaur Leggings.',
+                    inline: false
+                },
+                {
                     name: '$logs {raid} {URL}',
                     value: 'Sends and embed with the name of the raid and the combat logs in the channel #logs.\n{raid}: mc, ony, azuregos, kazzak, bwl, ysondre, lethon, taerar, emeriss, aq40, naxx, zg, aq20\n`e.g. $list mc https://mc_combatlogs.org`',
                     inline: false
