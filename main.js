@@ -9,6 +9,7 @@ module.exports = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
    })
+   console.log('Connected to MongoDB.');
    return mongoose
 }
 
@@ -118,6 +119,10 @@ bot.on('message', message => {
          } else if (args[0] === undefined) {
             message.author.send('Please enter the role you are playing with your main! (eg: $role healer)');
          }
+      } else if (command == 'recipeadd') {
+         bot.commands.get('recipeadd').execute(message, args);
+      } else if (command == 'recipesearch') {
+         bot.commands.get('recipesearch').execute(message, args);
       } else if (command == 'fokya'){
          bot.commands.get('fokya').execute(bot, message, args, nickname);
       } else if (command == 'thistime'){
