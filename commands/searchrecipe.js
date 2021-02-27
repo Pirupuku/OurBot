@@ -1,6 +1,8 @@
-async function searchrecipe(MongoClient, mongoPath, message, nickname, args, bot) {
+async function searchrecipe(Discord, MongoClient, mongoPath, message, nickname, args, bot) {
+    var embedRecipe = new Discord.MessageEmbed();
     var someText = arrayToString(args);
     someText = someText.toLowerCase();
+    var crafterArray = [];
     const client = await MongoClient.connect(mongoPath, {useNewUrlParser: true, useUnifiedTopology: true})
             .catch(err => {console.log('LoadData failed to connect');});
         if (!client)
@@ -17,11 +19,24 @@ async function searchrecipe(MongoClient, mongoPath, message, nickname, args, bot
                 var col = await db.collection(wowRecipe[i].name).find({}).toArray()
                 for (var j = 0; j < col.length; j++) {
                     var crafterName = bot.guilds.cache.get('773542499049668608').member(col[j].crafter).displayName;
-                    console.log(crafterName);
+                    crafterArray = crafterName + ", " + crafterArray;
+                    
+                    embedRecipe
+                        .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                        .setColor('#004A94')
+                        .addField (
+                            
+                                `Hey ${nickname}, those are all the recipes and crafters I found for your search *${items}*.`,
+                                `${wowRecipe[i].name}: ${crafterArray}`,
+                                false
+                            
+                        )
+
                 }
             }
         }
-
+        message.author.send(embedRecipe);
+        embedRecipe = '';
     } catch {
        console.log('error');
     } finally {
@@ -58,7 +73,7 @@ function IsSubstr(s1, s2) { // checks if s1 is a substr of s2
 module.exports = {
     name: 'searchrecipe',
     description: "searchs for a recipe!",
-    execute(MongoClient, mongoPath, message, nickname, args, bot){
-        searchrecipe(MongoClient, mongoPath, message, nickname, args, bot);
+    execute(Discord, MongoClient, mongoPath, message, nickname, args, bot){
+        searchrecipe(Discord, MongoClient, mongoPath, message, nickname, args, bot);
     }
 }
