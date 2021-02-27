@@ -28,6 +28,8 @@ async function searchrecipe(Discord, MongoClient, mongoPath, message, nickname, 
                     .setColor('#004A94')
                     .setDescription(`Hey ${nickname}, those are all the recipes and crafters I found for your search "**${items}**".`)
                     .addField(`${titleCase(wowRecipe[i].name)}`, `${crafterArray}`, false)
+            } else {
+                message.author.send("That recipe is not available.")
             }
             crafterArray = [];
         }
