@@ -27,7 +27,7 @@ async function searchrecipe(Discord, MongoClient, mongoPath, message, nickname, 
                     .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                     .setColor('#004A94')
                     .setDescription(`Hey ${nickname}, those are all the recipes and crafters I found for your search "**${items}**".`)
-                    .addField(`${titleCase(wowRecipe[i].name)}`, `${crafterArray.slice(0, -1)}`, false)
+                    .addField(`${titleCase(wowRecipe[i].name)}`, `${crafterArray.slice(0, -2)}`, false)
             } else {
                 embedRecipe
                     .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
