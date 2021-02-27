@@ -3,6 +3,7 @@ async function searchrecipe(Discord, MongoClient, mongoPath, message, nickname, 
     var someText = arrayToString(args);
     someText = someText.toLowerCase();
     var crafterArray = [];
+    
     const client = await MongoClient.connect(mongoPath, {useNewUrlParser: true, useUnifiedTopology: true})
             .catch(err => {console.log('LoadData failed to connect');});
         if (!client)
@@ -12,37 +13,45 @@ async function searchrecipe(Discord, MongoClient, mongoPath, message, nickname, 
         var wowRecipe = await db.listCollections().toArray()
             .catch(err => {console.log('LoadData failed to connect');});
         var items = arrayToString(args);
-
+        var col;
+        var crafterName;
         for (var i = 0; i < wowRecipe.length; i++) {
             
             if (IsSubstr(items, wowRecipe[i].name)) {
-                var col = await db.collection(wowRecipe[i].name).find({}).toArray()
+                col = await db.collection(wowRecipe[i].name).find({}).toArray();
                 for (var j = 0; j < col.length; j++) {
-                    var crafterName = bot.guilds.cache.get('773542499049668608').member(col[j].crafter).displayName;
+                    crafterName = bot.guilds.cache.get('773542499049668608').member(col[j].crafter).displayName;
                     crafterArray = crafterName + ", " + crafterArray;
-                    
-                    embedRecipe
-                        .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
-                        .setColor('#004A94')
-                        .addField (
-                            
-                                `Hey ${nickname}, those are all the recipes and crafters I found for your search *${items}*.`,
-                                `${wowRecipe[i].name}: ${crafterArray}`,
-                                false
-                            
-                        )
-
                 }
+                embedRecipe
+                    .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .setDescription(`Hey ${nickname}, those are all the recipes and crafters I found for your search "**${items}**".`)
+                    .addField(`${titleCase(wowRecipe[i].name)}`, `${crafterArray}`, false)
             }
+            crafterArray = [];
         }
+        
         message.author.send(embedRecipe);
         embedRecipe = '';
+        
     } catch {
        console.log('error');
     } finally {
        client.close();
     }
 }
+
+function titleCase(str) {
+    var splitStr = str.toLowerCase().split(' ');
+    for (var i = 0; i < splitStr.length; i++) {
+        // You do not need to check if i is larger than splitStr length, as your for does that for you
+        // Assign it back to the array
+        splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+    }
+    // Directly return the joined string
+    return splitStr.join(' '); 
+ }
 
 function arrayToString(array) {
     var some_string = '';
