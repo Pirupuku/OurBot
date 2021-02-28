@@ -9,7 +9,7 @@ module.exports = {
 
         const embedRole = new Discord.MessageEmbed()
             .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
-            .setDescription('A short instruction how our Discord server works.')
+            .setTitle('A short instruction how our Discord server works.')
             .setColor('#004A94')
             .setImage('https://cdn.discordapp.com/attachments/803340340894367837/815597005002768414/unknown.png')
             .addFields(
