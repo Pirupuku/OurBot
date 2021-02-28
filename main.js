@@ -13,6 +13,8 @@ const cheerio = require('cheerio');
 const request = require('request');
 const manyWhelps = require('./counters/member-counter');
 
+const talkedRecently = new Set();
+
 const druidID = '798497796541513759';
 const hunterID = '798497755952578560';
 const warriorID = '784698785586348032';
@@ -95,7 +97,7 @@ bot.on('message', message => {
    if (!message.content.startsWith(prefix) || message.author.bot) return;
    if (message.member.hasPermission('CHANGE_NICKNAME')) {
       if (message.content.startsWith(prefix)) {
-         message.delete({ timeout: 10000 });
+         message.delete();
       } else {
          return;
       }
@@ -132,7 +134,7 @@ bot.on('message', message => {
             if (i < args.length - 1)
                some_var += ' ';
          }
-         bot.commands.get('image').execute(bot, message, args, some_var, request, cheerio, nickname);
+         bot.commands.get('image').execute(talkedRecently, message, args, some_var, request, cheerio, nickname);
       } else if (command == 'clear') {
          bot.commands.get('clear').execute(bot, message, args, nickname);
       } else if (command == 'help') {
