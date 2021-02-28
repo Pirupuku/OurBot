@@ -8,17 +8,22 @@ module.exports = {
             .setColor('#004A94')
             .addFields (
                 {
-                    name: '**1.** Let us know: Trial to join the guild OR Guest either friend or PuG?',
+                    name: '**1.** Change your *Nickname* to your ingame name-',
+                    value: '** **',
+                    inline: false
+                },
+                {
+                    name: '**2.** Let us know: Trial to join the guild OR Guest either friend or PuG?',
                     value: '```Please write either $trial OR $guest```',
                     inline: false
                 },
                 {
-                    name: '**2.** If you have chosen TRIAL -> write the Class of your main character',
+                    name: '**3.** If you have chosen TRIAL -> write the Class of your main character',
                     value: '```Please write $class {yourclass} so you get the role of your class.\n\nEg: $class druid -> you get the discord role of a druid```',
                     inline: false
                 },
                 {
-                    name: '**3.** Role of your main character in raids',
+                    name: '**4.** Role of your main character in raids',
                     value: '```Please write $role {yourrole} so that the bot gives you the specific role, which you want to have in raids.\nRoles can be: tank, healer or dps\n\nEg: $role healer -> you get the discord role of a healer```',
                     inline: false
                 },

@@ -109,7 +109,7 @@ bot.on('message', message => {
          }
       } else if (command == 'role') {
          if (args[0] !== undefined) {
-            bot.commands.get('role').execute(message, args);
+            bot.commands.get('role').execute(Discord, message, args);
          } else if (args[0] === undefined) {
             message.author.send('Please enter the role you are playing with your main! (eg: $role healer)');
          }
