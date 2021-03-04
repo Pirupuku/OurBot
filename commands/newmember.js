@@ -9,7 +9,7 @@ module.exports = {
             .addFields (
                 {
                     name: '**1.** Change your *Nickname* to your ingame name.',
-                    value: 'Right-click on your profile and chose Change Nickname (it applies only to this server)',
+                    value: '```Right-click on your profile and chose Change Nickname (it applies only to this server)```',
                     inline: false
                 },
                 {
