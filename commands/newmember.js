@@ -3,7 +3,7 @@ module.exports = {
     description: "embed for new members",
     execute(Discord, bot, message, args){
         const embedNewmember = new Discord.MessageEmbed()
-            .setAuthor('[A][LC] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+            .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
             .setDescription('Hey there! If you are here to join the guild as Trial or you came as a friend who wants to chat or as a PuG for a raid, you are in the right place.')
             .setColor('#004A94')
             .addFields (

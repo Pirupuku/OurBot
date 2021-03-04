@@ -62,7 +62,7 @@ module.exports = {
         }
         if (classrole == 'druid') {
             embedList
-                .setAuthor('[A][LC] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -74,7 +74,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'hunter') {
             embedList
-                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -86,7 +86,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'mage') {
             embedList
-                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -98,7 +98,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'paladin') {
             embedList
-                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -110,7 +110,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'priest') {
             embedList
-                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -122,7 +122,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'rogue') {
             embedList
-                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -134,7 +134,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'warlock') {
             embedList
-                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -146,7 +146,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'warrior') {
             embedList
-                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -158,7 +158,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'tank') {
             embedList
-                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -170,7 +170,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'healer') {
             embedList
-                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
@@ -182,7 +182,7 @@ module.exports = {
             message.author.send(embedList);
         } else if (classrole == 'dps') {
             embedList
-                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
