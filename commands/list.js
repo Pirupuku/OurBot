@@ -62,7 +62,7 @@ module.exports = {
         }
         if (classrole == 'druid') {
             embedList
-                .setAuthor('[A] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setAuthor('[A][LC] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
                 .addFields (
                     {
