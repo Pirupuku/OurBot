@@ -3,7 +3,7 @@ module.exports = (bot) =>{
 
     const updateMembers = (guild) => {
         const channel = guild.channels.cache.get(channelId);
-        channel.setName(`Members: ${guild.manyWhelps}`);
+        channel.setName(`Members: ${guild.memberCount}`);
     }
     
     bot.on('guildMemberAdd', (member) => updateMembers(member.guild))
