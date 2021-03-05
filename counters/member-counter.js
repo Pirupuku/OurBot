@@ -3,7 +3,7 @@ module.exports = (bot) =>{
 
     const updateMembers = (guild) => {
         const channel = guild.channels.cache.get(channelId);
-        console.log(guild.channels.cache.get(channelID).filter(m => !m.user.bot).size);
+        console.log(guild.channels.cache.get(channelId).filter(m => !m.user.bot).size);
         channel.setName(`Members: ${guild.memberCount}`);
     }
     
