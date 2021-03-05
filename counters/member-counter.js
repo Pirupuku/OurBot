@@ -11,5 +11,6 @@ module.exports = (bot) =>{
     
     const guild = bot.guilds.cache.get('773542499049668608')
     console.log(guild.members.cache.filter(m => !m.user.bot).size);
+    console.log(guild.members.cache.filter(m => m.user.bot).size);
     updateMembers(guild)
 }
