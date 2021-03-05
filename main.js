@@ -57,6 +57,14 @@ bot.on('ready', () => {
       
 });
 
+bot.on('guildMemberRemove', (member) => {
+   bot.channels.cache.get('817319885444218882').send(`**${member.displayName}** has left the server...`);
+})
+
+bot.on('guildBanRemove', (member) => {
+   bot.channels.cache.get('817319885444218882').send(`**${member.displayName}** has left the server...`);
+})
+
 bot.on('message', message => {
    const args = message.content.slice(prefix.length).split(/ +/);
    const command = args.shift().toLowerCase();
