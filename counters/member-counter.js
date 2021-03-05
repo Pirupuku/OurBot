@@ -1,4 +1,4 @@
-module.exports = async(bot, message) =>{
+module.exports = (bot) =>{
     const channelId = '805473191177748491';
 
     const updateMembers = (guild) => {
