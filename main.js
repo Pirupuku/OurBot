@@ -11,7 +11,7 @@ const prefix = '$';
 const fs = require('fs');
 const cheerio = require('cheerio');
 const request = require('request');
-const manyWhelps = require('./counters/member-counter');
+const memberCount = require('./counters/member-counter');
 
 const talkedRecently = new Set();
 
@@ -53,7 +53,7 @@ var version = '1.0.0';
 bot.on('ready', () => {
      console.log('Many Whelps hands out 50 DKP minus');
      bot.user.setActivity('$help', { type: 'WATCHING'}).catch(console.error);
-     manyWhelps(bot);
+     memberCount(bot);
       
 });
 
