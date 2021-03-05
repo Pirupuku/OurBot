@@ -1,5 +1,5 @@
 module.exports = async(bot, message) =>{
-    const guild = bot.guilds.cache.cache.get('773542499049668608')
+    const guild = bot.guilds.cache.get('773542499049668608')
     const channelId = '805473191177748491';
 
     const memberCounter = guild => {
