@@ -10,6 +10,6 @@ module.exports = (bot) =>{
     bot.on('guildMemberRemove', (member) => updateMembers(member.guild))
     
     const guild = bot.guilds.cache.get('773542499049668608')
-    console.log(guild.channels.cache.get(channelId).members.cache.filter(m => !m.user.bot).size);
+    console.log(guild.members.cache.filter(m => !m.user.bot).size);
     updateMembers(guild)
 }
