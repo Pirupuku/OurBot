@@ -1,5 +1,4 @@
 module.exports = async(bot, message) =>{
-    const guild = bot.guilds.cache.get('773542499049668608')
     const channelId = '805473191177748491';
 
     const updateMembers = guild => {
@@ -10,5 +9,6 @@ module.exports = async(bot, message) =>{
     bot.on('guildMemberAdd', member => updateMembers(member.guild))
     bot.on('guildMemberRemove', member => updateMembers(member.guild))
     
+    const guild = bot.guilds.cache.get('773542499049668608')
     updateMembers(guild)
 }
