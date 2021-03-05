@@ -6,8 +6,8 @@ module.exports = async(bot, message) =>{
         channel.setName(`Total Members: ${guild.memberCounter}`);
     }
     
-    client.on('guildMemberAdd', member => memberCounter(member.guild))
-    client.on('guildMemberRemove', member => memberCounter(member.guild))
+    bot.on('guildMemberAdd', member => memberCounter(member.guild))
+    bot.on('guildMemberRemove', member => memberCounter(member.guild))
     
     const guild = bot.guilds.cache.cache.get('773542499049668608')
     updateMembers(guild)
