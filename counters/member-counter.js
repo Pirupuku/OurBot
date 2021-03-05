@@ -10,5 +10,5 @@ module.exports = async(bot, message) =>{
     bot.on('guildMemberAdd', member => memberCounter(member.guild))
     bot.on('guildMemberRemove', member => memberCounter(member.guild))
     
-    updateMembers(guild)
+    memberCounter(guild)
 }
