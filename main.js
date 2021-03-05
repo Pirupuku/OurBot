@@ -81,7 +81,7 @@ bot.on('message', message => {
       if (message.member.roles.cache.get('798498129661263882')) {
          if (command == 'class'){
             if (args[0] !== undefined) {
-               bot.commands.get('class').execute(Discord, message, args);
+               bot.commands.get('class').execute(message, args);
             } else if (args[0] === undefined) {
                message.author.send('Please enter the class you are playing with your main! (eg: $class rogue)');
             }
