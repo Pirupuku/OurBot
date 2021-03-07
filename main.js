@@ -72,11 +72,12 @@ bot.on('message', message => {
    let member = guild.member(message.author);
    let nickname = member ? member.displayName : null;
    
-   if (message.content.startsWith(prefix)) {
-      if (message.channel.id === '808820077561774100') {
-         if (!message.content.startsWith(prefix) && !message.author.bot) {
-            message.delete({ timeout: 10000 });
-         }
+   
+   if (message.channel.id === '808820077561774100') {
+      if (!message.content.startsWith(prefix) && !message.author.bot) {
+         message.delete({ timeout: 10000 });
+      }
+      if (message.content.startsWith(prefix)) {
          if (!message.member.roles.cache.get('808291239924465694')) {
             if (command == 'trial') {
                bot.commands.get('trial').execute(message, args);
@@ -104,6 +105,7 @@ bot.on('message', message => {
          }
       }
    }
+   
    if (!message.content.startsWith(prefix) || message.author.bot) return;
    
    
