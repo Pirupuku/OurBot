@@ -19,7 +19,7 @@ module.exports = {
                 },
                 {
                     name: '**3.** If you have chosen TRIAL -> write the Class of your main character',
-                    value: '```Please write $class {yourclass} so you get the role of your class.\n\nEg: $class druid -> you get the discord role of a druid```',
+                    value: '```Please write $class {yourclass} so you get the role of your class.\nClasse are: Druid, Hunter, Mage, Paladin, Priest, Rogue, Warlock or Warrior\n\nEg: $class druid -> you get the discord role of a druid```',
                     inline: false
                 },
                 {
