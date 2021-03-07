@@ -72,32 +72,34 @@ bot.on('message', message => {
    let member = guild.member(message.author);
    let nickname = member ? member.displayName : null;
    
-   if (message.channel.id === '808820077561774100') {
-      if (!message.content.startsWith(prefix) && !message.author.bot) {
-         message.delete({ timeout: 10000 });
-      }
-      if (!message.member.roles.cache.get('808291239924465694')) {
-         if (command == 'trial') {
-            bot.commands.get('trial').execute(message, args);
+   if (message.content.startsWith(prefix)) {
+      if (message.channel.id === '808820077561774100') {
+         if (!message.content.startsWith(prefix) && !message.author.bot) {
+            message.delete({ timeout: 10000 });
          }
-      }
-      if (!message.member.roles.cache.get('798498129661263882')) {
-         if (command == 'guest') {
-            bot.commands.get('guest').execute(message, args);
-         }
-      }
-      if (message.member.roles.cache.get('798498129661263882')) {
-         if (command == 'class'){
-            if (args[0] !== undefined) {
-               bot.commands.get('class').execute(message, args);
-            } else if (args[0] === undefined) {
-               message.author.send('Please enter the class you are playing with your main! (eg: $class rogue)');
+         if (!message.member.roles.cache.get('808291239924465694')) {
+            if (command == 'trial') {
+               bot.commands.get('trial').execute(message, args);
             }
-         } else if (command == 'role'){
-            if (args[0] !== undefined) {
-               bot.commands.get('role').execute(Discord, message, args);
-            } else if (args[0] === undefined) {
-               message.author.send('Please enter the role you are playing with your main! (eg: $role healer)');
+         }
+         if (!message.member.roles.cache.get('798498129661263882')) {
+            if (command == 'guest') {
+               bot.commands.get('guest').execute(message, args);
+            }
+         }
+         if (message.member.roles.cache.get('798498129661263882')) {
+            if (command == 'class'){
+               if (args[0] !== undefined) {
+                  bot.commands.get('class').execute(message, args);
+               } else if (args[0] === undefined) {
+                  message.author.send('Please enter the class you are playing with your main! (eg: $class rogue)');
+               }
+            } else if (command == 'role'){
+               if (args[0] !== undefined) {
+                  bot.commands.get('role').execute(Discord, message, args);
+               } else if (args[0] === undefined) {
+                  message.author.send('Please enter the role you are playing with your main! (eg: $role healer)');
+               }
             }
          }
       }
