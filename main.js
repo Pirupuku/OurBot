@@ -97,7 +97,9 @@ bot.on('message', message => {
                } else if (args[0] === undefined) {
                   message.author.send('Please enter the class you are playing with your main! (eg: $class rogue)');
                }
-            } 
+            } else if (command == 'trial') {
+               message.author.send('You already got **trial** status.')
+            }
 
             if (message.member.roles.cache.get('798497796541513759') || message.member.roles.cache.get('798497755952578560') || message.member.roles.cache.get('784698785586348032') || message.member.roles.cache.get('798497338561789993') || message.member.roles.cache.get('798497547642863626') || message.member.roles.cache.get('799233980570402816') || message.member.roles.cache.get('798497653058830339') || message.member.roles.cache.get('798497604035805184') || message.member.roles.cache.get('798497704976056350')) {
                if (command == 'role'){
