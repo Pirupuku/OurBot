@@ -114,6 +114,7 @@ bot.on('message', message => {
             }
          } 
       }
+      return;
    }
    
    if (!message.content.startsWith(prefix) || message.author.bot) return;
