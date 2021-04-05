@@ -1,3 +1,5 @@
+const { debug } = require("request");
+
 module.exports = {
     name: 'ping',
     description: "this is a ping command!",
