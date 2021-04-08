@@ -74,6 +74,11 @@ bot.on('message', message => {
    
    
    if (message.channel.id === '808820077561774100') {
+      if (message.content.startsWith(prefix)) {
+         message.delete();
+      } else {
+         return;
+      }
       if (!message.content.startsWith(prefix) && !message.author.bot) {
          message.delete({ timeout: 30000 });
       }
@@ -86,8 +91,6 @@ bot.on('message', message => {
          if (!message.member.roles.cache.get('798498129661263882')) {
             if (command == 'guest') {
                bot.commands.get('guest').execute(message, args);
-            } else {
-               message.author.send('Your are not a **trial** yet, so pls get trial status first.');
             }
          }
          if (message.member.roles.cache.get('798498129661263882')) {
