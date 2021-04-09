@@ -8,6 +8,7 @@ module.exports = {
         const paladinName = message.guild.roles.cache.get('799233980570402816').members.map(m=>m.displayName);
         const priestName = message.guild.roles.cache.get('798497653058830339').members.map(m=>m.displayName);
         const rogueName = message.guild.roles.cache.get('798497604035805184').members.map(m=>m.displayName);
+        const shamanName = message.guild.roles.cache.get('798497547642863626').members.map(m=>m.displayName);
         const warlockName = message.guild.roles.cache.get('798497338561789993').members.map(m=>m.displayName);
         const warriorName = message.guild.roles.cache.get('784698785586348032').members.map(m=>m.displayName);
         const tankName = message.guild.roles.cache.get('798507023020589066').members.map(m=>m.displayName);
@@ -20,6 +21,7 @@ module.exports = {
         var paladins = paladinName[0];
         var priests = priestName[0];
         var rogues = rogueName[0];
+        var shamans = shamanName[0];
         var warlocks = warlockName[0];
         var warriors = warriorName[0];
         var tanks = tankName[0];
@@ -44,6 +46,9 @@ module.exports = {
         }
         for (var i = 1; i < rogueName.length; i++) {
             rogues = rogues + ', ' + rogueName[i];
+        }
+        for (var i = 1; i < shamanName.length; i++) {
+            shamans = shamans + ', ' + shamanName[i];
         }
         for (var i = 1; i < warlockName.length; i++) {
             warlocks = warlocks + ', ' + warlockName[i];
@@ -132,7 +137,19 @@ module.exports = {
                     }
                 )
             message.author.send(embedList);
-        } else if (classrole == 'warlock') {
+        } else if (classrole == 'shaman') {
+            embedList
+                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setColor('#004A94')
+                .addFields (
+                    {
+                        name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
+                        value: `${shamans}`,
+                        inline: false
+                    }
+                )
+            message.author.send(embedList);
+        }else if (classrole == 'warlock') {
             embedList
                 .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                 .setColor('#004A94')
@@ -188,6 +205,59 @@ module.exports = {
                     {
                         name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
                         value: `${dps}`,
+                        inline: false
+                    }
+                )
+            message.author.send(embedList);
+        } else if (classrole == 'all') {
+            embedList
+                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                .setColor('#004A94')
+                .setDescription(`Hey ${nickname}, here is a list of every class from the guild.`)
+                .addFields (
+                    {
+                        name: `Druids:`,
+                        value: `${druids}`,
+                        inline: false
+                    },
+                    {
+                        name: `Hunters:`,
+                        value: `${hunters}`,
+                        inline: false
+                    },
+                    {
+                        name: `Mages:`,
+                        value: `${mages}`,
+                        inline: false
+                    },
+                    {
+                        name: `Paladins:`,
+                        value: `${paladins}`,
+                        inline: false
+                    },
+                    {
+                        name: `Priests:`,
+                        value: `${priests}`,
+                        inline: false
+                    },
+                    {
+                        name: `Rogues:`,
+                        value: `${rogues}`,
+                        inline: false
+                    },
+                    {
+                        name: `Shamans:`,
+                        value: `${shamans}`,
+                        inline: false
+                    },
+                    {
+                        name: `Warlocks:`,
+                        value: `${warlocks}`,
+                        inline: false
+                    },
+                    {
+                        name: `Warriors:`,
+                        value: `${warriors}`,
                         inline: false
                     }
                 )

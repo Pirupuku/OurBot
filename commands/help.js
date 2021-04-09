@@ -13,12 +13,12 @@ module.exports = {
                     inline: false
                 },
                 {
-                    name: '$fokya, $image {what to search for}, $thistime, $where, $whalecum',
+                    name: '$fokya <@user>, $image {what to search for}, $thistime, $where, $whalecum <@user>',
                     value: 'Try them out to see what the bot can do!\nFor the image command you write e.g. `$image many whelps` to print random images for the topic you want.',
                     inline: false
                 },
                 {
-                    name: '$list {class or role}',
+                    name: '$list {class or role or all}',
                     value: 'Sends you a DM with all the names of the class or role!\nClass: Druid, Hunter, Mage, Paladin, Priest, Rogue, Warlock, Warrior\nRole: Tank, Healer, DPS\n`e.g. $list mage -> all mages`\n`e.g. $list tank -> all tanks`',
                     inline: false
                 },
@@ -43,6 +43,6 @@ module.exports = {
                     inline: false
                 },
             );
-        message.channel.send( embedHelp );
+        message.author.send( embedHelp );
     }
 }
