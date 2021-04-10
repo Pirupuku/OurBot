@@ -28,7 +28,7 @@ module.exports = {
         var healers = healerName[0];
         var dps = dpsName[0];
         var embedList = new Discord.MessageEmbed();
-
+        
         for (var i = 1; i < druidName.length; i++) {
             druids = druids + ', ' + druidName[i];
         }
@@ -71,7 +71,7 @@ module.exports = {
                 .setColor('#004A94')
                 .addFields (
                     {
-                        name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
+                        name: `Hey ${nickname}, those are all the **${classrole}s (${druidName.length})** I found.`,
                         value: `${druids}`,
                         inline: false
                     }
@@ -83,7 +83,7 @@ module.exports = {
                 .setColor('#004A94')
                 .addFields (
                     {
-                        name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
+                        name: `Hey ${nickname}, those are all the **${classrole}s (${hunterName.length})** I found.`,
                         value: `${hunters}`,
                         inline: false
                     }
@@ -95,7 +95,7 @@ module.exports = {
                 .setColor('#004A94')
                 .addFields (
                     {
-                        name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
+                        name: `Hey ${nickname}, those are all the **${classrole}s (${mageName.length})** I found.`,
                         value: `${mages}`,
                         inline: false
                     }
@@ -107,7 +107,7 @@ module.exports = {
                 .setColor('#004A94')
                 .addFields (
                     {
-                        name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
+                        name: `Hey ${nickname}, those are all the **${classrole}s (${paladinName.length})** I found.`,
                         value: `${paladins}`,
                         inline: false
                     }
@@ -119,7 +119,7 @@ module.exports = {
                 .setColor('#004A94')
                 .addFields (
                     {
-                        name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
+                        name: `Hey ${nickname}, those are all the **${classrole}s (${priestName.length})** I found.`,
                         value: `${priests}`,
                         inline: false
                     }
@@ -131,7 +131,7 @@ module.exports = {
                 .setColor('#004A94')
                 .addFields (
                     {
-                        name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
+                        name: `Hey ${nickname}, those are all the **${classrole}s (${rogueName.length})** I found.`,
                         value: `${rogues}`,
                         inline: false
                     }
@@ -143,7 +143,7 @@ module.exports = {
                 .setColor('#004A94')
                 .addFields (
                     {
-                        name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
+                        name: `Hey ${nickname}, those are all the **${classrole}s (${shamanName.length})** I found.`,
                         value: `${shamans}`,
                         inline: false
                     }
@@ -155,7 +155,7 @@ module.exports = {
                 .setColor('#004A94')
                 .addFields (
                     {
-                        name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
+                        name: `Hey ${nickname}, those are all the **${classrole}s (${warlockName.length})** I found.`,
                         value: `${warlocks}`,
                         inline: false
                     }
@@ -167,7 +167,7 @@ module.exports = {
                 .setColor('#004A94')
                 .addFields (
                     {
-                        name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
+                        name: `Hey ${nickname}, those are all the **${classrole}s (${warriorName.length})** I found.`,
                         value: `${warriors}`,
                         inline: false
                     }
@@ -179,7 +179,7 @@ module.exports = {
                 .setColor('#004A94')
                 .addFields (
                     {
-                        name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
+                        name: `Hey ${nickname}, those are all the **${classrole}s (${tankName.length})** I found.`,
                         value: `${tanks}`,
                         inline: false
                     }
@@ -191,7 +191,7 @@ module.exports = {
                 .setColor('#004A94')
                 .addFields (
                     {
-                        name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
+                        name: `Hey ${nickname}, those are all the **${classrole}s (${healerName.length})** I found.`,
                         value: `${healers}`,
                         inline: false
                     }
@@ -203,7 +203,7 @@ module.exports = {
                 .setColor('#004A94')
                 .addFields (
                     {
-                        name: `Hey ${nickname}, those are all the ${classrole}s I found.`,
+                        name: `Hey ${nickname}, those are all the **${classrole}s (${dpsName.length})** I found.`,
                         value: `${dps}`,
                         inline: false
                     }
@@ -216,47 +216,47 @@ module.exports = {
                 .setDescription(`Hey ${nickname}, here is a list of every class from the guild.`)
                 .addFields (
                     {
-                        name: `Druids:`,
+                        name: `Druids (${druidName.length}):`,
                         value: `${druids}`,
                         inline: false
                     },
                     {
-                        name: `Hunters:`,
+                        name: `Hunters (${hunterName.length}):`,
                         value: `${hunters}`,
                         inline: false
                     },
                     {
-                        name: `Mages:`,
+                        name: `Mages (${mageName.length}):`,
                         value: `${mages}`,
                         inline: false
                     },
                     {
-                        name: `Paladins:`,
+                        name: `Paladins (${paladinName.length}):`,
                         value: `${paladins}`,
                         inline: false
                     },
                     {
-                        name: `Priests:`,
+                        name: `Priests (${priestName.length}):`,
                         value: `${priests}`,
                         inline: false
                     },
                     {
-                        name: `Rogues:`,
+                        name: `Rogues (${rogueName.length}):`,
                         value: `${rogues}`,
                         inline: false
                     },
                     {
-                        name: `Shamans:`,
+                        name: `Shamans (${shamanName.length}):`,
                         value: `${shamans}`,
                         inline: false
                     },
                     {
-                        name: `Warlocks:`,
+                        name: `Warlocks (${warlockName.length}):`,
                         value: `${warlocks}`,
                         inline: false
                     },
                     {
-                        name: `Warriors:`,
+                        name: `Warriors (${warriorName.length}):`,
                         value: `${warriors}`,
                         inline: false
                     }
