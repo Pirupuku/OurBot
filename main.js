@@ -74,9 +74,6 @@ bot.on('message', message => {
    
    
    if (message.channel.id === '808820077561774100') {
-      if (message.content.startsWith(prefix)) {
-         message.delete();
-      }
       if (!message.content.startsWith(prefix) && !message.author.bot) {
          message.author.send('If something is not working or you got a question -> pls DM Dieken');
       }
@@ -120,6 +117,7 @@ bot.on('message', message => {
             } 
          } 
       }
+      message.delete()
       return;
    }
    
