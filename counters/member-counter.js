@@ -18,7 +18,7 @@ module.exports = (bot) =>{
 
     const updateMembers = (guild) => {
         const channel = guild.channels.cache.get(channelId);
-        var realNumber = guild.memberCount - bots - guests - (83 - withoutRole);
+        var realNumber = guild.memberCount - bots - guests - (guild.memberCount - withoutRole);
         channel.setName(`Members: ${realNumber}`);
     }
     
