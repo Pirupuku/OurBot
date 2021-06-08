@@ -13,8 +13,8 @@ module.exports = {
                     inline: false
                 },
                 {
-                    name: '**2.** Let us know: Trial to join the guild OR Guest either friend or PuG?',
-                    value: '```Please write either $trial OR $guest```',
+                    name: '**2.** Trial OR Guest?',
+                    value: '```Please write either $trial OR $guest\n\nTrial: A person who wants to actively join the guild.\nGuest: A PuG or someone we know from before/another server and want to stay in contact with```',
                     inline: false
                 },
                 {
