@@ -80,7 +80,7 @@ bot.on('message', message => {
          return;
       }
       if (!message.content.startsWith(prefix) && !message.author.bot) {
-         message.author.send('If something is not working or you got a question -> pls DM `Dieken`');
+         message.author.send('If something is not working or you got a question -> pls DM Dieken');
       }
       if (message.content.startsWith(prefix)) {
          if (!message.member.roles.cache.get('808291239924465694')) {
