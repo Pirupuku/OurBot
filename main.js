@@ -112,14 +112,14 @@ bot.on('message', message => {
                      message.author.send('Please enter the role you are playing with your main! (eg: $role healer)');
                   }
                }
-            }
-            if (message.member.roles.cache.get('798497898434134066') || message.member.roles.cache.get('798497871376547881') || message.member.roles.cache.get('800024729997148161')) {
-               if (command == 'newmember') {
-                  bot.commands.get('newmember').execute(Discord, bot, message, args);
-               } 
             } else {
                message.author.send('Please chose a **class** first.')
             }
+         }
+         if (message.member.roles.cache.get('798497898434134066') || message.member.roles.cache.get('798497871376547881') || message.member.roles.cache.get('800024729997148161')) {
+            if (command == 'newmember') {
+               bot.commands.get('newmember').execute(Discord, bot, message, args);
+            } 
          } 
       }
       return;
