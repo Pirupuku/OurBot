@@ -16,6 +16,14 @@ module.exports = (bot) =>{
     const officer = bot.guilds.cache.get('773542499049668608').members.cache.filter(member => member.roles.cache.find(role => role == officerRole)).map(member => member.user.tag).length
     const withoutRole = guests + trial + member + social + raider + officer + bots
 
+    console.log(`guest: ${guests}`);
+    console.log(`trial: ${trial}`);
+    console.log(`member: ${member}`);
+    console.log(`social: ${social}`);
+    console.log(`raider: ${raider}`);
+    console.log(`officer: ${officer}`);
+    console.log(`bots: ${bots}`);
+
     const updateMembers = (guild) => {
         const channel = guild.channels.cache.get(channelId);
         var realNumber = guild.memberCount - bots - guests - (guild.memberCount - withoutRole);
