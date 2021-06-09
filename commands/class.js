@@ -13,6 +13,9 @@ module.exports = {
         const classRogue = '798497604035805184';
         const classMage = '798497704976056350';
 
+        const argument = args[0].shift().toLowerCase();
+        console.log(argument);
+        
         if (args[0] == 'druid'){
             if (message.member.roles.cache.has(classDruid)){
                 message.author.send('You already are a DRUID!')
