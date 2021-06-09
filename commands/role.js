@@ -7,6 +7,8 @@ module.exports = {
         const roleHealer = '798507050752933909';
         const roleDps = '798507075353182218';
 
+        args[0] = args[0].toLowerCase();
+
         const embedRole = new Discord.MessageEmbed()
             .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
             .setTitle('A short instruction how our Discord server works.')
