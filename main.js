@@ -74,6 +74,7 @@ bot.on('message', message => {
    
    
    if (message.channel.id === '808820077561774100') {
+      bot.channels.cache.get('852649234355585098').send(`${nickname} (${message.author.tag}): ${message}`);
       if (!message.content.startsWith(prefix) && !message.author.bot) {
          message.author.send('If something is not working or you got a question -> pls DM Dieken');
       }
@@ -82,13 +83,11 @@ bot.on('message', message => {
             if (command == 'trial') {
                bot.commands.get('trial').execute(message, args);
             }
-         }
-         if (!message.member.roles.cache.get('798498129661263882')) {
+         } else if (!message.member.roles.cache.get('798498129661263882')) {
             if (command == 'guest') {
                bot.commands.get('guest').execute(message, args);
             }
-         }
-         if (message.member.roles.cache.get('798498129661263882')) {
+         } else if (message.member.roles.cache.get('798498129661263882')) {
             if (command == 'class'){
                if (args[0] !== undefined) {
                   bot.commands.get('class').execute(message, args);
@@ -108,12 +107,11 @@ bot.on('message', message => {
                   }
                }
             }
-         }
-         if (message.member.roles.cache.get('798497898434134066') || message.member.roles.cache.get('798497871376547881') || message.member.roles.cache.get('800024729997148161')) {
+         } else if (message.member.roles.cache.get('798497898434134066') || message.member.roles.cache.get('798497871376547881') || message.member.roles.cache.get('800024729997148161')) {
             if (command == 'newmember') {
                bot.commands.get('newmember').execute(Discord, bot, message, args);
-            } 
-         } 
+            }
+         }
       }
       message.delete()
       return;
