@@ -3,6 +3,6 @@ module.exports = {
     description: "where the fuck are you all!",
     execute(bot, message, args, nickname){
         let user = message.mentions.users.first().toString();
-        message.channel.send(`${nickname} is looking ` + user + `\n` +'https://imgur.com/gallery/mKKAr')
+        message.channel.send(`${nickname} is looking for ` + user + `\n` +'https://imgur.com/gallery/mKKAr')
     }
 }
