@@ -83,19 +83,19 @@ bot.on('message', message => {
             if (command == 'trial') {
                bot.commands.get('trial').execute(message, args);
             }
-         } else if (!message.member.roles.cache.get('798498129661263882')) {
+         }
+         if (!message.member.roles.cache.get('798498129661263882')) {
             if (command == 'guest') {
                bot.commands.get('guest').execute(message, args);
             }
-         } else if (message.member.roles.cache.get('798498129661263882')) {
+         }
+         if (message.member.roles.cache.get('798498129661263882')) {
             if (command == 'class'){
                if (args[0] !== undefined) {
                   bot.commands.get('class').execute(message, args);
                } else if (args[0] === undefined) {
                   message.author.send('Please enter the class you are playing with your main! (eg: $class rogue)');
                }
-            } else if (command == 'trial') {
-               message.author.send('You already got **trial** status.')
             }
 
             if (message.member.roles.cache.get('798497796541513759') || message.member.roles.cache.get('798497755952578560') || message.member.roles.cache.get('784698785586348032') || message.member.roles.cache.get('798497338561789993') || message.member.roles.cache.get('798497547642863626') || message.member.roles.cache.get('799233980570402816') || message.member.roles.cache.get('798497653058830339') || message.member.roles.cache.get('798497604035805184') || message.member.roles.cache.get('798497704976056350')) {
@@ -107,7 +107,8 @@ bot.on('message', message => {
                   }
                }
             }
-         } else if (message.member.roles.cache.get('798497898434134066') || message.member.roles.cache.get('798497871376547881') || message.member.roles.cache.get('800024729997148161')) {
+         }
+         if (message.member.roles.cache.get('798497898434134066') || message.member.roles.cache.get('798497871376547881') || message.member.roles.cache.get('800024729997148161')) {
             if (command == 'newmember') {
                bot.commands.get('newmember').execute(Discord, bot, message, args);
             }

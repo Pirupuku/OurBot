@@ -30,7 +30,7 @@ module.exports = {
                 message.member.roles.remove(classMage).catch(console.error); 
                 message.author.send('You are a DRUID now!');
             }  
-        }  else if(args[0] == 'nodruid'){
+        }  else if (args[0] == 'nodruid'){
             if (!message.member.roles.cache.has(classDruid)){
                 message.author.send('You are not a DRUID!');
             } else {
