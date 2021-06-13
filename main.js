@@ -62,7 +62,7 @@ bot.on('guildMemberRemove', (member) => {
 })
 
 bot.on('guildBanRemove', (member) => {
-   bot.channels.cache.get('817319885444218882').send(`**${member.displayName}** has left the server...`);
+   bot.channels.cache.get('817319885444218882').send(`**${member.user.tag}** **(${member.displayName})** has left the server...`);
 })
 
 bot.on('guildMemberUpdate', (oldMember, newMember) => {
