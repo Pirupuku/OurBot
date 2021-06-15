@@ -58,16 +58,16 @@ bot.on('ready', () => {
 });
 
 bot.on('guildMemberRemove', (member) => {
-   bot.channels.cache.get('817319885444218882').send(`**${member.displayName}** has left the server...`);
+   bot.channels.cache.get('817319885444218882').send(`**${member.user.tag}: ${member.displayName}** has left the server...`);
 })
 
 bot.on('guildBanRemove', (member) => {
-   bot.channels.cache.get('817319885444218882').send(`**${member.user.tag}** **(${member.displayName})** has left the server...`);
+   bot.channels.cache.get('817319885444218882').send(`**${member.user.tag}: ${member.user.tag}** **(${member.displayName})** has left the server...`);
 })
 
 bot.on('guildMemberUpdate', (oldMember, newMember) => {
    if(newMember.nickname && oldMember.nickname !== newMember.nickname) {
-      bot.channels.cache.get('852649234355585098').send(`${oldMember.user.tag}: ${oldMember.nickname} changed his nickname to ${newMember.nickname}`);
+      bot.channels.cache.get('852649234355585098').send(`**${oldMember.user.tag}: ${oldMember.nickname}** changed his nickname to **${newMember.nickname}**`);
    }
 });
 
