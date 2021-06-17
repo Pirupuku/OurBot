@@ -32,6 +32,7 @@ module.exports = (bot) =>{
     
     bot.on('guildMemberAdd', (member) => updateMembers(member.guild))
     bot.on('guildMemberRemove', (member) => updateMembers(member.guild))
+    bot.on('guildMemberUpdate', (member) => updateMembers(member.guild))
     
     const guild = bot.guilds.cache.get('773542499049668608')
     updateMembers(guild)
