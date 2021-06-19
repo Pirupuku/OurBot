@@ -33,10 +33,9 @@ module.exports = async (bot) => {
     bot.on('guildMemberAdd', (member) => updateMembers(member.guild))
     bot.on('guildMemberRemove', (member) => updateMembers(member.guild))
     bot.on('guildMemberUpdate', (member) => updateMembers(member.guild))
-    
+
     setInterval(function () {
         updateMembers(guild);
-        console.log("test");
     }, 1000*60*30)
 
     const guild = bot.guilds.cache.get('773542499049668608')
