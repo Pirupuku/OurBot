@@ -1,4 +1,4 @@
-module.exports = (bot) =>{
+module.exports = async (bot) => {
     const channelId = '805473191177748491';
     const botRole = bot.guilds.cache.get('773542499049668608').roles.cache.find(role => role == '798524203120197652');
     const guestRole = bot.guilds.cache.get('773542499049668608').roles.cache.find(role => role == '808291239924465694');
@@ -34,6 +34,11 @@ module.exports = (bot) =>{
     bot.on('guildMemberRemove', (member) => updateMembers(member.guild))
     bot.on('guildMemberUpdate', (member) => updateMembers(member.guild))
     
+    setInterval(function () {
+        updateMembers(guild);
+        console.log("test");
+    }, 1000*60*30)
+
     const guild = bot.guilds.cache.get('773542499049668608')
     updateMembers(guild)
 }
