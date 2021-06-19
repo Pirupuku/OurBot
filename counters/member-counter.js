@@ -7,14 +7,14 @@ module.exports = async (bot) => {
     const socialRole = bot.guilds.cache.get('773542499049668608').roles.cache.find(role => role == '798512429175668736');
     const raiderRole = bot.guilds.cache.get('773542499049668608').roles.cache.find(role => role == '798498626442887199');
     const officerRole = bot.guilds.cache.get('773542499049668608').roles.cache.find(role => role == '798497871376547881');
-    const bots = bot.guilds.cache.get('773542499049668608').members.cache.filter(member => member.roles.cache.find(role => role == botRole)).map(member => member.user.tag).length
-    const guests = bot.guilds.cache.get('773542499049668608').members.cache.filter(member => member.roles.cache.find(role => role == guestRole)).map(member => member.user.tag).length
-    const trial = bot.guilds.cache.get('773542499049668608').members.cache.filter(member => member.roles.cache.find(role => role == trialRole)).map(member => member.user.tag).length
-    const member = bot.guilds.cache.get('773542499049668608').members.cache.filter(member => member.roles.cache.find(role => role == memberRole)).map(member => member.user.tag).length
-    const social = bot.guilds.cache.get('773542499049668608').members.cache.filter(member => member.roles.cache.find(role => role == socialRole)).map(member => member.user.tag).length
-    const raider = bot.guilds.cache.get('773542499049668608').members.cache.filter(member => member.roles.cache.find(role => role == raiderRole)).map(member => member.user.tag).length
-    const officer = bot.guilds.cache.get('773542499049668608').members.cache.filter(member => member.roles.cache.find(role => role == officerRole)).map(member => member.user.tag).length
-    const withoutRole = guests + trial + member + social + raider + officer + bots
+    var bots = bot.guilds.cache.get('773542499049668608').members.cache.filter(member => member.roles.cache.find(role => role == botRole)).map(member => member.user.tag).length
+    var guests = bot.guilds.cache.get('773542499049668608').members.cache.filter(member => member.roles.cache.find(role => role == guestRole)).map(member => member.user.tag).length
+    var trial = bot.guilds.cache.get('773542499049668608').members.cache.filter(member => member.roles.cache.find(role => role == trialRole)).map(member => member.user.tag).length
+    var member = bot.guilds.cache.get('773542499049668608').members.cache.filter(member => member.roles.cache.find(role => role == memberRole)).map(member => member.user.tag).length
+    var social = bot.guilds.cache.get('773542499049668608').members.cache.filter(member => member.roles.cache.find(role => role == socialRole)).map(member => member.user.tag).length
+    var raider = bot.guilds.cache.get('773542499049668608').members.cache.filter(member => member.roles.cache.find(role => role == raiderRole)).map(member => member.user.tag).length
+    var officer = bot.guilds.cache.get('773542499049668608').members.cache.filter(member => member.roles.cache.find(role => role == officerRole)).map(member => member.user.tag).length
+    var withoutRole = guests + trial + member + social + raider + officer + bots
 
     console.log(`guest: ${guests}`);
     console.log(`trial: ${trial}`);
