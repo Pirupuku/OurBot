@@ -1,4 +1,4 @@
-module.exports = async (bot) => {
+module.exports = (bot) => {
     const channelId = '805473191177748491';
     const botRole = bot.guilds.cache.get('773542499049668608').roles.cache.find(role => role == '798524203120197652');
     const guestRole = bot.guilds.cache.get('773542499049668608').roles.cache.find(role => role == '808291239924465694');
@@ -16,15 +16,7 @@ module.exports = async (bot) => {
     var officer = bot.guilds.cache.get('773542499049668608').members.cache.filter(member => member.roles.cache.find(role => role == officerRole)).map(member => member.user.tag).length
     var withoutRole = guests + trial + member + social + raider + officer + bots
 
-    console.log(`guest: ${guests}`);
-    console.log(`trial: ${trial}`);
-    console.log(`member: ${member}`);
-    console.log(`social: ${social}`);
-    console.log(`raider: ${raider}`);
-    console.log(`officer: ${officer}`);
-    console.log(`bots: ${bots}`);
-
-    const updateMembers = (guild) => {
+    var updateMembers = (guild) => {
         const channel = guild.channels.cache.get(channelId);
         var realNumber = guild.memberCount - bots - guests - (guild.memberCount - withoutRole);
         channel.setName(`Members: ${realNumber}`);
@@ -34,10 +26,11 @@ module.exports = async (bot) => {
     bot.on('guildMemberRemove', (member) => updateMembers(member.guild))
     bot.on('guildMemberUpdate', (member) => updateMembers(member.guild))
 
+    const guild = bot.guilds.cache.get('773542499049668608')
+
     setInterval(function () {
         updateMembers(guild);
-    }, 1000*60*30)
+    }, 5000)
 
-    const guild = bot.guilds.cache.get('773542499049668608')
     updateMembers(guild)
 }
