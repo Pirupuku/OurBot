@@ -118,13 +118,13 @@ bot.on('message', message => {
                }
             }
          }
+         message.delete()
          if (message.member.roles.cache.get('798497898434134066') || message.member.roles.cache.get('798497871376547881') || message.member.roles.cache.get('800024729997148161')) {
             if (command == 'newmember') {
                bot.commands.get('newmember').execute(Discord, bot, message, args);
             }
          }
       }
-      message.delete()
       return;
    }
    
