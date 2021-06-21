@@ -19,12 +19,12 @@ module.exports = {
                 },
                 {
                     name: '**3.** If you have chosen TRIAL -> write the Class of your main character',
-                    value: '```Please write $class {yourclass} so you get the role of your class.\nClasse are: Druid, Hunter, Mage, Paladin, Priest, Rogue, Warlock or Warrior\n\nEg: $class druid -> you get the discord role of a druid```',
+                    value: '```Please write $class yourclass so you get the role of your class.\nClasse are: Druid, Hunter, Mage, Paladin, Priest, Rogue, Warlock or Warrior\n\nEg: $class druid -> you get the discord role of a druid```',
                     inline: false
                 },
                 {
                     name: '**4.** Role of your main character in raids',
-                    value: '```Please write $role {yourrole} so that the bot gives you the specific role, which you want to have in raids.\nRoles can be: tank, healer or dps\n\nEg: $role healer -> you get the discord role of a healer```',
+                    value: '```Please write $role yourrole so that the bot gives you the specific role, which you want to have in raids.\nRoles can be: tank, healer or dps\n\nEg: $role healer -> you get the discord role of a healer```',
                     inline: false
                 },
             );
