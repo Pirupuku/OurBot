@@ -67,7 +67,11 @@ bot.on('guildBanRemove', (member) => {
 
 bot.on('guildMemberUpdate', (oldMember, newMember) => {
    if(newMember.nickname && oldMember.nickname !== newMember.nickname) {
-      bot.channels.cache.get('852649234355585098').send(`**${oldMember.user.tag}: ${oldMember.nickname}** changed his nickname to **${newMember.nickname}**`);
+      if (!oldMember.nickname || oldMember.nickname === undefined) {
+         bot.channels.cache.get('852649234355585098').send(`**${oldMember.user.tag}: ${oldMember.user.username}** changed his nickname to **${newMember.nickname}**`);
+      } else {
+         bot.channels.cache.get('852649234355585098').send(`**${oldMember.user.tag}: ${oldMember.nickname}** changed his nickname to **${newMember.nickname}**`);
+      }
    }
 });
 
