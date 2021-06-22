@@ -30,7 +30,7 @@ module.exports = (bot) => {
     const guild = bot.guilds.cache.get('773542499049668608')
 
     setInterval(function () {
-        updateMembers(guild);
+        
     }, 1000*60*30)
 
     updateMembers(guild)
