@@ -14,6 +14,11 @@ module.exports = {
         const tankName = message.guild.roles.cache.get('798507023020589066').members.map(m=>m.displayName);
         const healerName = message.guild.roles.cache.get('798507050752933909').members.map(m=>m.displayName);
         const dpsName = message.guild.roles.cache.get('798507075353182218').members.map(m=>m.displayName);
+        const trialName = message.guild.roles.cache.get('798498129661263882').members.map(m=>m.displayName);
+        const memberName = message.guild.roles.cache.get('773548993040482346').members.map(m=>m.displayName);
+        const socialName = message.guild.roles.cache.get('798512429175668736').members.map(m=>m.displayName);
+        const raiderName = message.guild.roles.cache.get('798498626442887199').members.map(m=>m.displayName);
+        const officerName = message.guild.roles.cache.get('798497871376547881').members.map(m=>m.displayName);
         const classrole = args[0];
         var druids = druidName[0];
         var hunters = hunterName[0];
@@ -27,188 +32,507 @@ module.exports = {
         var tanks = tankName[0];
         var healers = healerName[0];
         var dps = dpsName[0];
+        var trials = trialName[0];
+        var members = memberName[0];
+        var socials = socialName[0];
+        var raiders = raiderName[0];
+        var officers = officerName[0];
         var embedList = new Discord.MessageEmbed();
         
-        for (var i = 1; i < druidName.length; i++) {
-            druids = druids + ', ' + druidName[i];
-        }
-        for (var i = 1; i < hunterName.length; i++) {
-            hunters = hunters + ', ' + hunterName[i];
-        }
-        for (var i = 1; i < mageName.length; i++) {
-            mages = mages + ', ' + mageName[i];
-        }
-        for (var i = 1; i < paladinName.length; i++) {
-            paladins = paladins + ', ' + paladinName[i];
-        }
-        for (var i = 1; i < priestName.length; i++) {
-            priests = priests + ', ' + priestName[i];
-        }
-        for (var i = 1; i < rogueName.length; i++) {
-            rogues = rogues + ', ' + rogueName[i];
-        }
-        for (var i = 1; i < shamanName.length; i++) {
-            shamans = shamans + ', ' + shamanName[i];
-        }
-        for (var i = 1; i < warlockName.length; i++) {
-            warlocks = warlocks + ', ' + warlockName[i];
-        }       
-        for (var i = 1; i < warriorName.length; i++) {
-            warriors = warriors + ', ' + warriorName[i];
-        }
-        for (var i = 1; i < tankName.length; i++) {
-            tanks = tanks + ', ' + tankName[i];
-        }
-        for (var i = 1; i < healerName.length; i++) {
-            healers = healers + ', ' + healerName[i];
-        }
-        for (var i = 1; i < dpsName.length; i++) {
-            dps = dps + ', ' + dpsName[i];
-        }
         if (classrole == 'druid') {
-            embedList
-                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
-                .setColor('#004A94')
-                .addFields (
-                    {
-                        name: `Hey ${nickname}, those are all the **${classrole}s (${druidName.length})** I found.`,
-                        value: `${druids}`,
-                        inline: false
-                    }
-                )
-            message.author.send(embedList);
+            if (druidName.length == 0) {
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, I couldn't find any **${classrole}s**`,
+                            value: `${druidName.length}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            } else {
+                for (var i = 1; i < druidName.length; i++) {
+                    druids = druids + ', ' + druidName[i];
+                }
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, those are all the **${classrole}s (${druidName.length})** I found.`,
+                            value: `${druids}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            }
         } else if (classrole == 'hunter') {
-            embedList
-                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
-                .setColor('#004A94')
-                .addFields (
-                    {
-                        name: `Hey ${nickname}, those are all the **${classrole}s (${hunterName.length})** I found.`,
-                        value: `${hunters}`,
-                        inline: false
-                    }
-                )
-            message.author.send(embedList);
+            if (hunterName.length == 0) {
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, I couldn't find any **${classrole}s**`,
+                            value: `${hunterName.length}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            } else {
+                for (var i = 1; i < hunterName.length; i++) {
+                    hunters = hunters + ', ' + hunterName[i];
+                }
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, those are all the **${classrole}s (${hunterName.length})** I found.`,
+                            value: `${hunters}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            }
         } else if (classrole == 'mage') {
-            embedList
-                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
-                .setColor('#004A94')
-                .addFields (
-                    {
-                        name: `Hey ${nickname}, those are all the **${classrole}s (${mageName.length})** I found.`,
-                        value: `${mages}`,
-                        inline: false
-                    }
-                )
-            message.author.send(embedList);
+            if (mageName.length == 0) {
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, I couldn't find any **${classrole}s**`,
+                            value: `${mageName.length}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            } else {
+                for (var i = 1; i < mageName.length; i++) {
+                    mages = mages + ', ' + mageName[i];
+                }
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, those are all the **${classrole}s (${mageName.length})** I found.`,
+                            value: `${mages}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            }
         } else if (classrole == 'paladin') {
-            embedList
-                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
-                .setColor('#004A94')
-                .addFields (
-                    {
-                        name: `Hey ${nickname}, those are all the **${classrole}s (${paladinName.length})** I found.`,
-                        value: `${paladins}`,
-                        inline: false
-                    }
-                )
-            message.author.send(embedList);
+            if (paladinName.length == 0) {
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, I couldn't find any **${classrole}s**`,
+                            value: `${paladinName.length}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            } else {
+                for (var i = 1; i < paladinName.length; i++) {
+                    paladins = paladins + ', ' + paladinName[i];
+                }
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, those are all the **${classrole}s (${paladinName.length})** I found.`,
+                            value: `${paladins}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            }
         } else if (classrole == 'priest') {
-            embedList
-                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
-                .setColor('#004A94')
-                .addFields (
-                    {
-                        name: `Hey ${nickname}, those are all the **${classrole}s (${priestName.length})** I found.`,
-                        value: `${priests}`,
-                        inline: false
-                    }
-                )
-            message.author.send(embedList);
+            if (priestName.length == 0) {
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, I couldn't find any **${classrole}s**`,
+                            value: `${priestName.length}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            } else {
+                for (var i = 1; i < priestName.length; i++) {
+                    priests = priests + ', ' + priestName[i];
+                }
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, those are all the **${classrole}s (${priestName.length})** I found.`,
+                            value: `${priests}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            }
         } else if (classrole == 'rogue') {
-            embedList
-                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
-                .setColor('#004A94')
-                .addFields (
-                    {
-                        name: `Hey ${nickname}, those are all the **${classrole}s (${rogueName.length})** I found.`,
-                        value: `${rogues}`,
-                        inline: false
-                    }
-                )
-            message.author.send(embedList);
+            if (rogueName.length == 0) {
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, I couldn't find any **${classrole}s**`,
+                            value: `${rogueName.length}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            } else {
+                for (var i = 1; i < rogueName.length; i++) {
+                    rogues = rogues + ', ' + rogueName[i];
+                }
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, those are all the **${classrole}s (${rogueName.length})** I found.`,
+                            value: `${rogues}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            }
         } else if (classrole == 'shaman') {
-            embedList
-                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
-                .setColor('#004A94')
-                .addFields (
-                    {
-                        name: `Hey ${nickname}, those are all the **${classrole}s (${shamanName.length})** I found.`,
-                        value: `${shamans}`,
-                        inline: false
-                    }
-                )
-            message.author.send(embedList);
-        }else if (classrole == 'warlock') {
-            embedList
-                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
-                .setColor('#004A94')
-                .addFields (
-                    {
-                        name: `Hey ${nickname}, those are all the **${classrole}s (${warlockName.length})** I found.`,
-                        value: `${warlocks}`,
-                        inline: false
-                    }
-                )
-            message.author.send(embedList);
+            if (shamanName.length == 0) {
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, I couldn't find any **${classrole}s**`,
+                            value: `${shamanName.length}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            } else {
+                for (var i = 1; i < shamanName.length; i++) {
+                    shamans = shamans + ', ' + shamanName[i];
+                }
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, those are all the **${classrole}s (${shamanName.length})** I found.`,
+                            value: `${shamans}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            }
+        } else if (classrole == 'warlock') {
+            if (warlockName.length == 0) {
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, I couldn't find any **${classrole}s**`,
+                            value: `${warlockName.length}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            } else {
+                for (var i = 1; i < warlockName.length; i++) {
+                    warlocks = warlocks + ', ' + warlockName[i];
+                }
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, those are all the **${classrole}s (${warlockName.length})** I found.`,
+                            value: `${warlocks}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            }
         } else if (classrole == 'warrior') {
-            embedList
-                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
-                .setColor('#004A94')
-                .addFields (
-                    {
-                        name: `Hey ${nickname}, those are all the **${classrole}s (${warriorName.length})** I found.`,
-                        value: `${warriors}`,
-                        inline: false
-                    }
-                )
-            message.author.send(embedList);
+            if (warriorName.length == 0) {
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, I couldn't find any **${classrole}s**`,
+                            value: `${warriorName.length}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            } else {
+                for (var i = 1; i < warriorName.length; i++) {
+                    warriors = warriors + ', ' + warriorName[i];
+                }
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, those are all the **${classrole}s (${warriorName.length})** I found.`,
+                            value: `${warriors}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            }
         } else if (classrole == 'tank') {
-            embedList
-                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
-                .setColor('#004A94')
-                .addFields (
-                    {
-                        name: `Hey ${nickname}, those are all the **${classrole}s (${tankName.length})** I found.`,
-                        value: `${tanks}`,
-                        inline: false
-                    }
-                )
-            message.author.send(embedList);
+            if (tankName.length == 0) {
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, I couldn't find any **${classrole}s**`,
+                            value: `${tankName.length}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            } else {
+                for (var i = 1; i < tankName.length; i++) {
+                    tanks = tanks + ', ' + tankName[i];
+                }
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, those are all the **${classrole}s (${tankName.length})** I found.`,
+                            value: `${tanks}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            }
         } else if (classrole == 'healer') {
-            embedList
-                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
-                .setColor('#004A94')
-                .addFields (
-                    {
-                        name: `Hey ${nickname}, those are all the **${classrole}s (${healerName.length})** I found.`,
-                        value: `${healers}`,
-                        inline: false
-                    }
-                )
-            message.author.send(embedList);
+            if (healerName.length == 0) {
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, I couldn't find any **${classrole}s**`,
+                            value: `${healerName.length}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            } else {
+                for (var i = 1; i < healerName.length; i++) {
+                    healers = healers + ', ' + healerName[i];
+                }
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, those are all the **${classrole}s (${healerName.length})** I found.`,
+                            value: `${healers}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            }
         } else if (classrole == 'dps') {
-            embedList
-                .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
-                .setColor('#004A94')
-                .addFields (
-                    {
-                        name: `Hey ${nickname}, those are all the **${classrole}s (${dpsName.length})** I found.`,
-                        value: `${dps}`,
-                        inline: false
-                    }
-                )
-            message.author.send(embedList);
+            if (dpsName.length == 0) {
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, I couldn't find any **${classrole}s**`,
+                            value: `${dpsName.length}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            } else {
+                for (var i = 1; i < dpsName.length; i++) {
+                    dps = dps + ', ' + dpsName[i];
+                }
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, those are all the **${classrole}s (${dpsName.length})** I found.`,
+                            value: `${dps}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            }
+        } else if (classrole == 'trial') {
+            if (trialName.length == 0) {
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, I couldn't find any **${classrole}s**`,
+                            value: `${trialName.length}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            } else {
+                for (var i = 1; i < trialName.length; i++) {
+                    trials = trials + ', ' + trialName[i];
+                }
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, those are all the **${classrole}s (${trialName.length})** I found.`,
+                            value: `${trials}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            }
+        } else if (classrole == 'member') {
+            if (memberName.length == 0) {
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, I couldn't find any **${classrole}s**`,
+                            value: `${memberName.length}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            } else {
+                for (var i = 1; i < memberName.length; i++) {
+                    members = members + ', ' + memberName[i];
+                }
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, those are all the **${classrole}s (${memberName.length})** I found.`,
+                            value: `${members}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            }
+        } else if (classrole == 'social') {
+            if (socialName.length == 0) {
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, I couldn't find any **${classrole}s**`,
+                            value: `${socials}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            } else {
+                for (var i = 1; i < socialName.length; i++) {
+                    socials = socials + ', ' + socialName[i];
+                }
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, those are all the **${classrole}s (${socialName.length})** I found.`,
+                            value: `${socials}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            }
+        }
+        if (classrole == 'raider') {
+            if (raiderName.length == 0) {
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, I couldn't find any **${classrole}s**`,
+                            value: `${raiderName.length}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            } else {
+                for (var i = 1; i < raiderName.length; i++) {
+                    raiders = raiders + ', ' + raiderName[i];
+                }
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, those are all the **${classrole}s (${raiderName.length})** I found.`,
+                            value: `${raiders}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            }
+        } else if (classrole == 'officer') {        
+            if (officerName.length == 0) {
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, I couldn't find any **${classrole}s**`,
+                            value: `${officerName.length}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            } else {
+                for (var i = 1; i < officerName.length; i++) {
+                    officers = officers + ', ' + officerName[i];
+                }
+                embedList
+                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
+                    .setColor('#004A94')
+                    .addFields (
+                        {
+                            name: `Hey ${nickname}, those are all the **${classrole}s (${officerName.length})** I found.`,
+                            value: `${officers}`,
+                            inline: false
+                        }
+                    )
+                message.author.send(embedList);
+            }
         } else if (classrole == 'all') {
             embedList
                 .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
