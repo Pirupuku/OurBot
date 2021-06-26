@@ -9,17 +9,17 @@ module.exports = {
             .addFields (
                 {
                     name: '**1.** Change your *Nickname* to your ingame name.',
-                    value: '```Right-click on your profile and chose Change Nickname (it applies only to this server)```',
+                    value: "```Right-click on your profile and chose Change Nickname (it applies only to this server) and don't write $trial etc as your nickname!!!```",
                     inline: false
                 },
                 {
                     name: '**2.** Trial OR Guest?',
-                    value: '```Please write either "$trial" OR "$guest" (both commands without "")\n\nTrial: A person who wants to actively join the guild.\nGuest: A PuG or someone we know from before/another server and want to stay in contact with```',
+                    value: '```Please write either **$trial** OR **$guest**\n\nTrial: A person who wants to actively join the guild.\nGuest: A PuG or someone we know from before/another server and want to stay in contact with```',
                     inline: false
                 },
                 {
-                    name: '**3.** If you have chosen TRIAL -> write the Class of your main character',
-                    value: '```Please write "$class yourclass" (without "") so you get the role of your class.\nClasse are: Druid, Hunter, Mage, Paladin, Priest, Rogue, Warlock or Warrior\n\nEg: $class druid -> you get the discord role of a druid```',
+                    name: '**3.** If you have chosen **TRIAL** -> write the Class of your main character',
+                    value: '```Please write "$class yourclass" (without "") so you get the role of your class.\n\nClasses are: Druid, Hunter, Mage, Paladin, Priest, Rogue, Warlock or Warrior\n\nEg: $class druid -> you get the discord role of a druid```',
                     inline: false
                 },
                 {

@@ -13,13 +13,13 @@ module.exports = {
                     inline: false
                 },
                 {
-                    name: '$fokya <@user>, $image {what to search for}, $thistime, $where, $whalecum <@user>',
+                    name: '$fokya @user, $image what_to_search_for, $thistime, $where @user, $whalecum @user',
                     value: 'Try them out to see what the bot can do!\nFor the image command you write e.g. `$image many whelps` to print random images for the topic you want.',
                     inline: false
                 },
                 {
-                    name: '$list {class or role or all}',
-                    value: 'Sends you a DM with all the names of the class or role!\nClass: Druid, Hunter, Mage, Paladin, Priest, Rogue, Warlock, Warrior\nRole: Tank, Healer, DPS\n`e.g. $list mage -> all mages`\n`e.g. $list tank -> all tanks`',
+                    name: '$list {class or role or all or guildrole}',
+                    value: 'Sends you a DM with all the names of the class or role!\nClass: Druid, Hunter, Mage, Paladin, Priest, Rogue, Warlock, Warrior\nRole: Tank, Healer, DPS\nGuildrole: trial, member, raider, social, officer\n`e.g. $list mage -> all mages`\n`e.g. $list tank -> all tanks`',
                     inline: false
                 },
                 {
@@ -33,8 +33,8 @@ module.exports = {
                     inline: false
                 },
                 {
-                    name: '$logs {raid} {URL}',
-                    value: 'Sends and embed with the name of the raid and the combat logs in the channel #logs.\n{raid}: mc, ony, azuregos, kazzak, bwl, ysondre, lethon, taerar, emeriss, aq40, naxx, zg, aq20\n`e.g. $list mc https://mc_combatlogs.org`',
+                    name: '$logs raid URL',
+                    value: 'Sends and embed with the name of the raid and the combat logs in the channel #logs.\nRaid: mc, ony, azuregos, kazzak, bwl, ysondre, lethon, taerar, emeriss, aq40, naxx, zg, aq20\n`e.g. $list mc https://mc_combatlogs.org`',
                     inline: false
                 },
                 {
