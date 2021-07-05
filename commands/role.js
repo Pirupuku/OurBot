@@ -1,14 +1,9 @@
+const { RaidID } = require ('../ids');
+
 module.exports = {
     name: 'role',
     description: "give discord role of a role of WoW",
     execute(Discord, message, args){
-        
-        const roleTank = '798507023020589066';
-        const roleHealer = '798507050752933909';
-        const roleDps = '798507075353182218';
-
-        args[0] = args[0].toLowerCase();
-
         const embedRole = new Discord.MessageEmbed()
             .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
             .setTitle('A short instruction how our Discord server works.')
@@ -36,57 +31,25 @@ module.exports = {
                     inline: false
                 }
             )
-
-        if (args[0] == 'tank'){
-            if (message.member.roles.cache.has(roleTank)){
-                message.author.send('You already are a TANK!');
-            } else {
-                message.member.roles.add(roleTank).catch(console.error);
-                message.member.roles.remove(roleHealer).catch(console.error);
-                message.member.roles.remove(roleDps).catch(console.error);
-                message.author.send('You are a TANK now!');
+        var arg = args[0].toLowerCase();
+        if (arg in RaidID) {
+            if (message.member.roles.cache.has(RaidID[arg]))
+                message.author.send(`You already are a ${arg.toUpperCase()}!`);
+            else {
+                for (key in RaidID)
+                    message.member.roles.remove(RaidID[key]).catch(console.error);
+                message.member.roles.add(RaidID[arg]).catch(console.error);
+                message.author.send(`You are a ${arg.toUpperCase()} now!`);
                 message.author.send(embedRole);
             }
-        } else if (args[0] == 'notank'){
-            if (!message.member.roles.cache.has(roleTank)){
-                message.author.send('You are not a TANK!');
-            } else {
-                message.member.roles.remove(roleTank).catch(console.error);
-                message.author.send('You are not a TANK anymore!');
-            }
-        } else if (args[0] == 'healer'){
-            if (message.member.roles.cache.has(roleHealer)){
-                message.author.send('You already are a HEALER!');
-            } else {
-                message.member.roles.add(roleHealer).catch(console.error);
-                message.member.roles.remove(roleTank).catch(console.error);
-                message.member.roles.remove(roleDps).catch(console.error);
-                message.author.send('You are a HEALER now!');
-                message.author.send(embedRole);
-            }
-        } else if (args[0] == 'nohealer'){
-            if (!message.member.roles.cache.has(roleHealer)){
-                message.author.send('You are not a HEALER!');
-            } else {
-                message.member.roles.remove(roleHealer).catch(console.error);
-                message.author.send('You are not a HEALER anymore!');
-            }
-        } else if (args[0] == 'dps'){
-            if (message.member.roles.cache.has(roleDps)){
-                message.author.send('You already are a DPS!');
-            } else {
-                message.member.roles.add(roleDps).catch(console.error);
-                message.member.roles.remove(roleHealer).catch(console.error);
-                message.member.roles.remove(roleTank).catch(console.error);
-                message.author.send('You are a DPS now!');
-                message.author.send(embedRole);
-            }
-        } else if (args[0] == 'nodps'){
-            if (!message.member.roles.cache.has(roleDps)){
-                message.author.send('You are not a DPS!');
-            } else {
-                message.member.roles.remove(roleDps).catch(console.error);  
-                message.author.send('You are not a DPS anymore!');
+        }
+        else if (arg.substr(0, 2) == 'no' && arg.slice(2) in RaidID) {
+            arg = arg.slice(2);
+            if (!message.member.roles.cache.has(RaidID[arg]))
+                message.author.send(`You are not a ${arg.toUpperCase()}!`);
+            else {
+                message.member.roles.remove(RaidID[arg]).catch(console.error);
+                message.author.send(`You are not a ${arg.toUpperCase()} anymore!`);
             }
         }
     }
