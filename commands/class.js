@@ -6,12 +6,12 @@ module.exports = {
     execute(message, args) {
         var arg = args[0].toLowerCase();
         if (arg in ClassID) {
-            if (message.member.roles.cache.has(ClassID[role]))
+            if (message.member.roles.cache.has(ClassID[arg]))
                 message.author.send(`You already are a ${arg.toUpperCase()}!`);
             else {
                 for (key in ClassID)
                     message.member.roles.remove(ClassID[key]).catch(console.error);
-                message.member.roles.add(ClassID[role]).catch(console.error);
+                message.member.roles.add(ClassID[arg]).catch(console.error);
                 message.author.send(`You are a ${arg.toUpperCase()} now!`);
             }
         }

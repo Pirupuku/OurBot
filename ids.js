@@ -10,10 +10,13 @@ const ClassID = {
     mage : '798497704976056350'
 }
 
-const RoleID = {
+const RaidID = {
     tank : '798507023020589066',
     healer : '798507050752933909',
-    dps : '798507075353182218',
+    dps : '798507075353182218'
+}
+
+const GuildID = {
     trial : '798498129661263882',
     member : '773548993040482346',
     social : '798512429175668736',
@@ -35,4 +38,4 @@ const EmojiID = {
     dpsEmoji : '808302546677923860'
 }
 
-module.exports = { MWID, ClassID, RoleID, EmojiID };
+module.exports = { MWID, ClassID, RaidID, GuildID, EmojiID };
