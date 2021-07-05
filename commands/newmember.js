@@ -14,17 +14,17 @@ module.exports = {
                 },
                 {
                     name: '**2.** Trial OR Guest?',
-                    value: '```Please write **INTO THE CHAT** either **$trial** OR **$guest**\n\nTrial: A person who wants to actively join the guild.\nGuest: A PuG or someone we know from before/another server and want to stay in contact with```',
+                    value: '```Please write INTO THE CHAT either "$trial" OR "$guest" (without "")\n\nTrial: A person who wants to actively join the guild.\nGuest: A PuG or someone we know from before/another server and want to stay in contact with```',
                     inline: false
                 },
                 {
                     name: '**3.** If you have chosen **TRIAL** -> write the Class of your main character',
-                    value: '```Please write **INTO THE CHAT** "$class yourclass" (without "") so you get the role of your class.\n\nClasses are: Druid, Hunter, Mage, Paladin, Priest, Rogue, Warlock or Warrior\n\nEg: $class druid -> you get the discord role of a druid```',
+                    value: '```Please write INTO THE CHAT "$class yourclass" (without "") so you get the role of your class.\n\nClasses are: Druid, Hunter, Mage, Paladin, Priest, Rogue, Warlock or Warrior\n\nEg: $class druid -> you get the discord role of a druid```',
                     inline: false
                 },
                 {
                     name: '**4.** Role of your main character in raids',
-                    value: '```Please write **INTO THE CHAT** "$role yourrole" (without "") so that the bot gives you the specific role, which you want to have in raids.\nRoles can be: tank, healer or dps\n\nEg: $role healer -> you get the discord role of a healer```',
+                    value: '```Please write INTO THE CHAT "$role yourrole" (without "") so that the bot gives you the specific role, which you want to have in raids.\nRoles can be: tank, healer or dps\n\nEg: $role healer -> you get the discord role of a healer```',
                     inline: false
                 },
             );
