@@ -116,6 +116,8 @@ bot.on('message', message => {
       }
       if (command === 'ping') {
          bot.commands.get('ping').execute(bot, message, args, nickname);
+      } else if (command == 'fsigned') {
+         bot.commands.get('fsigned').execute(message, args);
       } else if (command == 'addrecipe') {
          bot.commands.get('addrecipe').execute(MongoClient, mongoPath, message, nickname, args);
       } else if (command == 'searchrecipe') {
