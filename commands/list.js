@@ -1,4 +1,4 @@
-const { ClassID, RaidID, GuildID } = require ('../ids');
+const { ClassID, RoleID, GuildID } = require ('../ids');
 
 function getRolesAsString(roleNames) {
     var temp = roleNames[0];
@@ -52,8 +52,8 @@ module.exports = {
         }
         if (arg in ClassID) 
             roleNames = guild.roles.cache.get(ClassID[args]).members.map(m=>m.displayName);
-        else if (arg in RaidID)
-            roleNames = guild.roles.cache.get(RaidID[args]).members.map(m=>m.displayName);  
+        else if (arg in RoleID)
+            roleNames = guild.roles.cache.get(RoleID[args]).members.map(m=>m.displayName);  
         else if (arg in GuildID)
             roleNames = guild.roles.cache.get(GuildID[args]).members.map(m=>m.displayName);
         else {

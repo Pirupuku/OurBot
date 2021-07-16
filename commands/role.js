@@ -1,4 +1,4 @@
-const { RaidID } = require ('../ids');
+const { RoleID } = require ('../ids');
 
 module.exports = {
     name: 'role',
@@ -32,23 +32,23 @@ module.exports = {
                 }
             )
         var arg = args[0].toLowerCase();
-        if (arg in RaidID) {
-            if (message.member.roles.cache.has(RaidID[arg]))
+        if (arg in RoleID) {
+            if (message.member.roles.cache.has(RoleID[arg]))
                 message.author.send(`You already are a ${arg.toUpperCase()}!`);
             else {
-                for (key in RaidID)
-                    message.member.roles.remove(RaidID[key]).catch(console.error);
-                message.member.roles.add(RaidID[arg]).catch(console.error);
+                for (key in RoleID)
+                    message.member.roles.remove(RoleID[key]).catch(console.error);
+                message.member.roles.add(RoleID[arg]).catch(console.error);
                 message.author.send(`You are a ${arg.toUpperCase()} now!`);
                 message.author.send(embedRole);
             }
         }
-        else if (arg.substr(0, 2) == 'no' && arg.slice(2) in RaidID) {
+        else if (arg.substr(0, 2) == 'no' && arg.slice(2) in RoleID) {
             arg = arg.slice(2);
-            if (!message.member.roles.cache.has(RaidID[arg]))
+            if (!message.member.roles.cache.has(RoleID[arg]))
                 message.author.send(`You are not a ${arg.toUpperCase()}!`);
             else {
-                message.member.roles.remove(RaidID[arg]).catch(console.error);
+                message.member.roles.remove(RoleID[arg]).catch(console.error);
                 message.author.send(`You are not a ${arg.toUpperCase()} anymore!`);
             }
         }
