@@ -10,7 +10,7 @@ const ClassID = {
     mage : '798497704976056350'
 }
 
-const RaidID = {
+const RoleID = {
     tank : '798507023020589066',
     healer : '798507050752933909',
     dps : '798507075353182218'
@@ -24,18 +24,21 @@ const GuildID = {
     officer : '798497871376547881'
 }
 
-const EmojiID = {
-    druidEmoji : '808301207206494228',
-    hunterEmoji : '808302350162591784',
-    warriorEmoji : '808301549712572426',
-    warlockEmoji : '808301265388830730',
-    paladinEmoji : '808301574761742346',
-    priestEmoji : '808301254677495848',
-    rogueEmoji : '808302389223489557',
-    mageEmoji : '808301245877059604',
-    tankEmoji : '808302563530768394',
-    healerEmoji : '808302584103305236',
-    dpsEmoji : '808302546677923860'
+const ClassEmoji = {
+    wowdruid : '808301207206494228',
+    wowhunter : '808302350162591784',
+    wowwarrior : '808301549712572426',
+    wowwarlock : '808301265388830730', 
+    wowpaladin : '808301574761742346',
+    wowpriest : '808301254677495848',
+    wowrogue : '808302389223489557',
+    wowmage : '808301245877059604',
 }
 
-module.exports = { MWID, ClassID, RaidID, GuildID, EmojiID };
+const RoleEmoji = {
+    wowtank : '808302563530768394',
+    wowdps : '808302546677923860',
+    wowhealer : '808302584103305236',
+}
+
+module.exports = { MWID, ClassID, RoleID, GuildID, ClassEmoji, RoleEmoji };

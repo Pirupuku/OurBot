@@ -25,12 +25,17 @@ for(const file of commandFiles){
 }
 
 var version = '1.0.0';
+var ManyWhelps;
+var FirstStep;
+const { RoleID, ClassID } = require('./ids');
 
 bot.on('ready', () => {
+   ManyWhelps = bot.guilds.cache.get('773542499049668608');
+   FirstStep = ManyWhelps.channels.cache.get('800716895417532526'); // officer chat atm
+   FirstStep.messages.fetch({});
    console.log('Many Whelps hands out 50 DKP minus');
    bot.user.setActivity('$help', { type: 'WATCHING'}).catch(console.error);
    memberCount(bot);
-   
 });
 
 bot.on('guildMemberRemove', (member) => {
@@ -146,6 +151,12 @@ bot.on('message', message => {
          bot.commands.get('list').execute(Discord, message, args, nickname);
       } else if (command == 'logs') {
             bot.commands.get('logs').execute(Discord, bot, message, args, nickname);
+      } else if (IsOfficer(message)) {
+         if (command == 'class_embed') {
+            bot.commands.get('class_embed').execute(Discord, message);
+         } else if (command == 'role_embed') {
+            bot.commands.get('role_embed').execute(Discord, message);
+         }
       } else {
          message.author.send("That command doesn't exist. Please type $help in any of <Many Whelps>' channel to see a list of all my commands.")
       }
@@ -153,5 +164,44 @@ bot.on('message', message => {
       message.author.send('You don not have the permission to use commands!');
    }
 });
+
+bot.on('messageReactionAdd', async (reaction, user) => {
+   if (user.bot) return;
+   var message = reaction.message;
+   var emoji = reaction.emoji.name;
+   var receivedEmbed = message.embeds[0];
+   if (message.channel == FirstStep) {
+       var GuildMember = ManyWhelps.members.cache.get(user.id);
+       var arg = emoji.slice(3);
+       if (receivedEmbed.title == 'Choose your class') {
+           if (!arg in ClassID || GuildMember.roles.cache.has(ClassID[arg])) return;
+           for (key in ClassID)
+               if (GuildMember.roles.cache.has(ClassID[key]))
+                   GuildMember.roles.remove(ClassID[key]).catch({});
+           GuildMember.roles.add(ClassID[arg]).catch({});
+       }
+       else if (receivedEmbed.title == 'Choose your role') {
+           if (!arg in RoleID || GuildMember.roles.cache.has(RoleID[arg])) return;
+           for (key in RoleID)
+               if (GuildMember.roles.cache.has(RoleID[key]))
+                   GuildMember.roles.remove(RoleID[key]).catch({});
+           GuildMember.roles.add(RoleID[arg]).catch({});
+       }
+       const userReactions = message.reactions.cache.filter(reaction => reaction.users.cache.has(user.id));
+       try {
+           for (const reaction of userReactions.values()) {
+               await reaction.users.remove(user.id);
+           }
+       } catch (error) {
+           console.error('Failed to remove reactions.');
+       }
+   }
+});
+
+function IsOfficer(message) {
+   return message.author.id == '267331618413346817' || // Ajso
+      message.author.id == '425955263355551746' || // Dieken
+      message.author.id == '290907809552400385'; // Divi
+}
 
 bot.login(token);
