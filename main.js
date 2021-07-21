@@ -70,6 +70,13 @@ bot.on('message', message => {
          message.delete()
          message.author.send('If something is not working or you got a question -> pls DM Dieken');
       }
+      if (IsOfficer(message)) {
+         if (command == 'class_embed') {
+            bot.commands.get('class_embed').execute(Discord, message);
+         } else if (command == 'role_embed') {
+            bot.commands.get('role_embed').execute(Discord, message);
+         }
+      }
       if (message.content.startsWith(prefix)) {
          if (!message.member.roles.cache.get('798498129661263882')) {
             if (command == 'guest') {
@@ -127,12 +134,6 @@ bot.on('message', message => {
          bot.commands.get('list').execute(Discord, message, args, nickname);
       } else if (command == 'logs') {
             bot.commands.get('logs').execute(Discord, bot, message, args, nickname);
-      } else if (IsOfficer(message)) {
-         if (command == 'class_embed') {
-            bot.commands.get('class_embed').execute(Discord, message);
-         } else if (command == 'role_embed') {
-            bot.commands.get('role_embed').execute(Discord, message);
-         }
       } else {
          message.author.send("That command doesn't exist. Please type $help in any of <Many Whelps>' channel to see a list of all my commands.")
       }
