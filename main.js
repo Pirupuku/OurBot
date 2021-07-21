@@ -31,7 +31,7 @@ const { RoleID, ClassID } = require('./ids');
 
 bot.on('ready', () => {
    ManyWhelps = bot.guilds.cache.get('773542499049668608');
-   FirstStep = ManyWhelps.channels.cache.get('800716895417532526'); // officer chat atm
+   FirstStep = ManyWhelps.channels.cache.get('808820077561774100'); // #first-step
    FirstStep.messages.fetch({});
    console.log('Many Whelps hands out 50 DKP minus');
    bot.user.setActivity('$help', { type: 'WATCHING'}).catch(console.error);
@@ -71,33 +71,9 @@ bot.on('message', message => {
          message.author.send('If something is not working or you got a question -> pls DM Dieken');
       }
       if (message.content.startsWith(prefix)) {
-         if (!message.member.roles.cache.get('808291239924465694')) {
-            if (command == 'trial') {
-               bot.commands.get('trial').execute(message, args);
-            }
-         }
          if (!message.member.roles.cache.get('798498129661263882')) {
             if (command == 'guest') {
                bot.commands.get('guest').execute(message, args);
-            }
-         }
-         if (message.member.roles.cache.get('798498129661263882')) {
-            if (command == 'class'){
-               if (args[0] !== undefined) {
-                  bot.commands.get('class').execute(message, args);
-               } else if (args[0] === undefined) {
-                  message.author.send('Please enter the class you are playing with your main! (eg: $class rogue)');
-               }
-            }
-
-            if (message.member.roles.cache.get('798497796541513759') || message.member.roles.cache.get('798497755952578560') || message.member.roles.cache.get('784698785586348032') || message.member.roles.cache.get('798497338561789993') || message.member.roles.cache.get('798497547642863626') || message.member.roles.cache.get('799233980570402816') || message.member.roles.cache.get('798497653058830339') || message.member.roles.cache.get('798497604035805184') || message.member.roles.cache.get('798497704976056350')) {
-               if (command == 'role'){
-                  if (args[0] !== undefined) {
-                     bot.commands.get('role').execute(Discord, message, args);
-                  } else if (args[0] === undefined) {
-                     message.author.send('Please enter the role you are playing with your main! (eg: $role healer)');
-                  }
-               }
             }
          }
          message.delete()
