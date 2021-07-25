@@ -164,6 +164,8 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                    GuildMember.roles.remove(RoleID[key]).catch({});
            GuildMember.roles.add(RoleID[arg]).catch({});
        }
+       if (GuildMember.roles.cache.length == 0)
+         GuildMember.roles.add('798498129661263882').catch({});
        const userReactions = message.reactions.cache.filter(reaction => reaction.users.cache.has(user.id));
        try {
            for (const reaction of userReactions.values()) {
