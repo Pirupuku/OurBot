@@ -63,7 +63,7 @@ bot.on('message', message => {
    let member = guild.member(message.author);
    let nickname = member ? member.displayName : null;
    
-   /*
+   
    if (message.channel.id === '808820077561774100') {
       bot.channels.cache.get('852649234355585098').send(`**${nickname} (${message.author.tag}):** ${message}`);
       if (!message.content.startsWith(prefix) && !message.author.bot) {
@@ -91,7 +91,7 @@ bot.on('message', message => {
          }
       }
       return;
-   }*/
+   }
    
    if (!message.content.startsWith(prefix) || message.author.bot) return;
    
@@ -164,6 +164,8 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                    GuildMember.roles.remove(RoleID[key]).catch({});
            GuildMember.roles.add(RoleID[arg]).catch({});
        }
+       if (GuildMember.roles.cache.length == 0)
+         GuildMember.roles.add('798498129661263882').catch({});
        const userReactions = message.reactions.cache.filter(reaction => reaction.users.cache.has(user.id));
        try {
            for (const reaction of userReactions.values()) {
