@@ -7,7 +7,8 @@ const ClassID = {
     paladin : '799233980570402816',
     priest : '798497653058830339',
     rogue : '798497604035805184',
-    mage : '798497704976056350'
+    mage : '798497704976056350',
+    //shaman : '798497547642863626'
 }
 
 const RoleID = {
@@ -33,6 +34,7 @@ const ClassEmoji = {
     wowpriest : '808301254677495848',
     wowrogue : '808302389223489557',
     wowmage : '808301245877059604',
+    //wowshaman : '869256208492683384',
 }
 
 const RoleEmoji = {
