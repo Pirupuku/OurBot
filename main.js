@@ -68,7 +68,7 @@ bot.on('message', message => {
       bot.channels.cache.get('852649234355585098').send(`**${nickname} (${message.author.tag}):** ${message}`);
       if (!message.content.startsWith(prefix) && !message.author.bot) {
          message.delete()
-         message.author.send('If something is not working or you got a question -> pls DM Dieken');
+         message.author.send('If something is not working or you got a question -> pls DM Dieken, Ajso or Divi!!!');
       }
       if (IsOfficer(message)) {
          if (command == 'class_embed') {
