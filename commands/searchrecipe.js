@@ -12,7 +12,7 @@ async function searchrecipe(Discord, MongoClient, mongoPath, message, nickname, 
         var db = client.db('recipes');
         var wowRecipe = await db.listCollections().toArray()
             .catch(err => {console.log('LoadData failed to connect');});
-        var items = arrayToString(args);
+        var items = someText;
         var col;
         var crafterName;
         for (var i = 0; i < wowRecipe.length; i++) {
@@ -24,13 +24,11 @@ async function searchrecipe(Discord, MongoClient, mongoPath, message, nickname, 
                     crafterArray = crafterName + ", " + crafterArray;
                 }
                 embedRecipe
-                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                     .setColor('#004A94')
                     .setDescription(`Hey ${nickname}, those are all the recipes and crafters I found for your search "**${items}**".`)
                     .addField(`${titleCase(wowRecipe[i].name)}`, `${crafterArray.slice(0, -2)}`, false)
             } else {
                 embedRecipe
-                    .setAuthor('[A][LC][EU] <Many Whelps>', 'https://cdn.discordapp.com/attachments/801916760482644008/808741524204290058/many_whelps_final.png')
                     .setColor('#004A94')
                     .setDescription(`Hey ${nickname}, this recipe is not available.`)
             }
