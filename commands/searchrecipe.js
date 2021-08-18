@@ -12,7 +12,7 @@ async function searchrecipe(Discord, MongoClient, mongoPath, message, nickname, 
         var db = client.db('recipes');
         var wowRecipe = await db.listCollections().toArray()
             .catch(err => {console.log('LoadData failed to connect');});
-        var items = arrayToString(args);
+        var items = someText;
         var col;
         var crafterName;
         for (var i = 0; i < wowRecipe.length; i++) {
