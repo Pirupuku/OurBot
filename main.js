@@ -64,7 +64,7 @@ bot.on('message', message => {
    let nickname = member ? member.displayName : null;
    
    
-   if (message.channel.id === '808820077561774100') {
+   if (message.channel.id === '808820077561774100' || message.channel.id === '877483537056546826') {
       bot.channels.cache.get('852649234355585098').send(`**${nickname} (${message.author.tag}):** ${message}`);
       if (!message.content.startsWith(prefix) && !message.author.bot) {
          message.delete()
