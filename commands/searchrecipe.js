@@ -20,7 +20,11 @@ async function searchrecipe(Discord, MongoClient, mongoPath, message, nickname, 
             if (IsSubstr(items, wowRecipe[i].name)) {
                 col = await db.collection(wowRecipe[i].name).find({}).toArray();
                 for (var j = 0; j < col.length; j++) {
-                    crafterName = bot.guilds.cache.get('773542499049668608').member(col[j].crafter).displayName;
+                    try {
+                        crafterName = bot.guilds.cache.get(message.guild.id).member(col[j].crafter).displayName;
+                    } catch {
+                        continue;
+                    }
                     crafterArray = crafterName + ", " + crafterArray;
                 }
                 embedRecipe

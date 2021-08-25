@@ -59,91 +59,98 @@ bot.on('guildMemberUpdate', (oldMember, newMember) => {
 bot.on('message', message => {
    const args = message.content.slice(prefix.length).split(/ +/);
    const command = args.shift().toLowerCase();
-   let guild = bot.guilds.cache.get('773542499049668608');
    let member = guild.member(message.author);
    let nickname = member ? member.displayName : null;
    
-   
-   if (message.channel.id === '808820077561774100' || message.channel.id === '877483537056546826') {
-      bot.channels.cache.get('852649234355585098').send(`**${nickname} (${message.author.tag}):** ${message}`);
-      if (!message.content.startsWith(prefix) && !message.author.bot) {
-         message.delete()
-         message.author.send('If something is not working or you got a question -> pls DM Dieken, Ajso or Divi!!!');
-      }
-      if (IsOfficer(message)) {
-         if (command == 'class_embed') {
-            bot.commands.get('class_embed').execute(Discord, message);
-         } else if (command == 'role_embed') {
-            bot.commands.get('role_embed').execute(Discord, message);
+   if (message.guild.id == '773542499049668608') { // If Many Whelps
+      let guild = bot.guilds.cache.get('773542499049668608');
+      if (message.channel.id === '808820077561774100' || message.channel.id === '877483537056546826') {
+         bot.channels.cache.get('852649234355585098').send(`**${nickname} (${message.author.tag}):** ${message}`);
+         if (!message.content.startsWith(prefix) && !message.author.bot) {
+            message.delete()
+            message.author.send('If something is not working or you got a question -> pls DM Dieken, Ajso or Divi!!!');
          }
-      }
-      if (message.content.startsWith(prefix)) {
-         if (!message.member.roles.cache.get('798498129661263882')) {
-            if (command == 'guest') {
-               bot.commands.get('guest').execute(message, args);
+         if (IsOfficer(message)) {
+            if (command == 'class_embed') {
+               bot.commands.get('class_embed').execute(Discord, message);
+            } else if (command == 'role_embed') {
+               bot.commands.get('role_embed').execute(Discord, message);
             }
          }
-         message.delete()
-         if (message.member.roles.cache.get('798497898434134066') || message.member.roles.cache.get('798497871376547881') || message.member.roles.cache.get('800024729997148161')) {
-            if (command == 'newmember') {
-               bot.commands.get('newmember').execute(Discord, bot, message, args);
+         if (message.content.startsWith(prefix)) {
+            if (!message.member.roles.cache.get('798498129661263882')) {
+               if (command == 'guest') {
+                  bot.commands.get('guest').execute(message, args);
+               }
+            }
+            message.delete()
+            if (message.member.roles.cache.get('798497898434134066') || message.member.roles.cache.get('798497871376547881') || message.member.roles.cache.get('800024729997148161')) {
+               if (command == 'newmember') {
+                  bot.commands.get('newmember').execute(Discord, bot, message, args);
+               }
             }
          }
-      }
-      return;
-   }
-   
-   if (!message.content.startsWith(prefix) || message.author.bot) return;
-   
-   
-   if (message.member.hasPermission('CHANGE_NICKNAME')) {
-      if (message.content.startsWith(prefix)) {
-         message.delete();
-      } else {
          return;
       }
-      if (command === 'ping') {
-         bot.commands.get('ping').execute(bot, message, args, nickname);
-      } else if (command == 'fsigned') {
-         bot.commands.get('fsigned').execute(message, args);
-      } else if (command == 'addrecipe') {
+      
+      if (!message.content.startsWith(prefix) || message.author.bot) return;
+      
+      
+      if (message.member.hasPermission('CHANGE_NICKNAME')) {
+         if (message.content.startsWith(prefix)) {
+            message.delete();
+         } else {
+            return;
+         }
+         if (command === 'ping') {
+            bot.commands.get('ping').execute(bot, message, args, nickname);
+         } else if (command == 'fsigned') {
+            bot.commands.get('fsigned').execute(message, args);
+         } else if (command == 'addrecipe') {
+            bot.commands.get('addrecipe').execute(MongoClient, mongoPath, message, nickname, args);
+         } else if (command == 'searchrecipe') {
+            bot.commands.get('searchrecipe').execute(Discord, MongoClient, mongoPath, message, nickname, args, bot);
+         } else if (command == 'fokya'){
+            bot.commands.get('fokya').execute(bot, message, args, nickname);
+         } else if (command == 'thistime'){
+            bot.commands.get('thistime').execute(bot, message, args, nickname);
+         } else if (command == 'where'){
+            bot.commands.get('where').execute(bot, message, args, nickname);
+         } else if (command == 'whalecum'){
+            bot.commands.get('whalecum').execute(bot, message, args, nickname);
+         } else if (command == 'image') {
+            var some_var = '';
+            for (var i = 0; i < args.length; i++) {
+               some_var += args[i];
+               if (i < args.length - 1)
+                  some_var += ' ';
+            }
+            bot.commands.get('image').execute(talkedRecently, message, args, some_var, request, cheerio, nickname);
+         } else if (command == 'clear') {
+            bot.commands.get('clear').execute(bot, message, args, nickname);
+         } else if (command == 'help') {
+            bot.commands.get('help').execute(Discord, message, args);
+         } else if (command == 'list') {
+            bot.commands.get('list').execute(Discord, message, args, nickname);
+         } else if (command == 'logs') {
+               bot.commands.get('logs').execute(Discord, bot, message, args, nickname);
+         } else {
+            message.author.send("That command doesn't exist. Please type $help in any of <Many Whelps>' channel to see a list of all my commands.")
+         }
+      } else {
+         message.author.send('You don not have the permission to use commands!');
+      }
+   } else { // if any other server
+      if (command == 'addrecipe') {
          bot.commands.get('addrecipe').execute(MongoClient, mongoPath, message, nickname, args);
       } else if (command == 'searchrecipe') {
          bot.commands.get('searchrecipe').execute(Discord, MongoClient, mongoPath, message, nickname, args, bot);
-      } else if (command == 'fokya'){
-         bot.commands.get('fokya').execute(bot, message, args, nickname);
-      } else if (command == 'thistime'){
-         bot.commands.get('thistime').execute(bot, message, args, nickname);
-      } else if (command == 'where'){
-         bot.commands.get('where').execute(bot, message, args, nickname);
-      } else if (command == 'whalecum'){
-         bot.commands.get('whalecum').execute(bot, message, args, nickname);
-      } else if (command == 'image') {
-         var some_var = '';
-         for (var i = 0; i < args.length; i++) {
-            some_var += args[i];
-            if (i < args.length - 1)
-               some_var += ' ';
-         }
-         bot.commands.get('image').execute(talkedRecently, message, args, some_var, request, cheerio, nickname);
-      } else if (command == 'clear') {
-         bot.commands.get('clear').execute(bot, message, args, nickname);
-      } else if (command == 'help') {
-         bot.commands.get('help').execute(Discord, message, args);
-      } else if (command == 'list') {
-         bot.commands.get('list').execute(Discord, message, args, nickname);
-      } else if (command == 'logs') {
-            bot.commands.get('logs').execute(Discord, bot, message, args, nickname);
-      } else {
-         message.author.send("That command doesn't exist. Please type $help in any of <Many Whelps>' channel to see a list of all my commands.")
       }
-   } else {
-      message.author.send('You don not have the permission to use commands!');
    }
 });
 
 bot.on('messageReactionAdd', async (reaction, user) => {
-   if (user.bot) return;
+   if (reaction.message.guild.id != '773542499049668608' || user.bot) return;
    var message = reaction.message;
    var emoji = reaction.emoji.name;
    var receivedEmbed = message.embeds[0];
