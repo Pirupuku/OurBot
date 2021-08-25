@@ -15,9 +15,10 @@ async function searchrecipe(Discord, MongoClient, mongoPath, message, nickname, 
         var items = someText;
         var col;
         var crafterName;
+        var recipeExists = false;
         for (var i = 0; i < wowRecipe.length; i++) {
-            
             if (IsSubstr(items, wowRecipe[i].name)) {
+                recipeExists = true;
                 col = await db.collection(wowRecipe[i].name).find({}).toArray();
                 for (var j = 0; j < col.length; j++) {
                     try {
@@ -31,14 +32,14 @@ async function searchrecipe(Discord, MongoClient, mongoPath, message, nickname, 
                     .setColor('#004A94')
                     .setDescription(`Hey ${nickname}, those are all the recipes and crafters I found for your search "**${items}**".`)
                     .addField(`${titleCase(wowRecipe[i].name)}`, `${crafterArray.slice(0, -2)}`, false)
-            } else {
-                embedRecipe
-                    .setColor('#004A94')
-                    .setDescription(`Hey ${nickname}, this recipe is not available.`)
             }
             crafterArray = [];
         }
-        
+        if (!recipeExists) {
+            embedRecipe
+                .setColor('#004A94')
+                .setDescription(`Hey ${nickname}, this recipe is not available.`)
+        }
         message.author.send(embedRecipe);
         embedRecipe = '';
         
