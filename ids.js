@@ -48,4 +48,4 @@ const FactionEmoji = {
     alliance : '879988792063315978',
 }
 
-module.exports = { MWID, ClassID, RoleID, GuildID, ClassEmoji, RoleEmoji };
+module.exports = { MWID, ClassID, RoleID, GuildID, ClassEmoji, RoleEmoji, FactionEmoji };
