@@ -59,11 +59,11 @@ bot.on('guildMemberUpdate', (oldMember, newMember) => {
 bot.on('message', message => {
    const args = message.content.slice(prefix.length).split(/ +/);
    const command = args.shift().toLowerCase();
+   let guild = bot.guilds.cache.get('773542499049668608');
    let member = guild.member(message.author);
    let nickname = member ? member.displayName : null;
    
    if (message.guild.id == '773542499049668608') { // If Many Whelps
-      let guild = bot.guilds.cache.get('773542499049668608');
       if (message.channel.id === '808820077561774100' || message.channel.id === '877483537056546826') {
          bot.channels.cache.get('852649234355585098').send(`**${nickname} (${message.author.tag}):** ${message}`);
          if (!message.content.startsWith(prefix) && !message.author.bot) {
