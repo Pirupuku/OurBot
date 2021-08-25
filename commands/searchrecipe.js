@@ -20,7 +20,7 @@ async function searchrecipe(Discord, MongoClient, mongoPath, message, nickname, 
                 recipeExists = true;
                 col = await db.collection(wowRecipe[i].name).find({}).toArray();
                 for (var j = 0; j < col.length; j++) {
-                    var crafter = bot.guilds.cache.get(message.guild.id).member(col[j].crafter).displayName;
+                    var crafter = bot.guilds.cache.get(message.guild.id).member(col[j].crafter);
                     if (crafter)
                         crafterArray = crafter.displayName + ", " + crafterArray;
                 }
