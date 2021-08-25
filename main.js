@@ -59,8 +59,7 @@ bot.on('guildMemberUpdate', (oldMember, newMember) => {
 bot.on('message', message => {
    const args = message.content.slice(prefix.length).split(/ +/);
    const command = args.shift().toLowerCase();
-   let guild = bot.guilds.cache.get(message.guild.id);
-   let member = guild.member(message.author);
+   let member = message.member;
    let nickname = member ? member.displayName : null;
    
    if (message.guild.id == '773542499049668608') { // If Many Whelps
