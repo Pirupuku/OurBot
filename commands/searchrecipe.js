@@ -14,19 +14,15 @@ async function searchrecipe(Discord, MongoClient, mongoPath, message, nickname, 
             .catch(err => {console.log('LoadData failed to connect');});
         var items = someText;
         var col;
-        var crafterName;
         var recipeExists = false;
         for (var i = 0; i < wowRecipe.length; i++) {
             if (IsSubstr(items, wowRecipe[i].name)) {
                 recipeExists = true;
                 col = await db.collection(wowRecipe[i].name).find({}).toArray();
                 for (var j = 0; j < col.length; j++) {
-                    try {
-                        crafterName = bot.guilds.cache.get(message.guild.id).member(col[j].crafter).displayName;
-                    } catch {
-                        continue;
-                    }
-                    crafterArray = crafterName + ", " + crafterArray;
+                    var crafter = bot.guilds.cache.get(message.guild.id).member(col[j].crafter).displayName;
+                    if (crafter)
+                        crafterArray = crafter.displayName + ", " + crafterArray;
                 }
                 embedRecipe
                     .setColor('#004A94')
