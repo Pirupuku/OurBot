@@ -43,4 +43,9 @@ const RoleEmoji = {
     wowhealer : '808302584103305236',
 }
 
+const FactionEmoji = {
+    horde : '879988805493473300',
+    alliance : '879988792063315978',
+}
+
 module.exports = { MWID, ClassID, RoleID, GuildID, ClassEmoji, RoleEmoji };
