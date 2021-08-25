@@ -39,7 +39,7 @@ bot.on('ready', () => {
 });
 
 bot.on('guildMemberRemove', (member) => {
-   if(member.guild.id != '773542499049668608') {
+   if(bot.guilds.id != '773542499049668608') {
      return;
    } else {  
      bot.channels.cache.get('817319885444218882').send(`**${member.user.tag}: ${member.displayName}** has left the server...`);
@@ -47,7 +47,7 @@ bot.on('guildMemberRemove', (member) => {
 })
 
 bot.on('guildBanRemove', (member) => {
-   if(member.guild.id != '773542499049668608') {
+   if(bot.guilds.id != '773542499049668608') {
      return;
    } else {
      bot.channels.cache.get('817319885444218882').send(`**${member.user.tag}: ${member.user.tag}** **(${member.displayName})** has left the server...`);
@@ -55,7 +55,7 @@ bot.on('guildBanRemove', (member) => {
 })
 
 bot.on('guildMemberUpdate', (oldMember, newMember) => {
-   if(member.guild.id != '773542499049668608') {
+   if(bot.guilds.id != '773542499049668608') {
      return;
    } else {
      if(newMember.nickname && oldMember.nickname !== newMember.nickname) {
