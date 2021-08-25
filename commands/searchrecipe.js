@@ -1,5 +1,4 @@
 async function searchrecipe(Discord, MongoClient, mongoPath, message, nickname, args, bot) {
-    var embedRecipe = new Discord.MessageEmbed();
     var someText = arrayToString(args);
     someText = someText.toLowerCase();
     var crafterArray = [];
@@ -14,33 +13,39 @@ async function searchrecipe(Discord, MongoClient, mongoPath, message, nickname, 
             .catch(err => {console.log('LoadData failed to connect');});
         var items = someText;
         var col;
+        var crafterExists;
         var recipeExists = false;
+        var embedRecipe = new Discord.MessageEmbed()
+            .setColor('#004A94')
+            .setDescription(`Hey ${nickname}, those are all the recipes and crafters I found for your search "**${items}**".`);
         for (var i = 0; i < wowRecipe.length; i++) {
             if (IsSubstr(items, wowRecipe[i].name)) {
-                recipeExists = true;
+                crafterExists = false;
                 col = await db.collection(wowRecipe[i].name).find({}).toArray();
                 for (var j = 0; j < col.length; j++) {
-                    var crafter = bot.guilds.cache.get(message.guild.id).member(col[j].crafter);
-                    if (crafter)
+                    if (bot.guilds.cache.get(message.guild.id).members.cache.find(user => user.id === col[j].crafter)) {
+                        crafterExists = true;
+                        recipeExists = true;
+                        var crafter = bot.guilds.cache.get(message.guild.id).member(col[j].crafter);
                         crafterArray = crafter.displayName + ", " + crafterArray;
+                    }
                 }
-                embedRecipe
-                    .setColor('#004A94')
-                    .setDescription(`Hey ${nickname}, those are all the recipes and crafters I found for your search "**${items}**".`)
-                    .addField(`${titleCase(wowRecipe[i].name)}`, `${crafterArray.slice(0, -2)}`, false)
+                if (crafterExists) {
+                    embedRecipe
+                        .addField(`${titleCase(wowRecipe[i].name)}`, `${crafterArray.slice(0, -2)}`, false);
+                }
             }
             crafterArray = [];
         }
         if (!recipeExists) {
             embedRecipe
-                .setColor('#004A94')
                 .setDescription(`Hey ${nickname}, this recipe is not available.`)
         }
         message.author.send(embedRecipe);
         embedRecipe = '';
         
-    } catch {
-       console.log('error');
+    } catch(er) {
+       console.log(er);
     } finally {
        client.close();
     }
