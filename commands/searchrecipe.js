@@ -22,7 +22,7 @@ async function searchrecipe(Discord, MongoClient, mongoPath, message, nickname, 
                 col = await db.collection(wowRecipe[i].name).find({}).toArray();
                 for (var j = 0; j < col.length; j++) {
                     try {
-                        crafterName = bot.guilds.cache.get(message.guild.id).member(col[j].crafter).displayName;
+                        crafterName = bot.guilds.cache.get(message.guildId).member(col[j].crafter).displayName;
                     } catch {
                         continue;
                     }
