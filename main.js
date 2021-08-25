@@ -39,20 +39,32 @@ bot.on('ready', () => {
 });
 
 bot.on('guildMemberRemove', (member) => {
-   bot.channels.cache.get('817319885444218882').send(`**${member.user.tag}: ${member.displayName}** has left the server...`);
+   if(member.guild.id != '773542499049668608') {
+     return;
+   } else {  
+     bot.channels.cache.get('817319885444218882').send(`**${member.user.tag}: ${member.displayName}** has left the server...`);
+   }
 })
 
 bot.on('guildBanRemove', (member) => {
-   bot.channels.cache.get('817319885444218882').send(`**${member.user.tag}: ${member.user.tag}** **(${member.displayName})** has left the server...`);
+   if(member.guild.id != '773542499049668608') {
+     return;
+   } else {
+     bot.channels.cache.get('817319885444218882').send(`**${member.user.tag}: ${member.user.tag}** **(${member.displayName})** has left the server...`);
+   }
 })
 
 bot.on('guildMemberUpdate', (oldMember, newMember) => {
-   if(newMember.nickname && oldMember.nickname !== newMember.nickname) {
-      if (!oldMember.nickname || oldMember.nickname === undefined) {
-         bot.channels.cache.get('852649234355585098').send(`**${oldMember.user.tag}: ${oldMember.user.username}** changed his nickname to **${newMember.nickname}**`);
-      } else {
-         bot.channels.cache.get('852649234355585098').send(`**${oldMember.user.tag}: ${oldMember.nickname}** changed his nickname to **${newMember.nickname}**`);
-      }
+   if(member.guild.id != '773542499049668608') {
+     return;
+   } else {
+     if(newMember.nickname && oldMember.nickname !== newMember.nickname) {
+          if (!oldMember.nickname || oldMember.nickname === undefined) {
+               bot.channels.cache.get('852649234355585098').send(`**${oldMember.user.tag}: ${oldMember.user.username}** changed his nickname to **${newMember.nickname}**`);
+          } else {
+               bot.channels.cache.get('852649234355585098').send(`**${oldMember.user.tag}: ${oldMember.nickname}** changed his nickname to **${newMember.nickname}**`);
+          }
+     }
    }
 });
 
