@@ -9,9 +9,9 @@
   "author": "Diekensack",
   "license": "ISC",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.5",
-    "discord.js": "^12.5.1",
-    "mongodb": "^3.6.4",
+    "cheerio": "^1.0.0-rc.10",
+    "discord.js": "^12.5.3",
+    "mongodb": "^3.6.11",
     "request": "^2.88.2"
   }
 }
