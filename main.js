@@ -154,10 +154,8 @@ bot.on('message', message => {
    } else { // if any other server
       if (command == 'addrecipe') {
          bot.commands.get('addrecipe').execute(MongoClient, mongoPath, message, nickname, args);
-         message.delete();
       } else if (command == 'searchrecipe') {
          bot.commands.get('searchrecipe').execute(Discord, MongoClient, mongoPath, message, nickname, args, bot);
-         message.delete()
       }
       if (message.content.startsWith(prefix)) {
          message.delete()
