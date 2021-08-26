@@ -159,6 +159,10 @@ bot.on('message', message => {
          bot.commands.get('searchrecipe').execute(Discord, MongoClient, mongoPath, message, nickname, args, bot);
          message.delete()
       }
+      if (message.content.startsWith(prefix)) {
+         message.delete()
+      }
+      if (!message.content.startsWith(prefix) || message.author.bot) return;
    }
 });
 
