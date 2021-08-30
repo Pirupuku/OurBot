@@ -76,6 +76,9 @@ bot.on('message', message => {
    let member = message.member;
    let nickname = member ? member.displayName : null;
    
+   console.log('guildID: ' + message.guildID);
+   console.log('guild: ' + message.guild);
+   console.log('guild.id: ' + message.guild.id);
    if (message.guildId == '773542499049668608') { // If Many Whelps
       console.log('working');
       if (message.channel.id === '808820077561774100' || message.channel.id === '877483537056546826') {
