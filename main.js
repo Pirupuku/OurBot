@@ -76,11 +76,7 @@ bot.on('message', message => {
    let member = message.member;
    let nickname = member ? member.displayName : null;
    
-   console.log('guildID: ' + message.guildID);
-   console.log('guild: ' + message.guild);
-   console.log('guild.id: ' + message.guild.id);
-   if (message.guildId == '773542499049668608') { // If Many Whelps
-      console.log('working');
+   if (message.guild == '773542499049668608') { // If Many Whelps
       if (message.channel.id === '808820077561774100' || message.channel.id === '877483537056546826') {
          bot.channels.cache.get('852649234355585098').send(`**${nickname} (${message.author.tag}):** ${message}`);
          if (!message.content.startsWith(prefix) && !message.author.bot) {
@@ -171,7 +167,7 @@ bot.on('message', message => {
 });
 
 bot.on('messageReactionAdd', async (reaction, user) => {
-   if (reaction.message.guildId != '773542499049668608' || user.bot) return;
+   if (reaction.message.guild != '773542499049668608' || user.bot) return;
    var message = reaction.message;
    var emoji = reaction.emoji.name;
    var receivedEmbed = message.embeds[0];
