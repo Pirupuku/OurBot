@@ -25,7 +25,7 @@ for(const file of commandFiles){
 }
 
 var version = '1.0.0';
-var ManyWhelps;
+let ManyWhelps;
 var FirstStep;
 const { RoleID, ClassID } = require('./ids');
 
@@ -37,9 +37,9 @@ bot.on('ready', () => {
    FirstStep.messages.fetch({});
    console.log('Many Whelps hands out 50 DKP minus');
    bot.user.setActivity('$help', { type: 'WATCHING'}).catch(console.error);
-   if (allGuilds == ManyWhelps) {
+   if (ManyWhelps) {
      memberCount(bot);
-        console.log('Counting Whelps...');
+     console.log('Counting Whelps...');
    }
 });
 
