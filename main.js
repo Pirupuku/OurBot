@@ -36,9 +36,7 @@ bot.on('ready', () => {
    FirstStep.messages.fetch({});
    console.log('Many Whelps hands out 50 DKP minus');
    bot.user.setActivity('$help', { type: 'WATCHING'}).catch(console.error);
-   if (ManyWhelps) {
-     memberCount(bot);
-     console.log('Counting Whelps...');
+   memberCount(bot);
    }
 });
 
@@ -58,7 +56,7 @@ bot.on('guildBanRemove', (member) => {
    }
 })
 
-bot.on('guildMemberUpdate', (oldMember, newMember) => {
+bot.on('guildMemberUpdate', (guild, oldMember, newMember) => {
    console.log(guild.id);
    if(!ManyWhelps) {
      return;
