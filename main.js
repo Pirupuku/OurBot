@@ -37,7 +37,7 @@ bot.on('ready', () => {
    FirstStep.messages.fetch({});
    console.log('Many Whelps hands out 50 DKP minus');
    bot.user.setActivity('$help', { type: 'WATCHING'}).catch(console.error);
-   if (bot.guilds.id == '773542499049668608') {
+   if (allGuilds == ManyWhelps) {
      memberCount(bot);
    }
 });
