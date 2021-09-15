@@ -39,6 +39,7 @@ bot.on('ready', () => {
    bot.user.setActivity('$help', { type: 'WATCHING'}).catch(console.error);
    if (allGuilds == ManyWhelps) {
      memberCount(bot);
+        console.log('Counting Whelps...');
    }
 });
 
