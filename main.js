@@ -40,7 +40,7 @@ bot.on('ready', () => {
 });
 
 bot.on('guildMemberRemove', (member) => {
-   if(!ManyWhelps) {
+   if(member.guild.id != ManyWhelps) {
      return;
    } else {  
      bot.channels.cache.get('817319885444218882').send(`**${member.user.tag}: ${member.displayName}** has left the server...`);
@@ -48,7 +48,7 @@ bot.on('guildMemberRemove', (member) => {
 })
 
 bot.on('guildBanRemove', (member) => {
-   if(!ManyWhelps) {
+   if(member.guild.id != ManyWhelps) {
      return;
    } else {
      bot.channels.cache.get('817319885444218882').send(`**${member.user.tag}: ${member.user.tag}** **(${member.displayName})** has left the server...`);
@@ -56,8 +56,7 @@ bot.on('guildBanRemove', (member) => {
 })
 
 bot.on('guildMemberUpdate', (oldMember, newMember) => {
-   console.log(oldMember.guild.id);
-   if(!ManyWhelps) {
+   if(oldMember.guild.id != ManyWhelps) {
      return;
    } else {
      if(newMember.nickname && oldMember.nickname !== newMember.nickname) {
