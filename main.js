@@ -59,6 +59,7 @@ bot.on('guildBanRemove', (member) => {
 })
 
 bot.on('guildMemberUpdate', (oldMember, newMember) => {
+   console.log(guild.id);
    if(!ManyWhelps) {
      return;
    } else {
