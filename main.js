@@ -31,6 +31,7 @@ const { RoleID, ClassID } = require('./ids');
 
 bot.on('ready', () => {
    const allGuilds = bot.guilds.cache.map(guild => guild.id);
+   console.log(allGuilds);
    ManyWhelps = bot.guilds.cache.get('773542499049668608');
    FirstStep = ManyWhelps.channels.cache.get('808820077561774100'); // #first-step
    FirstStep.messages.fetch({});
