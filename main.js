@@ -25,15 +25,12 @@ for(const file of commandFiles){
 }
 
 var version = '1.0.0';
-let ManyWhelps;
-var FirstStep;
+let ManyWhelps = bot.guilds.cache.get('773542499049668608');;
+let FirstStep = ManyWhelps.channels.cache.get('808820077561774100'); // #first-step;
 const { RoleID, ClassID } = require('./ids');
 
 bot.on('ready', () => {
    const allGuilds = bot.guilds.cache.map(guild => guild.id);
-   console.log(allGuilds);
-   ManyWhelps = bot.guilds.cache.get('773542499049668608');
-   FirstStep = ManyWhelps.channels.cache.get('808820077561774100'); // #first-step
    FirstStep.messages.fetch({});
    console.log('Many Whelps hands out 50 DKP minus');
    bot.user.setActivity('$help', { type: 'WATCHING'}).catch(console.error);
@@ -44,7 +41,7 @@ bot.on('ready', () => {
 });
 
 bot.on('guildMemberRemove', (member) => {
-   if(bot.guilds.id != '773542499049668608') {
+   if(!ManyWhelps) {
      return;
    } else {  
      bot.channels.cache.get('817319885444218882').send(`**${member.user.tag}: ${member.displayName}** has left the server...`);
@@ -52,7 +49,7 @@ bot.on('guildMemberRemove', (member) => {
 })
 
 bot.on('guildBanRemove', (member) => {
-   if(bot.guilds.id != '773542499049668608') {
+   if(!ManyWhelps) {
      return;
    } else {
      bot.channels.cache.get('817319885444218882').send(`**${member.user.tag}: ${member.user.tag}** **(${member.displayName})** has left the server...`);
@@ -60,7 +57,7 @@ bot.on('guildBanRemove', (member) => {
 })
 
 bot.on('guildMemberUpdate', (oldMember, newMember) => {
-   if(bot.guilds.id != '773542499049668608') {
+   if(!ManyWhelps) {
      return;
    } else {
      if(newMember.nickname && oldMember.nickname !== newMember.nickname) {
