@@ -37,7 +37,6 @@ bot.on('ready', () => {
    console.log('Many Whelps hands out 50 DKP minus');
    bot.user.setActivity('$help', { type: 'WATCHING'}).catch(console.error);
    memberCount(bot);
-   }
 });
 
 bot.on('guildMemberRemove', (member) => {
