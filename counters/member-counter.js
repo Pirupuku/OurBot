@@ -2,7 +2,7 @@ module.exports = (bot) => {
     const channelId = '805473191177748491';
     
     var updateMembers = (guild) => {
-        console.log(guild);
+        console.log(guild.id);
         // if (guild.channels.exists('name', corruption)) {
             const botRole = bot.guilds.cache.get('773542499049668608').roles.cache.find(role => role == '798524203120197652');
             const guestRole = bot.guilds.cache.get('773542499049668608').roles.cache.find(role => role == '808291239924465694');
