@@ -25,12 +25,14 @@ for(const file of commandFiles){
 }
 
 var version = '1.0.0';
-let ManyWhelps = bot.guilds.cache.get('773542499049668608');;
-let FirstStep = ManyWhelps.channels.cache.get('808820077561774100'); // #first-step;
+let ManyWhelps;
+let FirstStep;
 const { RoleID, ClassID } = require('./ids');
 
 bot.on('ready', () => {
    const allGuilds = bot.guilds.cache.map(guild => guild.id);
+   ManyWhelps = bot.guilds.cache.get('773542499049668608');;
+   FirstStep = ManyWhelps.channels.cache.get('808820077561774100'); // #first-step;
    FirstStep.messages.fetch({});
    console.log('Many Whelps hands out 50 DKP minus');
    bot.user.setActivity('$help', { type: 'WATCHING'}).catch(console.error);
