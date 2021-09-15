@@ -2,7 +2,8 @@ module.exports = (bot) => {
     const channelId = '805473191177748491';
     
     var updateMembers = (guild) => {
-        if guild.channels.exists('name', corruption) {
+        console.log(guild);
+        // if (guild.channels.exists('name', corruption)) {
             const botRole = bot.guilds.cache.get('773542499049668608').roles.cache.find(role => role == '798524203120197652');
             const guestRole = bot.guilds.cache.get('773542499049668608').roles.cache.find(role => role == '808291239924465694');
             const trialRole = bot.guilds.cache.get('773542499049668608').roles.cache.find(role => role == '798498129661263882');
@@ -21,8 +22,8 @@ module.exports = (bot) => {
             const channel = guild.channels.cache.get(channelId);
             var realNumber = guild.memberCount - bots - guests - (guild.memberCount - withoutRole);
             channel.setName(`Whelps: ${realNumber}`);
-            console.log(realNumber)
-        }
+            console.log(realNumber);
+        //}
     }
     
     bot.on('guildMemberAdd', (member) => updateMembers(member.guild))
