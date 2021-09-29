@@ -40,7 +40,7 @@ bot.on('ready', () => {
 });
 
 bot.on('guildMemberAdd', (member) => {
-     member.guild.channels.get('798525055994298370').send(`**${member.user.tag}: ${member.displayName}** hopped on the server...`); 
+     member.guild.channels.cache.get('798525055994298370').send(`**${member.user.tag}: ${member.displayName}** hopped on the server...`); 
 });
 
 bot.on('guildMemberRemove', (member) => {
