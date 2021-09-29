@@ -39,6 +39,10 @@ bot.on('ready', () => {
    memberCount(bot);
 });
 
+bot.on('guildMemberAdd', (member) => {
+     member.guild.channels.get('798525055994298370').send(`**${member.user.tag}: ${member.displayName}** hopped on the server...`); 
+});
+
 bot.on('guildMemberRemove', (member) => {
    if(member.guild.id != ManyWhelps) {
      return;
@@ -51,7 +55,7 @@ bot.on('guildBanRemove', (member) => {
    if(member.guild.id != ManyWhelps) {
      return;
    } else {
-     bot.channels.cache.get('817319885444218882').send(`**${member.user.tag}: ${member.user.tag}** **(${member.displayName})** has left the server...`);
+     bot.channels.cache.get('817319885444218882').send(`**${member.user.tag}: (${member.displayName})** was banned from the server...`);
    }
 })
 
