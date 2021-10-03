@@ -2,7 +2,7 @@ const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
 const Discord = require('discord.js');
 const mongo = require('mongodb');
 const MongoClient = mongo.MongoClient;
-const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
+const bot = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_MEMBERS"], partials: ["MESSAGE", "CHANNEL", "REACTION"] });
 
 const mongoPath = 'mongodb+srv://professions:m4n1wh3lpsprofession@professions.r1p0r.mongodb.net'
 
@@ -32,7 +32,7 @@ const { RoleID, ClassID } = require('./ids');
 
 bot.on('ready', () => {
    const allGuilds = bot.guilds.cache.map(guild => guild.id);
-   ManyWhelps = bot.guilds.cache.get('773542499049668608');;
+   ManyWhelps = bot.guilds.cache.get('773542499049668608');
    FirstStep = ManyWhelps.channels.cache.get('808820077561774100'); // #first-step;
    FirstStep.messages.fetch({});
    console.log('Many Whelps hands out 50 DKP minus');
@@ -40,12 +40,37 @@ bot.on('ready', () => {
    memberCount(bot);
 });
 
-let raidMC = new cron.CronJob('00 35 11 * * *', () => {
-     let channel = guild.channels.cache.get('798517475113304084');
-     channel.send('test');
-});
 
-raidMC.start()
+
+//let raidOny = new cron.CronJob('00 15 22 * * 0', () => {
+//     let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('798517475113304084'); // #sign-ups
+//     channel.send(`+quickcreate [title: ONYXIA][description: killing shit and getting lootz!!!][channel:sign-ups][date:${day}-${month}-${year}][time:20:00][template:2][image: https://ibb.co/tYnppNJ] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
+//});
+
+//let raidBWL = new cron.CronJob('00 15 22 * * 0', () => {
+//     let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('798517475113304084'); // #sign-ups
+//     channel.send(`+quickcreate [title: BLACKWING LAIR][description: killing shit and getting lootz!!!][channel:sign-ups][date:${day}-${month}-${year}][time:20:00][template:2][image: https://i.ibb.co/pf2q7CL/BWL.jpg] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
+//});
+
+//let raidZG = new cron.CronJob('00 15 22 * * 0', () => {
+//     let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('798517475113304084'); // #sign-ups
+//     channel.send(`+quickcreate [title: ZUL'GURUB][description: killing shit and getting lootz!!!][channel:sign-ups][date:${day}-${month}-${year}][time:20:00][template:2][image: https://i.ibb.co/gyW9KsQ/zg.jpg] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
+//});
+
+//let raidAQ20 = new cron.CronJob('00 15 22 * * 0', () => {
+//     let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('798517475113304084'); // #sign-ups
+//     channel.send(`+quickcreate [title: AHN'QIRAJ 20][description: killing shit and getting lootz!!!][channel:sign-ups][date:${day}-${month}-${year}][time:20:00][template:2][image: https://i.ibb.co/3yf7qjJ/aq20.jpg] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
+//});
+
+//let raidAQ40 = new cron.CronJob('00 15 22 * * 0', () => {
+//     let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('798517475113304084'); // #sign-ups
+//     channel.send(`+quickcreate [title: AHN'QIRAJ 40][description: killing shit and getting lootz!!!][channel:sign-ups][date:${day}-${month}-${year}][time:20:00][template:2][image: https://i.ibb.co/zGjSH2p/aq40.jpg] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
+//});
+
+//let raidNaxx = new cron.CronJob('00 15 22 * * 0', () => {
+//     let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('798517475113304084'); // #sign-ups
+//     channel.send(`+quickcreate [title: NAXXRAMAS][description: killing shit and getting lootz!!!][channel:sign-ups][date:${day}-${month}-${year}][time:20:00][template:2][image: https://i.ibb.co/zs4wJnb/naxx.jpg] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
+//});
 
 bot.on('guildMemberAdd', (member) => {
      member.guild.channels.cache.get('798525055994298370').send(`**${member.user.tag}: ${member.displayName}** hopped on the server...`); 
@@ -128,6 +153,20 @@ bot.on('message', message => {
          }
          if (command === 'ping') {
             bot.commands.get('ping').execute(bot, message, args, nickname);
+         //} else if (command === 'startMC') {
+            //bot.commands.get('').execute(bot, message, args);
+         //} else if (command === 'startOny') {
+            //bot.commands.get('').execute(bot, message, args);
+         //} else if (command === 'startBWL') {
+            //bot.commands.get('').execute(bot, message, args);
+         //} else if (command === 'startZG') {
+            //bot.commands.get('').execute(bot, message, args);
+         //} else if (command === 'startAQ20') {
+            //bot.commands.get('').execute(bot, message, args);
+         //} else if (command === 'startAQ40') {
+            //bot.commands.get('').execute(bot, message, args);
+         //} else if (command === 'startNaxx') {
+            //bot.commands.get('').execute(bot, message, args);
          } else if (command == 'fsigned') {
             bot.commands.get('fsigned').execute(message, args);
          } else if (command == 'addrecipe') {
