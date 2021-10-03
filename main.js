@@ -12,6 +12,7 @@ const fs = require('fs');
 const cheerio = require('cheerio');
 const request = require('request');
 const memberCount = require('./counters/member-counter');
+var cron = require("cron");
 
 const talkedRecently = new Set();
 
@@ -38,6 +39,13 @@ bot.on('ready', () => {
    bot.user.setActivity('$help', { type: 'WATCHING'}).catch(console.error);
    memberCount(bot);
 });
+
+let raidMC = new cron.CronJob('00 35 11 * * *', () => {
+     let channel = guild.channels.cache.get('798517475113304084');
+     channel.send('test');
+});
+
+raidMC.start()
 
 bot.on('guildMemberAdd', (member) => {
      member.guild.channels.cache.get('798525055994298370').send(`**${member.user.tag}: ${member.displayName}** hopped on the server...`); 
