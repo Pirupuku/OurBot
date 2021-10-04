@@ -1,9 +1,9 @@
 module.exports = {
     name: 'raidaq40',
     description: "start raiding AQ40",
-    execute(bot, message, args) {
+    execute(bot, message, args, CronJob) {
 
-        let startAQ40 = new cron.CronJob(`00 00 20 * * 0`, () => {
+        let startAQ40 = new CronJob(`00 00 20 * * 0`, () => {
             var aq40Date = new Date();
             aq40Date.setDate(aq40Date.getDate() + (7 + args[0] - aq40Date.getDay() % 7));
             let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('800716895417532526'); // #corruption

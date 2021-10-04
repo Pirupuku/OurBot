@@ -12,7 +12,7 @@ const fs = require('fs');
 const cheerio = require('cheerio');
 const request = require('request');
 const memberCount = require('./counters/member-counter');
-var cron = require("cron");
+var CronJob = require('cron').CronJob;
 
 const talkedRecently = new Set();
 
@@ -157,25 +157,25 @@ bot.on('message', message => {
          console.log('officer');
          if (command == 'raidmc') {
             console.log('starting mc');
-            bot.commands.get('raidmc').execute(bot, message, args);
+            bot.commands.get('raidmc').execute(bot, message, args, CronJob);
          } else if (command == 'raidony') {
             console.log('starting ony');
-            bot.commands.get('raidony').execute(bot, message, args);
+            bot.commands.get('raidony').execute(bot, message, args, CronJob);
          } else if (command == 'raidbwl') {
             console.log('starting bwl');
-            bot.commands.get('raidbwl').execute(bot, message, args);
+            bot.commands.get('raidbwl').execute(bot, message, args, CronJob);
          } else if (command == 'raidzg') {
             console.log('starting zg');
-            bot.commands.get('raidzg').execute(bot, message, args);
+            bot.commands.get('raidzg').execute(bot, message, args, CronJob);
          } else if (command == 'raidaq20') {
             console.log('starting aq20');
-            bot.commands.get('raidaq20').execute(bot, message, args);
+            bot.commands.get('raidaq20').execute(bot, message, args, CronJob);
          } else if (command == 'raidaq40') {
             console.log('starting aq40');
-            bot.commands.get('raidaq40').execute(bot, message, args);
+            bot.commands.get('raidaq40').execute(bot, message, args, CronJob);
          } else if (command == 'raidnaxx') {
             console.log('starting naxx');
-            bot.commands.get('raidnaxx').execute(bot, message, args);
+            bot.commands.get('raidnaxx').execute(bot, message, args, CronJob);
          } else if (command == 'clear') {
             bot.commands.get('clear').execute(bot, message, args, nickname);
          }

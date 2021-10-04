@@ -1,11 +1,11 @@
 module.exports = {
     name: 'raidaq20',
     description: "start raiding AQ20",
-    execute(bot, message, args) {
+    execute(bot, message, args, CronJob) {
         
         var aq20StartDate = new Date();
 
-        let startAQ20 = new cron.CronJob(`00 00 20 * * ${aq20StartDate.getDay()}`, () => {
+        let startAQ20 = new CronJob(`00 00 20 * * ${aq20StartDate.getDay()}`, () => {
             aq20StartDate.setDate(aq20StartDate.getDate() + 3); 
             var aq20Date = new Date();
             aq20Date.setDate(aq20Date.getDate() + 3);

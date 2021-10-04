@@ -1,11 +1,11 @@
 module.exports = {
     name: 'raidzg',
     description: "start raiding MC",
-    execute(bot, message, args) {
+    execute(bot, message, args, CronJob) {
 
         var zgStartDate = new Date();
 
-        let startZG = new cron.CronJob(`00 05 22 * * ${zgStartDate.getDay()}`, () => {
+        let startZG = new CronJob(`00 05 22 * * ${zgStartDate.getDay()}`, () => {
             zgStartDate.setDate(zgDate.getDate() + 3)
             var zgDate = new Date();
             zgDate.setDate(zgDate.getDate() + 3);

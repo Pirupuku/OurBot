@@ -1,11 +1,11 @@
 module.exports = {
     name: 'raidony',
     description: "start raiding Ony",
-    execute(bot, message, args) {
+    execute(bot, message, args, CronJob) {
 
         var onyStartDate = new Date();
 
-        let startOny = new cron.CronJob(`00 00 20 * * ${onyStartDate.getDay()}`, () => {
+        let startOny = new CronJob(`00 00 20 * * ${onyStartDate.getDay()}`, () => {
             onyStartDate.setDate(onyStartDate.getDate() + 5);
             var onyDate = new Date();
             onyDate.setDate(onyDate.getDate() + 5);

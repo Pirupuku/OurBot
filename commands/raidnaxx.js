@@ -1,9 +1,9 @@
 module.exports = {
     name: 'raidnaxx',
     description: "start raiding Naxx",
-    execute(bot, message, args) {
+    execute(bot, message, args, CronJob) {
 
-        let startNaxx = new cron.CronJob(`00 00 20 * * 0`, () => {
+        let startNaxx = new CronJob(`00 00 20 * * 0`, () => {
             var naxxDate = new Date();
             naxxDate.setDate(naxxDate.getDate() + (7 + args[0] - naxxDate.getDay() % 7));
             let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('800716895417532526'); // #corruption
