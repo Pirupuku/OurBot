@@ -40,38 +40,6 @@ bot.on('ready', () => {
    memberCount(bot);
 });
 
-
-
-//let raidOny = new cron.CronJob('00 15 22 * * 0', () => {
-//     let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('798517475113304084'); // #sign-ups
-//     channel.send(`+quickcreate [title: ONYXIA][description: killing shit and getting lootz!!!][channel:sign-ups][date:${day}-${month}-${year}][time:20:00][template:2][image: https://ibb.co/tYnppNJ] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
-//});
-
-//let raidBWL = new cron.CronJob('00 15 22 * * 0', () => {
-//     let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('798517475113304084'); // #sign-ups
-//     channel.send(`+quickcreate [title: BLACKWING LAIR][description: killing shit and getting lootz!!!][channel:sign-ups][date:${day}-${month}-${year}][time:20:00][template:2][image: https://i.ibb.co/pf2q7CL/BWL.jpg] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
-//});
-
-//let raidZG = new cron.CronJob('00 15 22 * * 0', () => {
-//     let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('798517475113304084'); // #sign-ups
-//     channel.send(`+quickcreate [title: ZUL'GURUB][description: killing shit and getting lootz!!!][channel:sign-ups][date:${day}-${month}-${year}][time:20:00][template:2][image: https://i.ibb.co/gyW9KsQ/zg.jpg] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
-//});
-
-//let raidAQ20 = new cron.CronJob('00 15 22 * * 0', () => {
-//     let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('798517475113304084'); // #sign-ups
-//     channel.send(`+quickcreate [title: AHN'QIRAJ 20][description: killing shit and getting lootz!!!][channel:sign-ups][date:${day}-${month}-${year}][time:20:00][template:2][image: https://i.ibb.co/3yf7qjJ/aq20.jpg] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
-//});
-
-//let raidAQ40 = new cron.CronJob('00 15 22 * * 0', () => {
-//     let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('798517475113304084'); // #sign-ups
-//     channel.send(`+quickcreate [title: AHN'QIRAJ 40][description: killing shit and getting lootz!!!][channel:sign-ups][date:${day}-${month}-${year}][time:20:00][template:2][image: https://i.ibb.co/zGjSH2p/aq40.jpg] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
-//});
-
-//let raidNaxx = new cron.CronJob('00 15 22 * * 0', () => {
-//     let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('798517475113304084'); // #sign-ups
-//     channel.send(`+quickcreate [title: NAXXRAMAS][description: killing shit and getting lootz!!!][channel:sign-ups][date:${day}-${month}-${year}][time:20:00][template:2][image: https://i.ibb.co/zs4wJnb/naxx.jpg] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
-//});
-
 bot.on('guildMemberAdd', (member) => {
      member.guild.channels.cache.get('798525055994298370').send(`**${member.user.tag}: ${member.displayName}** hopped on the server...`); 
 });
