@@ -6,7 +6,7 @@ const bot = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_ME
 
 const mongoPath = 'mongodb+srv://professions:m4n1wh3lpsprofession@professions.r1p0r.mongodb.net'
 
-const token = require("./config.json").token;
+const token = require('./config.json').token;
 const prefix = '$';
 const fs = require('fs');
 const cheerio = require('cheerio');
