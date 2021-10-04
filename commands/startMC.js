@@ -3,7 +3,7 @@ module.exports = {
     description: "start raiding MC",
     execute(bot, message, args) {
 
-        let raidMC = new cron.CronJob(`00 05 22 * * 0`, () => {
+        let raidMC = new cron.CronJob(`00 00 20 * * 0`, () => {
             var mcDate = new Date();
             mcDate.setDate(mcDate.getDate() + (7 + args[0] - mcDate.getDay() % 7));
             let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('800716895417532526'); // #corruption

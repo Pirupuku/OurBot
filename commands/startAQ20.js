@@ -2,8 +2,11 @@ module.exports = {
     name: 'startMC',
     description: "start raiding MC",
     execute(bot, message, args) {
+        
+        var aq20StartDate = new Date();
 
-        let raidMC = new cron.CronJob(`00 05 22 * * 0`, () => {
+        let raidMC = new cron.CronJob(`00 00 20 * * ${aq20StartDate.getDay()}`, () => {
+            aq20StartDate.setDate(aq20StartDate.getDate() + 3); 
             var aq20Date = new Date();
             aq20Date.setDate(aq20Date.getDate() + 3);
             let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('800716895417532526'); // #corruption
