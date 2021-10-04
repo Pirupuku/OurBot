@@ -12,7 +12,12 @@ module.exports = {
             let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('800716895417532526'); // #corruption
             channel.send(`+quickcreate [title: ONYXIA][description: killing shit and getting lootz!!!][channel:sign-ups][date:${aq20Date.getDate()}-${aq20Date.getMonth()+1}-${aq20Date.getFullYear()}][time:20:00][template:2][image: https://i.ibb.co/3yf7qjJ/aq20.jpg] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
         });
-        startAQ20.start();
+        if (args[0] == 'start') {
+            startAQ20.start();
+        } else if (args[0] == 'stop') {
+            startAQ20.stop();
+        }
+
         message.channel.send("You will receive a message to quickly create your **Ahn'Qiraj 20** in the channel #corruption.");
     }
 }
