@@ -143,8 +143,6 @@ bot.on('message', message => {
                   some_var += ' ';
             }
             bot.commands.get('image').execute(talkedRecently, message, args, some_var, request, cheerio, nickname);
-         } else if (command == 'clear') {
-            bot.commands.get('clear').execute(bot, message, args, nickname);
          } else if (command == 'help') {
             bot.commands.get('help').execute(Discord, message, args);
          } else if (command == 'list') {
@@ -172,6 +170,8 @@ bot.on('message', message => {
             bot.commands.get('').execute(bot, message, args);
          } else if (command == 'startNaxx') {
             bot.commands.get('').execute(bot, message, args);
+         } else if (command == 'clear') {
+            bot.commands.get('clear').execute(bot, message, args, nickname);
          }
       }
    } else { // if any other server
