@@ -149,8 +149,6 @@ bot.on('message', message => {
             bot.commands.get('list').execute(Discord, message, args, nickname);
          } else if (command == 'logs') {
                bot.commands.get('logs').execute(Discord, bot, message, args, nickname);
-         } else {
-            message.author.send("That command doesn't exist. Please type $help in any of <Many Whelps>' channel to see a list of all my commands.")
          }
       } else {
          message.author.send('You don not have the permission to use commands!');
