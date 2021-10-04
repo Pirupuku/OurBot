@@ -1,5 +1,6 @@
 const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
 const Discord = require('discord.js');
+require('dotenv').config();
 const mongo = require('mongodb');
 const MongoClient = mongo.MongoClient;
 const bot = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_MEMBERS"], partials: ["MESSAGE", "CHANNEL", "REACTION"] });
@@ -231,4 +232,4 @@ function IsOfficer(message) {
       message.author.id == '290907809552400385'; // Divi
 }
 
-bot.login(token);
+bot.login(process.env.TOKEN);
