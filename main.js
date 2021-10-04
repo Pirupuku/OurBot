@@ -121,20 +121,20 @@ bot.on('message', message => {
          }
          if (command === 'ping') {
             bot.commands.get('ping').execute(bot, message, args, nickname);
-         //} else if (command === 'startMC') {
-            //bot.commands.get('').execute(bot, message, args);
-         //} else if (command === 'startOny') {
-            //bot.commands.get('').execute(bot, message, args);
-         //} else if (command === 'startBWL') {
-            //bot.commands.get('').execute(bot, message, args);
-         //} else if (command === 'startZG') {
-            //bot.commands.get('').execute(bot, message, args);
-         //} else if (command === 'startAQ20') {
-            //bot.commands.get('').execute(bot, message, args);
-         //} else if (command === 'startAQ40') {
-            //bot.commands.get('').execute(bot, message, args);
-         //} else if (command === 'startNaxx') {
-            //bot.commands.get('').execute(bot, message, args);
+         } else if (command === 'startMC') {
+            bot.commands.get('').execute(bot, message, args);
+         } else if (command === 'startOny') {
+            bot.commands.get('').execute(bot, message, args);
+         } else if (command === 'startBWL') {
+            bot.commands.get('').execute(bot, message, args);
+         } else if (command === 'startZG') {
+            bot.commands.get('').execute(bot, message, args);
+         } else if (command === 'startAQ20') {
+            bot.commands.get('').execute(bot, message, args);
+         } else if (command === 'startAQ40') {
+            bot.commands.get('').execute(bot, message, args);
+         } else if (command === 'startNaxx') {
+            bot.commands.get('').execute(bot, message, args);
          } else if (command == 'fsigned') {
             bot.commands.get('fsigned').execute(message, args);
          } else if (command == 'addrecipe') {

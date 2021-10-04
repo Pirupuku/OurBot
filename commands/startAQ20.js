@@ -1,0 +1,14 @@
+module.exports = {
+    name: 'startMC',
+    description: "start raiding MC",
+    execute(bot, message, args) {
+
+        let raidMC = new cron.CronJob(`00 05 22 * * 0`, () => {
+            var aq20Date = new Date();
+            aq20Date.setDate(aq20Date.getDate() + 3);
+            let channel = bot.guilds.cache.get('773542499049668608').channels.cache.get('800716895417532526'); // #corruption
+            channel.send(`+quickcreate [title: ONYXIA][description: killing shit and getting lootz!!!][channel:sign-ups][date:${aq20Date.getDate()}-${aq20Date.getMonth()+1}-${aq20Date.getFullYear()}][time:20:00][template:2][image: https://i.ibb.co/3yf7qjJ/aq20.jpg] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
+        });
+        raidMC.start();
+    }
+}
