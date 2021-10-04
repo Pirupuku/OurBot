@@ -19,6 +19,6 @@ module.exports = {
             startOny.stop();
         }
         
-        message.channel.send('You will receive a message to quickly create your **Onyxia** in the channel #corruption.');
+        bot.channels.cache.get('773542499049668608').send('You will receive a message to quickly create your **Onyxia** in the channel #corruption.');
     }
 }

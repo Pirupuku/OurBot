@@ -18,6 +18,6 @@ module.exports = {
             startAQ20.stop();
         }
 
-        message.channel.send("You will receive a message to quickly create your **Ahn'Qiraj 20** in the channel #corruption.");
+        bot.channels.cache.get('773542499049668608').send("You will receive a message to quickly create your **Ahn'Qiraj 20** in the channel #corruption.");
     }
 }
