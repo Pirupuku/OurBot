@@ -17,7 +17,7 @@ var CronJob = require('cron').CronJob;
 const talkedRecently = new Set();
 
 bot.commands = new Discord.Collection();
-
+console.log('test');
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
      const command = require(`./commands/${file}`);
