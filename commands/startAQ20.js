@@ -1,6 +1,6 @@
 module.exports = {
     name: 'startMC',
-    description: "start raiding MC",
+    description: "start raiding AQ20",
     execute(bot, message, args) {
         
         var aq20StartDate = new Date();
