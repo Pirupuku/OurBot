@@ -154,20 +154,28 @@ bot.on('message', message => {
          message.author.send('You don not have the permission to use commands!');
       }
       if (IsOfficer(message)) {
-         if (command == 'startMC') {
-            bot.commands.get('').execute(bot, message, args);
-         } else if (command == 'startOny') {
-            bot.commands.get('').execute(bot, message, args);
-         } else if (command == 'startBWL') {
-            bot.commands.get('').execute(bot, message, args);
-         } else if (command == 'startZG') {
-            bot.commands.get('').execute(bot, message, args);
-         } else if (command == 'startAQ20') {
-            bot.commands.get('').execute(bot, message, args);
-         } else if (command == 'startAQ40') {
-            bot.commands.get('').execute(bot, message, args);
-         } else if (command == 'startNaxx') {
-            bot.commands.get('').execute(bot, message, args);
+         console.log('officer');
+         if (command == 'raidmc') {
+            console.log('starting mc');
+            bot.commands.get('raidmc').execute(bot, message, args);
+         } else if (command == 'raidony') {
+            console.log('starting ony');
+            bot.commands.get('raidony').execute(bot, message, args);
+         } else if (command == 'raidbwl') {
+            console.log('starting bwl');
+            bot.commands.get('raidbwl').execute(bot, message, args);
+         } else if (command == 'raidzg') {
+            console.log('starting zg');
+            bot.commands.get('raidzg').execute(bot, message, args);
+         } else if (command == 'raidaq20') {
+            console.log('starting aq20');
+            bot.commands.get('raidaq20').execute(bot, message, args);
+         } else if (command == 'raidaq40') {
+            console.log('starting aq40');
+            bot.commands.get('raidaq40').execute(bot, message, args);
+         } else if (command == 'raidnaxx') {
+            console.log('starting naxx');
+            bot.commands.get('raidnaxx').execute(bot, message, args);
          } else if (command == 'clear') {
             bot.commands.get('clear').execute(bot, message, args, nickname);
          }

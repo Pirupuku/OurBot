@@ -14,7 +14,9 @@
     "discord": "^0.8.2",
     "discord.js": "^12.5.3",
     "events": "^3.3.0",
+    "latest": "^0.2.0",
     "mongodb": "^3.7.1",
+    "node": "^16.10.0",
     "request": "^2.88.2"
   }
 }
