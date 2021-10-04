@@ -1,6 +1,6 @@
 module.exports = {
     name: 'startMC',
-    description: "start raiding MC",
+    description: "start raiding Ony",
     execute(bot, message, args) {
 
         var onyStartDate = new Date();
@@ -13,5 +13,6 @@ module.exports = {
             channel.send(`+quickcreate [title: ONYXIA][description: killing shit and getting lootz!!!][channel:sign-ups][date:${onyDate.getDate()}-${onyDate.getMonth()+1}-${onyDate.getFullYear()}][time:20:00][template:2][image: https://ibb.co/tYnppNJ] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
         });
         raidMC.start();
+        message.channel.send('You will receive a message to quickly create your **Onyxia** in the channel #corruption.');
     }
 }

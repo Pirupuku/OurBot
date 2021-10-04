@@ -12,5 +12,6 @@ module.exports = {
             channel.send(`+quickcreate [title: ONYXIA][description: killing shit and getting lootz!!!][channel:sign-ups][date:${zgDate.getDate()}-${zgDate.getMonth()+1}-${zgDate.getFullYear()}][time:20:00][template:2][image: https://i.ibb.co/gyW9KsQ/zg.jpg] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
         });
         raidMC.start();
+        message.channel.send("You will receive a message to quickly create your **Zul'Gurub** in the channel #corruption.");
     }
 }

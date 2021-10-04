@@ -10,5 +10,6 @@ module.exports = {
             channel.send(`+quickcreate [title: MOLTEN CORE][description: killing shit and getting lootz!!!][channel:sign-ups][date:${mcDate.getDate()}-${mcDate.getMonth()+1}-${mcDate.getFullYear()}][time:20:00][template:2][image: https://i.ibb.co/CBVZw8h/molten-core.jpg] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
         });
         raidMC.start();
+        message.channel.send('You will receive a message to quickly create your **Molten Core** in the channel #corruption.');
     }
 }
