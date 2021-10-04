@@ -5,7 +5,7 @@ module.exports = {
         
         var aq20StartDate = new Date();
 
-        let raidMC = new cron.CronJob(`00 00 20 * * ${aq20StartDate.getDay()}`, () => {
+        let raidaq20 = new cron.CronJob(`00 00 20 * * ${aq20StartDate.getDay()}`, () => {
             aq20StartDate.setDate(aq20StartDate.getDate() + 3); 
             var aq20Date = new Date();
             aq20Date.setDate(aq20Date.getDate() + 3);
