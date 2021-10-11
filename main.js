@@ -175,6 +175,19 @@ bot.on('message', message => {
             bot.commands.get('raidnaxx').execute(bot, message, args, CronJob);
          } else if (command == 'clear') {
             bot.commands.get('clear').execute(bot, message, args, nickname);
+         } else if (commant == 'testosterone') {
+            let testus = new CronJob(`* 1 * * * 0-6`, () => {
+               let channel = bot.channels.cache.get('773542499049668608'); // #bot-config
+               channel.send(`+quickcreate [title: MOLTEN CORE][description: killing shit and getting lootz!!!][channel:sign-ups][date:${mcDate.getDate()}-${mcDate.getMonth()+1}-${mcDate.getFullYear()}][time:20:00][template:2][image: https://i.ibb.co/CBVZw8h/molten-core.jpg] [advanced:# Deadline - ( 0 ) # Sign-Ups overall - ( 100 ) # Sign-Ups lock - ( false ) # Sign-Ups user - ( 1 )  # Mention - ( {Raiders} )  # Attendance - ( true ) # Numbering - ( true ) # Rename - ( Late ) # ( Bench ) # ( Tentative ) # ( Absence ) # ( No )  # Announcement - ( true ) # ( general ) # ( 1 ) # ( Raid has been posted ) # Opt-out - ( none )][deletion:4]`);
+           });
+   
+           if (args[0] == 'start') {
+               startMC.start();
+           } else if (args[0] == 'stop') {
+               startMC.stop();
+           }
+           
+           bot.channels.cache.get('773542499049668608').send('You will receive a message to quickly create your **Molten Core** in the channel #corruption.');
          }
       }
    } else { // if any other server
