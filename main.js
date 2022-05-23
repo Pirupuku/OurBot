@@ -177,6 +177,7 @@ bot.on('message', message => {
       }
    } else if (message.guild == '807313418293608479') { // If BOT-TEST-SERVER
       if (message.channel.id == '807313418293608482') {
+         console.log(message.content);
          message.guild.channels.cache.get('978357378682617877').send(message.content);
       }
    } else { // if any other server
