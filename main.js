@@ -33,8 +33,6 @@ const { RoleID, ClassID } = require('./ids');
 bot.on('ready', () => {
    const allGuilds = bot.guilds.cache.map(guild => guild.id);
    ManyWhelps = bot.guilds.cache.get('773542499049668608');
-   FirstStep = ManyWhelps.channels.cache.get('808820077561774100'); // #first-step;
-   FirstStep.messages.fetch({});
    console.log('Many Whelps hands out 50 DKP minus');
    bot.user.setActivity('$help', { type: 'WATCHING'}).catch(console.error);
    memberCount(bot);
@@ -178,7 +176,9 @@ bot.on('message', message => {
          }
       }
    } else if (message.guild == '807313418293608479') { // If BOT-TEST-SERVER
-      bot.channels.cache.get('978343865167786043').send(message);
+      if (message.channel.id == '807313418293608482') {
+         message.guild.channels.cache.get('978357378682617877').send(message.content);
+      }
    } else { // if any other server
       if (command == 'addrecipe') {
          bot.commands.get('addrecipe').execute(MongoClient, mongoPath, message, nickname, args);
