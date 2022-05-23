@@ -177,6 +177,9 @@ bot.on('message', message => {
             bot.commands.get('clear').execute(bot, message, args, nickname);
          }
       }
+   } else if (message.guild == '807313418293608482') { // If BOT-TEST-SERVER
+      message = message.content.toString();
+      bot.channels.cache.get('978343865167786043').send(message);
    } else { // if any other server
       if (command == 'addrecipe') {
          bot.commands.get('addrecipe').execute(MongoClient, mongoPath, message, nickname, args);
