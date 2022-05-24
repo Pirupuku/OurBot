@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 require('dotenv').config();
 const mongo = require('mongodb');
 const MongoClient = mongo.MongoClient;
-const bot = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_MEMBERS"], partials: ["MESSAGE", "CHANNEL", "REACTION"] });
+const bot = new Discord.Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS], partials: [Intents.FLAGS.MESSAGE, Intents.FLAGS.CHANNEL, Intents.FLAGS.REACTION] });
 
 const mongoPath = 'mongodb+srv://professions:m4n1wh3lpsprofession@professions.r1p0r.mongodb.net'
 
