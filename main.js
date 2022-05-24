@@ -106,7 +106,7 @@ bot.on('guildMemberUpdate', (oldMember, newMember) => {
    }
 });
 
-bot.on('message', message => {
+bot.on('messageCreate', (message) => {
    const args = message.content.slice(prefix.length).split(/ +/);
    const command = args.shift().toLowerCase();
    let member = message.member;
