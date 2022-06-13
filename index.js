@@ -55,7 +55,7 @@ client.once("ready", () => {
         await rest.put(Routes.applicationCommands(CLIENT_ID), {
           body: commands
         });
-        constole.log("Successfully registered commands globally.");
+        console.log("Successfully registered commands globally.");
       } else {
         await rest.put(Routes.applicationGuildCommands(CLIENT_ID, process.env.GUILD_ID), {
           body: commands
