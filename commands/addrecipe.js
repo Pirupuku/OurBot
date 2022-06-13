@@ -1,42 +1,37 @@
-async function addrecipe(MongoClient, mongoPath, message, nickname, someText) {
-    const client = await MongoClient.connect(mongoPath, {useNewUrlParser: true, useUnifiedTopology: true})
-            .catch(err => {console.log('LoadData failed to connect');});
-        if (!client)
-          return;
-    try {
-        var db = client.db('recipes');
-        var col = await db.collection(someText).find({crafter: message.author.id}).toArray().catch(err => {console.log('LoadData failed to connect');});
-        
-       if (col.length != 0) {
-           return;
-       }
-       await db.collection(someText).insertOne({crafter: message.author.id})
-
-    } catch {
-       console.log('error');
-    } finally {
-       client.close();
-    }
-}
-
-function arrayToString(array) {
-    var some_string = '';
-    if (array != null && array.length != 0) {
-        for (var i = 0; i < array.length; i++) {
-            some_string += array[i];
-            if (i < array.length - 1)
-                some_string += ' ';
-        }
-    }
-    return some_string;
-}
+const { SlashCommandBuilder } = require("@discordjs/builders");
+const mongo = require('mongodb');
+const MongoClient = mongo.MongoClient;
 
 module.exports = {
-    name: 'addrecipe',
-    description: "adds a recipe!",
-    execute(MongoClient, mongoPath, message, nickname, args) {   
-        var someText = arrayToString(args);
-        someText = someText.toLowerCase();
-        addrecipe(MongoClient, mongoPath, message, nickname, someText)
-    }
+  data: new SlashCommandBuilder()
+    .setName("addrecipe")
+    .setDescription("Adds a recipe to the database.")
+    .addStringOption((option) => 
+        option
+            .setName('recipe')
+            .setDescription('Full name of the recipe.')
+            .setRequired(true)
+    ),
+  async execute(interaction, nickname, client) {
+    const recipeToAdd = interaction.options.getString('recipe').toLowerCase()
+
+    MongoClient.connect(process.env.MONGO_URI, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db('recipes');
+        var myobj = { crafter: interaction.user.id };
+        var newvalues = { $set: { crafter: interaction.user.id } };
+        
+        dbo.collection(recipeToAdd).updateOne(myobj, newvalues, {upsert: true, new: true}, function(err, res) {
+            if (err) throw err;
+
+            console.log('1 recipe added');
+            db.close();
+        });
+
+    });
+    interaction.reply({
+      content: `This recipe was added to the database: ${interaction.options.getString('recipe')}`,
+      ephemeral: true,
+    });
+  }
 }
