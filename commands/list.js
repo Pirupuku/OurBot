@@ -49,7 +49,7 @@ module.exports = {
             listEmbed
                 .addFields(getGenericField(key, roleNames));
         }
-        interaction.reply({
+        await interaction.reply({
             embeds: [listEmbed],
             ephemeral: true,
         });
@@ -64,7 +64,7 @@ module.exports = {
     } else if (args in GuildID) {
       roleNames = manyWhelps.members.cache.filter(member => member.roles.cache.find(r => r.id === GuildID[args])).map(m => m.displayName)
     } else {
-        interaction.reply({
+        await interaction.reply({
             content: 'No such role exists',
             ephemeral: true,
         });
@@ -79,7 +79,7 @@ module.exports = {
         .addFields(getRoleField(nickname, args, roleNames));
     }
 
-    interaction.reply({
+    await interaction.reply({
       embeds: [listEmbed],
       ephemeral: true,
     });
