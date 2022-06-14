@@ -70,13 +70,13 @@ async function getRecipes(dbo, nickname, someText, client, interaction) {
   if (!recipeExists) {
     embedRecipe
       .setDescription(`Hey ${nickname}, this recipe is not available.`)
-    interaction.reply({
+    await interaction.reply({
       embeds: [embedRecipe],
       ephemeral: true,
     });
     embedRecipe = '';
   } else {
-    interaction.reply({
+    await interaction.reply({
       embeds: [embedRecipe],
       ephemeral: true,
     });
