@@ -93,10 +93,8 @@ module.exports = {
         })
         return
     }
-console.log(startDay.split(''));
-    console.log(startMonth.split(''));
-    console.log(startYear.split(''));
-    if (startDay.split('') > 2 || startMonth.split('') > 2 || endDay.split('') > 2 || endMonth.split('') > 2) {
+
+    if (startDay.split('').length > 2 || startMonth.split('').length > 2 || endDay.split('').length > 2 || endMonth.split('').length > 2) {
         interaction.reply({
             content: 'Wrong length of characters in either your starting or ending date.',
             ephemeral: true,
@@ -104,7 +102,7 @@ console.log(startDay.split(''));
         return
     }
 
-    if (startYear.split('') === 2 || startYear.split('') === 4) {
+    if (startYear.split('').length === 2 || startYear.split('').length === 4) {
         interaction.reply({
             content: 'Wrong length of characters in either your starting or ending date.',
             ephemeral: true,
@@ -112,7 +110,7 @@ console.log(startDay.split(''));
         return
     }
 
-    if (endYear.split('') === 2 || endYear.split('') === 4) {
+    if (endYear.split('').length === 2 || endYear.split('').length === 4) {
         interaction.reply({
             content: 'Wrong length of characters in either your starting or ending date.',
             ephemeral: true,
