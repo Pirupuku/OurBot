@@ -5,7 +5,7 @@ module.exports = {
     .setName("cheer")
     .setDescription("Get cheered"),
   async execute(interaction, nickname, client) {
-    interaction.reply({
+    await interaction.reply({
       content: "You won't ever be able to kill C'thun - you little piece of shit!",
       ephemeral: true,
     });
