@@ -124,15 +124,6 @@ module.exports = {
     const result = Math.ceil(Math.abs(today - endDate)) + oneDay;
     const resultDays = Math.ceil(Math.abs((today - endDate) / oneDay));
 
-    // for deleting
-    channelAbsence.send({ embeds: [absenceEmbed] })
-     /*
-      .then(repliedMessage => {
-            setTimeout(() => repliedMessage.delete(), result);
-        })
-        
-    .catch();
-    */
       if (isNaN(startDay) || isNaN(startMonth) || isNaN(startYear) || isNaN(endDay) || isNaN(endMonth) || isNaN(endYear)) {
         await interaction.reply({
             content: 'Typo, you entered not only numbers in your dates',
@@ -141,19 +132,19 @@ module.exports = {
         return
     } else if (startDay.split('').length > 2 || startMonth.split('').length > 2 || endDay.split('').length > 2 || endMonth.split('').length > 2) {
         await interaction.reply({
-            content: 'Wrong length of characters in either your starting or ending date.',
+            content: 'Wrong length of characters in either your starting or ending day/month.',
             ephemeral: true,
         })
         return
-    } else if (startYear.split('').length === 2 || startYear.split('').length === 4) {
+    } else if (startYear.split('').length !== 2 && startYear.split('').length !== 4) {
         await interaction.reply({
-            content: 'Wrong length of characters in either your starting day/month or ending day/month.',
+            content: 'Wrong length of characters in either your starting year.',
             ephemeral: true,
         })
         return
     } else if (endYear.split('').length !== 2 && endYear.split('').length !== 4) {
         await interaction.reply({
-            content: 'Wrong length of characters in either your starting or ending year.',
+            content: 'Wrong length of characters in either your ending year.',
             ephemeral: true,
         })
         return
@@ -176,6 +167,16 @@ module.exports = {
         })
         return
     } else {  
+        
+        // for deleting
+        channelAbsence.send({ embeds: [absenceEmbed] })
+        /*
+            .then(repliedMessage => {
+                setTimeout(() => repliedMessage.delete(), result);
+            })
+        
+        .catch();
+        */
         await interaction.reply({
             content: 'Your message is being send to #longterm-absence and will be deleted automatically.',
             ephemeral: true,
