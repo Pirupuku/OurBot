@@ -29,7 +29,7 @@ module.exports = {
         });
 
     });
-    interaction.reply({
+    await interaction.reply({
       content: `This recipe was added to the database: ${interaction.options.getString('recipe')}`,
       ephemeral: true,
     });
