@@ -86,38 +86,6 @@ module.exports = {
     const todayDate = d.getDate();
     const today = new Date(todayYear, todayMonth, todayDate, 0, 0, 0, 0);
 
-    if (isNaN(startDay) || isNaN(startMonth) || isNaN(startYear) || isNaN(endDay) || isNaN(endMonth) || isNaN(endYear)) {
-        interaction.reply({
-            content: 'Typo, you entered not only numbers in your dates',
-            ephemeral: true,
-        })
-        return
-    }
-
-    if (startDay.split('').length > 2 || startMonth.split('').length > 2 || endDay.split('').length > 2 || endMonth.split('').length > 2) {
-        interaction.reply({
-            content: 'Wrong length of characters in either your starting or ending date.',
-            ephemeral: true,
-        })
-        return
-    }
-
-    if (startYear.split('').length === 2 || startYear.split('').length === 4) {
-        interaction.reply({
-            content: 'Wrong length of characters in either your starting or ending date.',
-            ephemeral: true,
-        })
-        return
-    }
-
-    if (endYear.split('').length === 2 || endYear.split('').length === 4) {
-        interaction.reply({
-            content: 'Wrong length of characters in either your starting or ending date.',
-            ephemeral: true,
-        })
-        return
-    }
-
     startDay = parseInt(startDay);
     startMonth = parseInt(startMonth);
     startYear = parseInt(startYear);
@@ -129,31 +97,8 @@ module.exports = {
     const startDate = new Date(startYear, startMonth-1, startDay, 0, 0, 0, 0);
     const endDate = new Date(endYear, endMonth-1, endDay, 0, 0, 0, 0);
 
-    if (startArray.length !== 3 && startArray2.length !== 3 && startArray3.length !== 3) {
-        interaction.reply({
-            content: 'Wrong starting date.',
-            ephemeral: true,
-        })
-        return
-    }
-    if (endArray.length !== 3 && endArray2.length !== 3 && endArray3.length !== 3) {
-        interaction.reply({
-            content: 'Wrong ending date.',
-            ephemeral: true,
-        })
-        return
-    }
-
     const oneDay = 24 * 60 * 60 * 1000;
     const diffDays = Math.ceil(Math.abs((startDate - endDate) / oneDay));
-
-    if (startDate > endDate) {
-        interaction.reply({
-            content: 'Starting date lies further ahead than ending date.',
-            ephemeral: true,
-        })
-        return
-    }
 
     const absenceEmbed = new MessageEmbed()
         .setAuthor({name: '<OurBot>'})
@@ -180,12 +125,53 @@ module.exports = {
         
     .catch();
     */
-    
-    interaction.reply({
-        content: 'Your message is being send to #longterm-absence and will be deleted automatically.',
-        ephemeral: true,
-    })
-    
-    
+      if (isNaN(startDay) || isNaN(startMonth) || isNaN(startYear) || isNaN(endDay) || isNaN(endMonth) || isNaN(endYear)) {
+        await interaction.reply({
+            content: 'Typo, you entered not only numbers in your dates',
+            ephemeral: true,
+        })
+        return
+    } else if (startDay.split('').length > 2 || startMonth.split('').length > 2 || endDay.split('').length > 2 || endMonth.split('').length > 2) {
+        await interaction.reply({
+            content: 'Wrong length of characters in either your starting or ending date.',
+            ephemeral: true,
+        })
+        return
+    } else if (startYear.split('').length === 2 || startYear.split('').length === 4) {
+        await interaction.reply({
+            content: 'Wrong length of characters in either your starting or ending date.',
+            ephemeral: true,
+        })
+        return
+    } else if (endYear.split('').length === 2 || endYear.split('').length === 4) {
+        await interaction.reply({
+            content: 'Wrong length of characters in either your starting or ending date.',
+            ephemeral: true,
+        })
+        return
+    } else if (startArray.length !== 3 && startArray2.length !== 3 && startArray3.length !== 3) {
+        await interaction.reply({
+            content: 'Wrong starting date.',
+            ephemeral: true,
+        })
+        return
+    } else if (endArray.length !== 3 && endArray2.length !== 3 && endArray3.length !== 3) {
+        await interaction.reply({
+            content: 'Wrong ending date.',
+            ephemeral: true,
+        })
+        return
+    } else if (startDate > endDate) {
+        await interaction.reply({
+            content: 'Starting date lies further ahead than ending date.',
+            ephemeral: true,
+        })
+        return
+    } else {  
+        await interaction.reply({
+            content: 'Your message is being send to #longterm-absence and will be deleted automatically.',
+            ephemeral: true,
+        })
+    }
   }
 }
