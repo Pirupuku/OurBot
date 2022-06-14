@@ -138,13 +138,13 @@ module.exports = {
         return
     } else if (startYear.split('').length !== 2 && startYear.split('').length !== 4) {
         await interaction.reply({
-            content: 'Wrong length of characters in either your starting year.',
+            content: 'Wrong length of characters in your starting year.',
             ephemeral: true,
         })
         return
     } else if (endYear.split('').length !== 2 && endYear.split('').length !== 4) {
         await interaction.reply({
-            content: 'Wrong length of characters in either your ending year.',
+            content: 'Wrong length of characters in your ending year.',
             ephemeral: true,
         })
         return
