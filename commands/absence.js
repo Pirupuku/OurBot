@@ -129,43 +129,36 @@ module.exports = {
             content: 'Typo, you entered not only numbers in your dates',
             ephemeral: true,
         })
-        return
     } else if (startDay.split('').length > 2 || startMonth.split('').length > 2 || endDay.split('').length > 2 || endMonth.split('').length > 2) {
         await interaction.reply({
             content: 'Wrong length of characters in either your starting or ending day/month.',
             ephemeral: true,
         })
-        return
     } else if (startYear.split('').length !== 2 && startYear.split('').length !== 4) {
         await interaction.reply({
             content: 'Wrong length of characters in your starting year.',
             ephemeral: true,
         })
-        return
     } else if (endYear.split('').length !== 2 && endYear.split('').length !== 4) {
         await interaction.reply({
             content: 'Wrong length of characters in your ending year.',
             ephemeral: true,
         })
-        return
     } else if (startArray.length !== 3 && startArray2.length !== 3 && startArray3.length !== 3) {
         await interaction.reply({
             content: 'Wrong starting date.',
             ephemeral: true,
         })
-        return
     } else if (endArray.length !== 3 && endArray2.length !== 3 && endArray3.length !== 3) {
         await interaction.reply({
             content: 'Wrong ending date.',
             ephemeral: true,
         })
-        return
     } else if (startDate > endDate) {
         await interaction.reply({
             content: 'Starting date lies further ahead than ending date.',
             ephemeral: true,
         })
-        return
     } else {  
         
         // for deleting
