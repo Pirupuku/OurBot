@@ -56,7 +56,7 @@ module.exports = {
         },
       )
       .setTimestamp()
-    interaction.reply({
+    await interaction.reply({
       embeds: [helpEmbed],
       ephemeral: true,
     });
