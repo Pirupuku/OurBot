@@ -171,11 +171,6 @@ module.exports = {
     const result = Math.ceil(Math.abs(today - endDate)) + oneDay;
     const resultDays = Math.ceil(Math.abs((today - endDate) / oneDay));
 
-    interaction.reply({
-        content: 'Your message is being send to #longterm-absence and will be deleted automatically.',
-        ephemeral: true,
-    })
-    
     // for deleting
     channelAbsence.send({ embeds: [absenceEmbed] })
      /*
@@ -185,5 +180,12 @@ module.exports = {
         
     .catch();
     */
+    
+    interaction.reply({
+        content: 'Your message is being send to #longterm-absence and will be deleted automatically.',
+        ephemeral: true,
+    })
+    
+    
   }
 }
