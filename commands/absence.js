@@ -147,13 +147,13 @@ module.exports = {
         return
     } else if (startYear.split('').length === 2 || startYear.split('').length === 4) {
         await interaction.reply({
-            content: 'Wrong length of characters in either your starting or ending date.',
+            content: 'Wrong length of characters in either your starting day/month or ending day/month.',
             ephemeral: true,
         })
         return
-    } else if (endYear.split('').length === 2 || endYear.split('').length === 4) {
+    } else if (endYear.split('').length !== 2 && endYear.split('').length !== 4) {
         await interaction.reply({
-            content: 'Wrong length of characters in either your starting or ending date.',
+            content: 'Wrong length of characters in either your starting or ending year.',
             ephemeral: true,
         })
         return
