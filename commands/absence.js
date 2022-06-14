@@ -93,7 +93,9 @@ module.exports = {
         })
         return
     }
-
+console.log(startDay.split(''));
+    console.log(startMonth.split(''));
+    console.log(startYear.split(''));
     if (startDay.split('') > 2 || startMonth.split('') > 2 || endDay.split('') > 2 || endMonth.split('') > 2) {
         interaction.reply({
             content: 'Wrong length of characters in either your starting or ending date.',
@@ -182,8 +184,8 @@ module.exports = {
       .then(repliedMessage => {
             setTimeout(() => repliedMessage.delete(), result);
         })
-        */
+        
     .catch();
-    
+    */
   }
 }
