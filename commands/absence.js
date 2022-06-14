@@ -40,6 +40,10 @@ module.exports = {
     var startMonth;
     var startYear;
 
+    var startDayInt;
+    var startMonthInt;
+    var startYearInt;
+    
     if (startArray.length >= startArray2.length) {
         if (startArray.length > startArray3.length) {
             startDay = startArray[0];
@@ -63,7 +67,11 @@ module.exports = {
     var endDay;
     var endMonth;
     var endYear;
-
+    
+    var endDayInt;
+    var endMonthInt;
+    var endYearInt;
+    
     if (endArray.length >= endArray2.length) {
         if (endArray.length > endArray3.length) {
             endDay = endArray[0];
@@ -86,16 +94,16 @@ module.exports = {
     const todayDate = d.getDate();
     const today = new Date(todayYear, todayMonth, todayDate, 0, 0, 0, 0);
 
-    startDay = parseInt(startDay);
-    startMonth = parseInt(startMonth);
-    startYear = parseInt(startYear);
+    startDayInt = parseInt(startDay);
+    startMonthInt = parseInt(startMonth);
+    startYearInt = parseInt(startYear);
 
-    endDay = parseInt(endDay);
-    endMonth = parseInt(endMonth);
-    endYear = parseInt(endYear);
+    endDayInt = parseInt(endDay);
+    endMonthInt = parseInt(endMonth);
+    endYearInt = parseInt(endYear);
 
-    const startDate = new Date(startYear, startMonth-1, startDay, 0, 0, 0, 0);
-    const endDate = new Date(endYear, endMonth-1, endDay, 0, 0, 0, 0);
+    const startDate = new Date(startYearInt, startMonthInt-1, startDayInt, 0, 0, 0, 0);
+    const endDate = new Date(endYearInt, endMonthInt-1, endDayInt, 0, 0, 0, 0);
 
     const oneDay = 24 * 60 * 60 * 1000;
     const diffDays = Math.ceil(Math.abs((startDate - endDate) / oneDay));
