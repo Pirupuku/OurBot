@@ -88,8 +88,10 @@ module.exports = {
 
     if (isNaN(startDay) || isNaN(startMonth) || isNaN(startYear) || isNaN(endDay) || isNaN(endMonth) || isNaN(endYear)) {
         interaction.reply({
-            content: 'Typo, you entered not only numbers in your dates'
+            content: 'Typo, you entered not only numbers in your dates',
+            ephemeral: true,
         })
+        return
     }
 
     if (startDay.split('') > 2 || startMonth.split('') > 2 || endDay.split('') > 2 || endMonth.split('') > 2) {
@@ -176,9 +178,11 @@ module.exports = {
     
     // for deleting
     channelAbsence.send({ embeds: [absenceEmbed] })
-        .then(repliedMessage => {
+     /*
+      .then(repliedMessage => {
             setTimeout(() => repliedMessage.delete(), result);
         })
+        */
     .catch();
     
   }
