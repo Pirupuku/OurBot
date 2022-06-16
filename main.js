@@ -72,21 +72,31 @@ client.on("interactionCreate", async interaction => {
   let member = interaction.member;
   let nickname = member ? member.displayName : null;
   
-  if (!interaction.isCommand()) return;
+  if (interaction.isCommand()) {
+    const command = client.commands.get(interaction.commandName);
 
-  const command = client.commands.get(interaction.commandName);
+    if (!command) return;
 
-  if (!command) return;
+    try {
+      await command.execute(interaction, nickname, client);
+    } catch (err) {
+      if (err) console.error(err);
 
-  try {
-    await command.execute(interaction, nickname, client);
-  } catch(err) {
-    if (err) console.error(err);
+      await interaction.reply({
+        content: "An error occurred while executing that command.",
+        ephemeral: true,
+      });
+    }
+  } else if (interaction.isSelectMenu()) {
 
-    await interaction.reply({
-      content: "An error occurred while executing that command.",
-      ephemeral: true,
-    });
+    if (interaction.customId === 'boss') {
+      let raid = "";
+
+      await interaction.values.forEach(async values => {
+        raid += `${values} `;
+      })
+      await interaction.reply({ content: `Your fav colour are: ${raid}`, ephemeral: true })
+    }
   }
 });
 
