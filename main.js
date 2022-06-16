@@ -89,12 +89,26 @@ client.on("interactionCreate", async interaction => {
     }
   } else if (interaction.isSelectMenu()) {
 
+    const bossEmbed = new MessageEmbed();
+
     if (interaction.customId === 'boss') {
       let raid = "";
 
       await interaction.values.forEach(async values => {
         raid += `${values} `;
       })
+      bossEmbed
+        .setName(`**${raid}`)
+        .setDescription(`<Many Whelps> strategy for ${raid}`)
+        .setThumbnail('https://wow.zamimg.com/uploads/guide/seo/8929.jpg?1568747152')
+        .setColor('#004A94')
+        .addFields(
+          {
+            name: 'Positioning',
+            value: 'Stack all adds + boss and hard cleave!',
+            inline: false,
+          }
+        )
       await interaction.reply({ content: `The strategy for **${raid}** is currently missing.` })
     }
   }

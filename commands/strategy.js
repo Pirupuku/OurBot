@@ -28,7 +28,7 @@ module.exports = {
           .setCustomId('boss')
           .setPlaceholder('Nothing is selected.')
           .setMinValues(1)
-          .setMaxValues(10)
+          .setMaxValues(1)
           .addOptions([
             {
               label: `Lucifron`,
@@ -89,7 +89,7 @@ module.exports = {
           .setCustomId('boss')
           .setPlaceholder('Nothing is selected.')
           .setMinValues(1)
-          .setMaxValues(8)
+          .setMaxValues(1)
           .addOptions([
             {
               label: `Razorgore`,
@@ -140,7 +140,7 @@ module.exports = {
           .setCustomId('boss')
           .setPlaceholder('Nothing is selected.')
           .setMinValues(1)
-          .setMaxValues(9)
+          .setMaxValues(1)
           .addOptions([
             {
               label: `Skeram`,
@@ -196,7 +196,7 @@ module.exports = {
           .setCustomId('boss')
           .setPlaceholder('Nothing is selected.')
           .setMinValues(1)
-          .setMaxValues(15)
+          .setMaxValues(1)
           .addOptions([
             {
               label: `Anub'Rekhan`,
