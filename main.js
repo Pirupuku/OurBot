@@ -202,8 +202,17 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-      }
-      else {
+      } else if (raid.toLowerCase() === 'cthun') {
+        bossEmbed
+          .setThumbnail('https://2img.net/u/2512/28/98/52/album/pr/310_800x600.jpg')
+          .addFields(
+            {
+              name: 'Positioning',
+              value: 'Kill it before first submerge!',
+              inline: false,
+            }
+          )
+      } else {
         bossEmbed
           .addFields(
             {
@@ -214,7 +223,12 @@ client.on("interactionCreate", async interaction => {
           )    
       }
 
-      await interaction.reply({ embeds: [bossEmbed] })
+      await interaction.reply({ embeds: [bossEmbed], files: [{
+        attachment: 'https://cdn.discordapp.com/attachments/800716895417532526/984182070588895272/CthunClowns.mp4',
+        attachment: 'https://cdn.discordapp.com/attachments/808984734939742228/985634623415529572/unknown.png',
+        attachment: 'https://cdn.discordapp.com/attachments/800716895417532526/985353334758178856/Dark_Glare.png'
+        }]
+      })
     }
   }
 });
