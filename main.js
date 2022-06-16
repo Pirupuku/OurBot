@@ -95,7 +95,7 @@ client.on("interactionCreate", async interaction => {
       let raid = "";
 
       await interaction.values.forEach(async values => {
-        raid = `${values} `;
+        raid = `${values.toLowerCase()} `;
       })
       console.log(raid)
       bossEmbed
