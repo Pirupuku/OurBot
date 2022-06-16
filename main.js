@@ -97,9 +97,9 @@ client.on("interactionCreate", async interaction => {
       await interaction.values.forEach(async values => {
         raid += `${values} `;
       })
-      console.log(raid)
+      
       bossEmbed
-          .setName(`**${raid}`)
+          .setAuthor({name: `**${raid}`})
           .setDescription(`<Many Whelps> strategy for ${raid}`)
           .setColor('#004A94')
       if (raid.toLowerCase() === 'lucifron') {
