@@ -51,9 +51,9 @@ module.exports = {
               value: `Garr`
             },
             {
-              label: `Geddon`,
+              label: `Baron Geddon`,
               description: `Strategies for **Baron Geddon**.`,
-              value: `Baron Geddon`
+              value: `Geddon`
             },
             {
               label: `Shazzrah`,
@@ -61,19 +61,19 @@ module.exports = {
               value: `Shazzrah`
             },
             {
-              label: `Sulfuron`,
+              label: `Sulfuron Harbinger`,
               description: `Strategies for **Sulfuron Harbinger**.`,
-              value: `Sulfuron Harbinger`
+              value: `Harbinger`
             },
             {
-              label: `Golemagg`,
+              label: `Golemagg the Incinerator`,
               description: `Strategies for **Golemagg the Incinerator**.`,
-              value: `Golemagg the Incinerator`
+              value: `Golemagg`
             },
             {
-              label: `Majordomo`,
+              label: `Majordomo Executus`,
               description: `Strategies for **Majordomo Executus**.`,
-              value: `Majordomo Executus`
+              value: `Majordomo`
             },
             {
               label: `Ragnaros`,
@@ -92,19 +92,19 @@ module.exports = {
           .setMaxValues(1)
           .addOptions([
             {
-              label: `Razorgore`,
+              label: `Razorgore the Untamed`,
               description: `Strategies for **Razorgore the Untamed**.`,
-              value: `Razorgore the Untamed`
+              value: `Razorgore`
             },
             {
-              label: `Vaelastrasz`,
+              label: `Vaelastrasz the Corrupt`,
               description: `Strategies for **Vaelastrasz the Corrupt**.`,
-              value: `Vaelastrasz the Corrupt`
+              value: `Vaelastrasz`
             },
             {
-              label: `Broodlord`,
+              label: `Broodlord Lashlayer`,
               description: `Strategies for **Broodlord Lashlayer**.`,
-              value: `Broodlord Lashlayer`
+              value: `Broodlord`
             },
             {
               label: `Firemaw`,
@@ -143,24 +143,24 @@ module.exports = {
           .setMaxValues(1)
           .addOptions([
             {
-              label: `Skeram`,
+              label: `The Prophet Skeram`,
               description: `Strategies for **The Prophet Skeram**.`,
-              value: `The Prophet Skeram`
+              value: `Skeram`
             },
             {
-              label: `Bug Trio`,
+              label: `The Bug Trio`,
               description: `Strategies for **The Bug Trio**.`,
-              value: `The Bug Trio`
+              value: `bugTrio`
             },
             {
-              label: `Satura`,
+              label: `Battleguard Satura`,
               description: `Strategies for **Battleguard Satura**.`,
-              value: `Battleguard Satura`
+              value: `Satura`
             },
             {
-              label: `Fankriss`,
+              label: `Fankriss the Unyielding`,
               description: `Strategies for **Fankriss the Unyielding**.`,
-              value: `Fankriss the Unyielding`
+              value: `Fankriss`
             },
             {
               label: `Viscidus`,
@@ -168,14 +168,14 @@ module.exports = {
               value: `Viscidus`
             },
             {
-              label: `Huhuran`,
+              label: `Princess Huhuran`,
               description: `Strategies for **Princess Huhuran**.`,
-              value: `Princess Huhuran`
+              value: `Huhuran`
             },
             {
-              label: `Twin Emperors`,
+              label: `The Twin Emperors`,
               description: `Strategies for **The Twin Emperors**.`,
-              value: `The Twin Emperors`
+              value: `twinEmps`
             },
             {
               label: `Ouro`,
@@ -185,7 +185,7 @@ module.exports = {
             {
               label: `C'Thun`,
               description: `Strategies for **C'Thun**.`,
-              value: `C'Thun`
+              value: `cThun`
             },
           ])
       )
@@ -201,12 +201,12 @@ module.exports = {
             {
               label: `Anub'Rekhan`,
               description: `Strategies for **Anub'Rekhan**.`,
-              value: `Anub'Rekhan`
+              value: `Anub`
             },
             {
-              label: `Faerlina`,
+              label: `Grand Widow Faerlina`,
               description: `Strategies for **Grand Widow Faerlina**.`,
-              value: `Grand Widow Faerlina`
+              value: `Faerlina`
             },
             {
               label: `Maexxna`,
@@ -214,14 +214,14 @@ module.exports = {
               value: `Maexxna`
             },
             {
-              label: `Noth`,
+              label: `Noth the Plaguebringer`,
               description: `Strategies for **Noth the Plaguebringer**.`,
-              value: `Noth the Plaguebringer`
+              value: `Noth`
             },
             {
-              label: `Heigan`,
+              label: `Heigan the Unclean`,
               description: `Strategies for **Heigan the Unclean**.`,
-              value: `Heigan the Unclean`
+              value: `Heigan`
             },
             {
               label: `Loatheb`,
@@ -229,19 +229,19 @@ module.exports = {
               value: `Loatheb`
             },
             {
-              label: `Razuvious`,
+              label: `Instructor Razuvious`,
               description: `Strategies for **Instructor Razuvious**.`,
-              value: `Instructor Razuvious`
+              value: `Razuvious`
             },
             {
-              label: `Gothik`,
+              label: `Gothik the Harvester`,
               description: `Strategies for **Gothik the Harvester**.`,
-              value: `Gothik the Harvester`
+              value: `Gothik`
             },
             {
-              label: `Four Horsemen`,
+              label: `The Four Horsemen`,
               description: `Strategies for **The Four Horsemen**.`,
-              value: `The Four Horsemen`
+              value: `4hm`
             },
             {
               label: `Patchwerk`,
@@ -271,7 +271,7 @@ module.exports = {
             {
               label: `Kel'Thuzad`,
               description: `Strategies for **Kel'Thuzad**.`,
-              value: `Kel'Thuzad`
+              value: `kt`
             },
           ])
       )

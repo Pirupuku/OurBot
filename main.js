@@ -108,11 +108,102 @@ client.on("interactionCreate", async interaction => {
           .addFields(
             {
               name: 'Positioning',
-              value: 'Stack all adds + boss and hard cleave!',
+              value: 'Stack all adds + boss and cleave hard!',
               inline: false,
             }
           )
-      } else {
+      } else if (raid.toLowerCase() === 'magmadar') {
+        bossEmbed
+          .setThumbnail('https://www.warcrafttavern.com/wp-content/uploads/2021/11/Magmadar-WoW-Classic-Season-of-Mastery-Strategy-Guide.jpg')
+          .addFields(
+            {
+              name: 'Positioning',
+              value: 'Do not stand in the fire!',
+              inline: false,
+            }
+          )
+      } else if (raid.toLowerCase() === 'gehennas') {
+        bossEmbed
+          .setThumbnail('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG0FQ7fOJY9xNZ-fh3Za9A8hLoi0du-7mp_w&usqp=CAU')
+          .addFields(
+            {
+              name: 'Positioning',
+              value: 'Stack all adds + boss and cleave hard!',
+              inline: false,
+            }
+          )
+      } else if (raid.toLowerCase() === 'garr') {
+        bossEmbed
+          .setThumbnail('https://static.wikia.nocookie.net/wowwiki/images/8/8b/Garr.jpg/revision/latest/scale-to-width-down/480?cb=20050829014520')
+          .addFields(
+            {
+              name: 'Positioning',
+              value: 'Stack all adds, kill boss fast, kill adds!',
+              inline: false,
+            }
+          )
+      } else if (raid.toLowerCase() === 'geddon') {
+        bossEmbed
+          .setThumbnail('https://wow.zamimg.com/uploads/screenshots/normal/762804-baron-geddon.jpg')
+          .addFields(
+            {
+              name: 'Positioning',
+              value: 'Position him out of Line-Of-Sight of healers!',
+              inline: false,
+            }
+          )
+      } else if (raid.toLowerCase() === 'shazzrah') {
+        bossEmbed
+          .setThumbnail('https://wow.zamimg.com/uploads/screenshots/normal/86833-shazzrah.jpg')
+          .addFields(
+            {
+              name: 'Positioning',
+              value: 'All in, nuke boss, pray to the healers (as melee)!',
+              inline: false,
+            }
+          )
+      } else if (raid.toLowerCase() === 'golemagg') {
+        bossEmbed
+          .setThumbnail('https://www.warcrafttavern.com/wp-content/uploads/2021/11/Golemagg-WoW-Classic-Season-of-Mastery-Strategy-Guide-1024x506.jpg')
+          .addFields(
+            {
+              name: 'Positioning',
+              value: 'One tank get both doggos, other tank on boss -> nuke!',
+              inline: false,
+            }
+          )
+      } else if (raid.toLowerCase() === 'sulfuron') {
+        bossEmbed
+          .setThumbnail('https://www.warcrafttavern.com/wp-content/uploads/2021/11/Sulfuron-Harbringer-WoW-Classic-Season-of-Mastery-Strategy-Guide.jpg')
+          .addFields(
+            {
+              name: 'Positioning',
+              value: 'Stack all adds, interrupt and kill -> nuke boss!',
+              inline: false,
+            }
+          )
+      } else if (raid.toLowerCase() === 'majordomo') {
+        bossEmbed
+          .setThumbnail('https://www.wow-freakz.com/img/screenshots/wowhead_332853.jpg')
+          .addFields(
+            {
+              name: 'Positioning',
+              value: 'Kill two elites, kite the other two elites, sheep all healers!',
+              inline: false,
+            }
+          )
+      } else if (raid.toLowerCase() === 'ragnaros') {
+        bossEmbed
+          .setThumbnail('https://wow.zamimg.com/uploads/screenshots/normal/1061-ragnaros-ragnaros-after-killing-us.jpg')
+          .addFields(
+            {
+              name: 'Positioning',
+              value: 'Kill it before first submerge!',
+              inline: false,
+            }
+          )
+      }
+      else {
         bossEmbed
           .addFields(
             {
