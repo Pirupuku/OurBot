@@ -95,9 +95,9 @@ client.on("interactionCreate", async interaction => {
       let raid = "";
 
       await interaction.values.forEach(async values => {
-        raid += `${values} `;
+        raid = `${values} `;
       })
-      
+      console.log(raid)
       bossEmbed
           .setAuthor({name: `**${raid}`})
           .setDescription(`<Many Whelps> strategy for ${raid}`)
