@@ -275,12 +275,15 @@ client.on("interactionCreate", async interaction => {
             }
           ),
           new MessageEmbed()
+          .setDescription(`<Many Whelps> strategy for ${raid}`)
           .setURL(`https://www.youtube.com/watch?v=vZcR-OcrJGg`)
           .setImage(`https://cdn.discordapp.com/attachments/800716895417532526/985353334414274570/CThun_Run_In.png`),
           new MessageEmbed()
+          .setDescription(`<Many Whelps> strategy for ${raid}`)
           .setURL(`https://www.youtube.com/watch?v=vZcR-OcrJGg`)
           .setImage(`https://cdn.discordapp.com/attachments/808984734939742228/985634623415529572/unknown.png`),
           new MessageEmbed()
+          .setDescription(`<Many Whelps> strategy for ${raid}`)
           .setURL(`https://www.youtube.com/watch?v=vZcR-OcrJGg`)
           .setImage(`https://cdn.discordapp.com/attachments/800716895417532526/985353334758178856/Dark_Glare.png`),
         ]
