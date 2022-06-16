@@ -45,7 +45,7 @@ client.once("ready", () => {
 
   const manyWhelpsServer = client.guilds.cache.get(process.env.GUILD_ID);
   const allMembers = manyWhelpsServer.members.fetch();
-  
+
   memberCount(client);
 
   (async () => {
@@ -71,7 +71,7 @@ client.once("ready", () => {
 client.on("interactionCreate", async interaction => {
   let member = interaction.member;
   let nickname = member ? member.displayName : null;
-  
+
   if (interaction.isCommand()) {
     const command = client.commands.get(interaction.commandName);
 
@@ -97,26 +97,40 @@ client.on("interactionCreate", async interaction => {
       await interaction.values.forEach(async values => {
         raid += `${values} `;
       })
+      console.log(raid)
       bossEmbed
-        .setName(`**${raid}`)
-        .setDescription(`<Many Whelps> strategy for ${raid}`)
-        .setThumbnail('https://wow.zamimg.com/uploads/guide/seo/8929.jpg?1568747152')
-        .setColor('#004A94')
-        .addFields(
-          {
-            name: 'Positioning',
-            value: 'Stack all adds + boss and hard cleave!',
-            inline: false,
-          }
-        )
-      await interaction.reply({ content: `The strategy for **${raid}** is currently missing.` })
+          .setName(`**${raid}`)
+          .setDescription(`<Many Whelps> strategy for ${raid}`)
+          .setColor('#004A94')
+      if (raid.toLowerCase() === 'lucifron') {
+        bossEmbed
+          .setThumbnail('https://wow.zamimg.com/uploads/guide/seo/8929.jpg?1568747152')
+          .addFields(
+            {
+              name: 'Positioning',
+              value: 'Stack all adds + boss and hard cleave!',
+              inline: false,
+            }
+          )
+      } else {
+        bossEmbed
+          .setThumbnail('https://wow.zamimg.com/uploads/guide/seo/8929.jpg?1568747152')
+          .addFields(
+            {
+              name: 'NaN',
+              value: `The strategy for **${raid}** is currently missing.`,
+              inline: false,
+            }
+          )    
+      }
+      await interaction.reply({ embed: [bossEmbed] })
     }
   }
 });
 
 client.on("messageCreate", message => {
   if (message.content.startsWith("$")) {
-    
+
     if (message.content.substring(1) === "ping") {
       message.reply("pong");
     }
