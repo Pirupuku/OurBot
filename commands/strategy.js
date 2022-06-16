@@ -11,17 +11,17 @@ module.exports = {
         .setDescription(`Which raid you want the strategy for?`)
         .setRequired(true)
         .addChoices(
-          { name: "mc", value: "Molten Core" },
-          { name: "bwl", value: "Blackwing Lair" },
-          { name: "aq40", value: "Temple of Ahn Qiraj" },
-          { name: "naxx", value: "Naxxramas" },
+          { name: "Molten Core", value: "mc" },
+          { name: "Blackwing Lair", value: "bwl" },
+          { name: "Temple of Ahn'Qiraj", value: `aq40` },
+          { name: "Naxxramas", value: "naxx" },
         )
     ),
   async execute(interaction, nickname, client) {
     const row = new MessageActionRow()
     const selectedRaid = interaction.options.getString('raid')
     console.log(selectedRaid)
-    if (selectedRaid === 'Molten Core') {
+    if (selectedRaid === 'mc') {
       row
       .addComponents(
         new MessageSelectMenu()
@@ -82,7 +82,7 @@ module.exports = {
             },
           ])
       )
-    } else if (selectedRaid === 'Blackwing Lair') {
+    } else if (selectedRaid === 'bwl') {
       row
       .addComponents(
         new MessageSelectMenu()
@@ -133,7 +133,7 @@ module.exports = {
             },
           ])
       )
-    } else if (selectedRaid === 'Temple of Ahn Qiraj') {
+    } else if (selectedRaid === 'aq40') {
       row
       .addComponents(
         new MessageSelectMenu()
@@ -189,7 +189,7 @@ module.exports = {
             },
           ])
       )
-    } else if (selectedRaid === 'Naxxramas') {
+    } else if (selectedRaid === 'naxx') {
       row
       .addComponents(
         new MessageSelectMenu()
