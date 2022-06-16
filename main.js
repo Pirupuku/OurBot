@@ -95,11 +95,11 @@ client.on("interactionCreate", async interaction => {
       let raid = "";
 
       await interaction.values.forEach(async values => {
-        raid = `${values.toLowerCase()} `;
+        raid = `${values}`;
       })
       console.log(raid)
       bossEmbed
-          .setAuthor({name: `**${raid}`})
+          .setAuthor({name: `${raid}`})
           .setDescription(`<Many Whelps> strategy for ${raid}`)
           .setColor('#004A94')
       if (raid.toLowerCase() === 'lucifron') {
@@ -114,7 +114,6 @@ client.on("interactionCreate", async interaction => {
           )
       } else {
         bossEmbed
-          .setThumbnail('https://wow.zamimg.com/uploads/guide/seo/8929.jpg?1568747152')
           .addFields(
             {
               name: 'NaN',
