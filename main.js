@@ -89,7 +89,7 @@ client.on("interactionCreate", async interaction => {
     }
   } else if (interaction.isSelectMenu()) {
 
-    const bossEmbed = [];
+    var bossEmbed = [];
 
     if (interaction.customId === 'boss') {
       let raid = "";
