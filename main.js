@@ -97,7 +97,7 @@ client.on("interactionCreate", async interaction => {
       await interaction.values.forEach(async values => {
         raid = `${values}`;
       })
-      console.log(raid)
+      
       bossEmbed
           .setAuthor({name: `${raid}`})
           .setDescription(`<Many Whelps> strategy for ${raid}`)
@@ -223,10 +223,15 @@ client.on("interactionCreate", async interaction => {
           )    
       }
 
-      await interaction.reply({ embeds: [bossEmbed], files: [{
-        attachment: 'https://cdn.discordapp.com/attachments/800716895417532526/984182070588895272/CthunClowns.mp4',
-        attachment: 'https://cdn.discordapp.com/attachments/808984734939742228/985634623415529572/unknown.png',
-        attachment: 'https://cdn.discordapp.com/attachments/800716895417532526/985353334758178856/Dark_Glare.png'
+      await interaction.reply({ embeds: [bossEmbed],
+        files: [{
+        attachment: 'https://cdn.discordapp.com/attachments/800716895417532526/984182070588895272/CthunClowns.mp4'
+        }],
+        files: [{
+          attachment: 'https://cdn.discordapp.com/attachments/808984734939742228/985634623415529572/unknown.png'
+        }],
+        files: [{
+          attachment: 'https://cdn.discordapp.com/attachments/800716895417532526/985353334758178856/Dark_Glare.png'
         }]
       })
     }
