@@ -33,52 +33,52 @@ module.exports = {
             {
               label: `Lucifron`,
               description: `Strategies for **Lucifron**.`,
-              value: `lucifron`
+              value: `Lucifron`
             },
             {
               label: `Magmadar`,
               description: `Strategies for **Magmadar**.`,
-              value: `magmadar`
+              value: `Magmadar`
             },
             {
               label: `Gehennas`,
               description: `Strategies for **Gehennas**.`,
-              value: `gehennas`
+              value: `Gehennas`
             },
             {
               label: `Garr`,
               description: `Strategies for **Garr**.`,
-              value: `garr`
+              value: `Garr`
             },
             {
               label: `Geddon`,
               description: `Strategies for **Baron Geddon**.`,
-              value: `geddon`
+              value: `Baron Geddon`
             },
             {
               label: `Shazzrah`,
               description: `Strategies for **Shazzrah**.`,
-              value: `shazzrah`
+              value: `Shazzrah`
             },
             {
               label: `Sulfuron`,
               description: `Strategies for **Sulfuron Harbinger**.`,
-              value: `sulfuron`
+              value: `Sulfuron Harbinger`
             },
             {
               label: `Golemagg`,
               description: `Strategies for **Golemagg the Incinerator**.`,
-              value: `golemagg`
+              value: `Golemagg the Incinerator`
             },
             {
               label: `Majordomo`,
               description: `Strategies for **Majordomo Executus**.`,
-              value: `majordomo`
+              value: `Majordomo Executus`
             },
             {
               label: `Ragnaros`,
               description: `Strategies for **Ragnaros**.`,
-              value: `ragnaros`
+              value: `Ragnaros`
             },
           ])
       )
@@ -94,42 +94,42 @@ module.exports = {
             {
               label: `Razorgore`,
               description: `Strategies for **Razorgore the Untamed**.`,
-              value: `razorgore`
+              value: `Razorgore the Untamed`
             },
             {
               label: `Vaelastrasz`,
               description: `Strategies for **Vaelastrasz the Corrupt**.`,
-              value: `vael`
+              value: `Vaelastrasz the Corrupt`
             },
             {
               label: `Broodlord`,
               description: `Strategies for **Broodlord Lashlayer**.`,
-              value: `broodlord`
+              value: `Broodlord Lashlayer`
             },
             {
               label: `Firemaw`,
               description: `Strategies for **Firemaw**.`,
-              value: `firemaw`
+              value: `Firemaw`
             },
             {
               label: `Ebonroc`,
               description: `Strategies for **Ebonroc**.`,
-              value: `ebonroc`
+              value: `Ebonroc`
             },
             {
               label: `Flamegor`,
               description: `Strategies for **Flamegor**.`,
-              value: `flamegor`
+              value: `Flamegor`
             },
             {
               label: `Chromaggus`,
               description: `Strategies for **Chromaggus**.`,
-              value: `chromaggus`
+              value: `Chromaggus`
             },
             {
               label: `Nefarian`,
               description: `Strategies for **Nefarian**.`,
-              value: `nef`
+              value: `Nefarian`
             },
           ])
       )
@@ -145,47 +145,47 @@ module.exports = {
             {
               label: `Skeram`,
               description: `Strategies for **The Prophet Skeram**.`,
-              value: `skeram`
+              value: `The Prophet Skeram`
             },
             {
               label: `Bug Trio`,
-              description: `Strategies for **Bug Trio**.`,
-              value: `bugTrio`
+              description: `Strategies for **The Bug Trio**.`,
+              value: `The Bug Trio`
             },
             {
               label: `Satura`,
               description: `Strategies for **Battleguard Satura**.`,
-              value: `satura`
+              value: `Battleguard Satura`
             },
             {
               label: `Fankriss`,
               description: `Strategies for **Fankriss the Unyielding**.`,
-              value: `fankriss`
+              value: `Fankriss the Unyielding`
             },
             {
               label: `Viscidus`,
               description: `Strategies for **Viscidus**.`,
-              value: `viscidus`
+              value: `Viscidus`
             },
             {
               label: `Huhuran`,
               description: `Strategies for **Princess Huhuran**.`,
-              value: `huhuran`
+              value: `Princess Huhuran`
             },
             {
               label: `Twin Emperors`,
-              description: `Strategies for **Twin Emperors**.`,
-              value: `twinEmps`
+              description: `Strategies for **The Twin Emperors**.`,
+              value: `The Twin Emperors`
             },
             {
               label: `Ouro`,
               description: `Strategies for **Ouro**.`,
-              value: `ouro`
+              value: `Ouro`
             },
             {
               label: `C'Thun`,
               description: `Strategies for **C'Thun**.`,
-              value: `cThun`
+              value: `C'Thun`
             },
           ])
       )
@@ -201,77 +201,77 @@ module.exports = {
             {
               label: `Anub'Rekhan`,
               description: `Strategies for **Anub'Rekhan**.`,
-              value: `anub`
+              value: `Anub'Rekhan`
             },
             {
               label: `Faerlina`,
               description: `Strategies for **Grand Widow Faerlina**.`,
-              value: `faerlina`
+              value: `Grand Widow Faerlina`
             },
             {
               label: `Maexxna`,
               description: `Strategies for **Maexxna**.`,
-              value: `maexxna`
+              value: `Maexxna`
             },
             {
               label: `Noth`,
               description: `Strategies for **Noth the Plaguebringer**.`,
-              value: `noth`
+              value: `Noth the Plaguebringer`
             },
             {
               label: `Heigan`,
               description: `Strategies for **Heigan the Unclean**.`,
-              value: `heigan`
+              value: `Heigan the Unclean`
             },
             {
               label: `Loatheb`,
               description: `Strategies for **Loatheb**.`,
-              value: `loatheb`
+              value: `Loatheb`
             },
             {
               label: `Razuvious`,
               description: `Strategies for **Instructor Razuvious**.`,
-              value: `razuvious`
+              value: `Instructor Razuvious`
             },
             {
               label: `Gothik`,
               description: `Strategies for **Gothik the Harvester**.`,
-              value: `gothik`
+              value: `Gothik the Harvester`
             },
             {
               label: `Four Horsemen`,
               description: `Strategies for **The Four Horsemen**.`,
-              value: `4hm`
+              value: `The Four Horsemen`
             },
             {
               label: `Patchwerk`,
               description: `Strategies for **Patchwerk**.`,
-              value: `patchwerk`
+              value: `Patchwerk`
             },
             {
               label: `Grobbulus`,
               description: `Strategies for **Grobbulus**.`,
-              value: `grob`
+              value: `Grobbulus`
             },
             {
               label: `Gluth`,
               description: `Strategies for **Gluth**.`,
-              value: `gluth`
+              value: `Gluth`
             },
             {
               label: `Thaddius`,
               description: `Strategies for **Thaddius**.`,
-              value: `thaddius`
+              value: `Thaddius`
             },
             {
               label: `Sapphiron`,
               description: `Strategies for **Sapphiron**.`,
-              value: `sapphiron`
+              value: `Sapphiron`
             },
             {
               label: `Kel'Thuzad`,
               description: `Strategies for **Kel'Thuzad**.`,
-              value: `kt`
+              value: `Kel'Thuzad`
             },
           ])
       )
