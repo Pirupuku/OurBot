@@ -295,7 +295,7 @@ client.on("interactionCreate", async interaction => {
           )    
       }
 
-      await interaction.reply({ bossEmbed })
+      await interaction.reply({ embeds: [bossEmbed] })
     }
   }
 });
