@@ -277,7 +277,7 @@ module.exports = {
       )
     }
       
-    await interaction.reply({ content: `The strategy for which boss of **${selectedRaid}** you want to see?`, components: [row], ephemeral: true})
+    await interaction.reply({ content: `The strategy for which boss of **${selectedRaid}** you want to see?`, components: [row]})
 
       /*
     var thumbnail;
