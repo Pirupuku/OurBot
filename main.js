@@ -142,7 +142,7 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-      } else if (raid.toLowerCase() === 'geddon') {
+      } else if (raid.toLowerCase() === 'baron geddon') {
         bossEmbed
           .setThumbnail('https://wow.zamimg.com/uploads/screenshots/normal/762804-baron-geddon.jpg')
           .addFields(
@@ -162,7 +162,7 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-      } else if (raid.toLowerCase() === 'golemagg') {
+      } else if (raid.toLowerCase() === 'golemagg the incinerator') {
         bossEmbed
           .setThumbnail('https://www.warcrafttavern.com/wp-content/uploads/2021/11/Golemagg-WoW-Classic-Season-of-Mastery-Strategy-Guide-1024x506.jpg')
           .addFields(
@@ -172,7 +172,7 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-      } else if (raid.toLowerCase() === 'sulfuron') {
+      } else if (raid.toLowerCase() === 'sulfuron harbringer') {
         bossEmbed
           .setThumbnail('https://www.warcrafttavern.com/wp-content/uploads/2021/11/Sulfuron-Harbringer-WoW-Classic-Season-of-Mastery-Strategy-Guide.jpg')
           .addFields(
@@ -182,7 +182,7 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-      } else if (raid.toLowerCase() === 'majordomo') {
+      } else if (raid.toLowerCase() === 'majordomo executus') {
         bossEmbed
           .setThumbnail('https://www.wow-freakz.com/img/screenshots/wowhead_332853.jpg')
           .addFields(
@@ -202,7 +202,7 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-      } else if (raid.toLowerCase() === 'cthun') {
+      } else if (raid.toLowerCase() === `c'thun`) {
         bossEmbed
           .setThumbnail('https://2img.net/u/2512/28/98/52/album/pr/310_800x600.jpg')
           .addFields(

@@ -53,7 +53,7 @@ module.exports = {
             {
               label: `Baron Geddon`,
               description: `Strategies for **Baron Geddon**.`,
-              value: `Geddon`
+              value: `Baron Geddon`
             },
             {
               label: `Shazzrah`,
@@ -63,17 +63,17 @@ module.exports = {
             {
               label: `Sulfuron Harbinger`,
               description: `Strategies for **Sulfuron Harbinger**.`,
-              value: `Harbinger`
+              value: `Sulfuron Harbinger`
             },
             {
               label: `Golemagg the Incinerator`,
               description: `Strategies for **Golemagg the Incinerator**.`,
-              value: `Golemagg`
+              value: `Golemagg the Incinerator`
             },
             {
               label: `Majordomo Executus`,
               description: `Strategies for **Majordomo Executus**.`,
-              value: `Majordomo`
+              value: `Majordomo Executus`
             },
             {
               label: `Ragnaros`,
@@ -94,17 +94,17 @@ module.exports = {
             {
               label: `Razorgore the Untamed`,
               description: `Strategies for **Razorgore the Untamed**.`,
-              value: `Razorgore`
+              value: `Razorgore the Untamed`
             },
             {
               label: `Vaelastrasz the Corrupt`,
               description: `Strategies for **Vaelastrasz the Corrupt**.`,
-              value: `Vaelastrasz`
+              value: `Vaelastrasz the Corrupt`
             },
             {
               label: `Broodlord Lashlayer`,
               description: `Strategies for **Broodlord Lashlayer**.`,
-              value: `Broodlord`
+              value: `Broodlord Lashlayer`
             },
             {
               label: `Firemaw`,
@@ -145,22 +145,22 @@ module.exports = {
             {
               label: `The Prophet Skeram`,
               description: `Strategies for **The Prophet Skeram**.`,
-              value: `Skeram`
+              value: `The Prophet Skeram`
             },
             {
               label: `The Bug Trio`,
               description: `Strategies for **The Bug Trio**.`,
-              value: `bugTrio`
+              value: `The Bug Trio`
             },
             {
               label: `Battleguard Satura`,
               description: `Strategies for **Battleguard Satura**.`,
-              value: `Satura`
+              value: `Battleguard Satura`
             },
             {
               label: `Fankriss the Unyielding`,
               description: `Strategies for **Fankriss the Unyielding**.`,
-              value: `Fankriss`
+              value: `Fankriss the Unyielding`
             },
             {
               label: `Viscidus`,
@@ -170,12 +170,12 @@ module.exports = {
             {
               label: `Princess Huhuran`,
               description: `Strategies for **Princess Huhuran**.`,
-              value: `Huhuran`
+              value: `Princess Huhuran`
             },
             {
               label: `The Twin Emperors`,
               description: `Strategies for **The Twin Emperors**.`,
-              value: `twinEmps`
+              value: `The Twin Emperors`
             },
             {
               label: `Ouro`,
@@ -185,7 +185,7 @@ module.exports = {
             {
               label: `C'Thun`,
               description: `Strategies for **C'Thun**.`,
-              value: `cThun`
+              value: `C'Thun`
             },
           ])
       )
@@ -201,12 +201,12 @@ module.exports = {
             {
               label: `Anub'Rekhan`,
               description: `Strategies for **Anub'Rekhan**.`,
-              value: `Anub`
+              value: `Anub'Rekhan`
             },
             {
               label: `Grand Widow Faerlina`,
               description: `Strategies for **Grand Widow Faerlina**.`,
-              value: `Faerlina`
+              value: `Grand Widow Faerlina`
             },
             {
               label: `Maexxna`,
@@ -216,12 +216,12 @@ module.exports = {
             {
               label: `Noth the Plaguebringer`,
               description: `Strategies for **Noth the Plaguebringer**.`,
-              value: `Noth`
+              value: `Noth the Plaguebringer`
             },
             {
               label: `Heigan the Unclean`,
               description: `Strategies for **Heigan the Unclean**.`,
-              value: `Heigan`
+              value: `Heigan the Unclean`
             },
             {
               label: `Loatheb`,
@@ -231,17 +231,17 @@ module.exports = {
             {
               label: `Instructor Razuvious`,
               description: `Strategies for **Instructor Razuvious**.`,
-              value: `Razuvious`
+              value: `Instructor Razuvious`
             },
             {
               label: `Gothik the Harvester`,
               description: `Strategies for **Gothik the Harvester**.`,
-              value: `Gothik`
+              value: `Gothik the Harvester`
             },
             {
               label: `The Four Horsemen`,
               description: `Strategies for **The Four Horsemen**.`,
-              value: `4hm`
+              value: `The Four Horsemen`
             },
             {
               label: `Patchwerk`,
@@ -271,7 +271,7 @@ module.exports = {
             {
               label: `Kel'Thuzad`,
               description: `Strategies for **Kel'Thuzad**.`,
-              value: `kt`
+              value: `Kel'Thuzad`
             },
           ])
       )
