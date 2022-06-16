@@ -123,7 +123,8 @@ client.on("interactionCreate", async interaction => {
             }
           )    
       }
-      await interaction.reply({ embed: [bossEmbed] })
+
+      await interaction.reply({ embeds: [bossEmbed] })
     }
   }
 });

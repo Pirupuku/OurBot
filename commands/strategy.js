@@ -20,7 +20,7 @@ module.exports = {
   async execute(interaction, nickname, client) {
     const row = new MessageActionRow()
     const selectedRaid = interaction.options.getString('raid')
-    console.log(selectedRaid)
+    
     if (selectedRaid === 'Molten Core') {
       row
       .addComponents(
