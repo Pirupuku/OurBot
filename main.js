@@ -89,7 +89,7 @@ client.on("interactionCreate", async interaction => {
     }
   } else if (interaction.isSelectMenu()) {
 
-    var bossEmbed = [];
+    var bossEmbed = new MessageEmbed();
 
     if (interaction.customId === 'boss') {
       let raid = "";
@@ -99,8 +99,7 @@ client.on("interactionCreate", async interaction => {
       })
 
       if (raid.toLowerCase() === 'lucifron') {
-        bossEmbed = [
-          new MessageEmbed()
+        bossEmbed
           .setURL(`https://www.youtube.com/watch?v=Y-8CaOSdRzo&list=PLsAypabLoZsn-gAxy0BiOwl_Rv27kun_6&index=2`)
           .setImage(`https://wow.zamimg.com/uploads/guide/seo/8929.jpg?1568747152`)
           .setTitle(`${raid}`)
@@ -113,10 +112,8 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-        ]
       } else if (raid.toLowerCase() === 'magmadar') {
-        bossEmbed = [
-          new MessageEmbed()
+        bossEmbed
           .setURL(`https://www.youtube.com/watch?v=ayLkPn-qe7w&list=PLsAypabLoZsn-gAxy0BiOwl_Rv27kun_6&index=3`)
           .setImage(`https://www.warcrafttavern.com/wp-content/uploads/2021/11/Magmadar-WoW-Classic-Season-of-Mastery-Strategy-Guide.jpg`)
           .setTitle(`${raid}`)
@@ -129,10 +126,8 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-        ]
       } else if (raid.toLowerCase() === 'gehennas') {
-        bossEmbed = [
-          new MessageEmbed()
+        bossEmbed
           .setURL(`https://www.youtube.com/watch?v=7Z1HPFARoRI&list=PLsAypabLoZsn-gAxy0BiOwl_Rv27kun_6&index=4`)
           .setImage(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG0FQ7fOJY9xNZ-fh3Za9A8hLoi0du-7mp_w&usqp=CAU`)
           .setTitle(`${raid}`)
@@ -145,10 +140,8 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-        ]
       } else if (raid.toLowerCase() === 'garr') {
-        bossEmbed = [
-          new MessageEmbed()
+        bossEmbed
           .setURL(`https://www.youtube.com/watch?v=dRG8v4qh4nk&list=PLsAypabLoZsn-gAxy0BiOwl_Rv27kun_6&index=5`)
           .setImage(`https://static.wikia.nocookie.net/wowwiki/images/8/8b/Garr.jpg/revision/latest/scale-to-width-down/480?cb=20050829014520`)
           .setTitle(`${raid}`)
@@ -161,10 +154,8 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-        ]
       } else if (raid.toLowerCase() === 'baron geddon') {
-        bossEmbed = [
-          new MessageEmbed()
+        bossEmbed
           .setURL(`https://www.youtube.com/watch?v=xHYl8Jp0hqk`)
           .setImage(`https://wow.zamimg.com/uploads/screenshots/normal/762804-baron-geddon.jpg`)
           .setTitle(`${raid}`)
@@ -177,10 +168,8 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-        ]
       } else if (raid.toLowerCase() === 'shazzrah') {
-        bossEmbed = [
-          new MessageEmbed()
+        bossEmbed
           .setURL(`https://www.youtube.com/watch?v=5Y7b3Y2KP9M`)
           .setImage(`https://wow.zamimg.com/uploads/screenshots/normal/86833-shazzrah.jpg`)
           .setTitle(`${raid}`)
@@ -193,10 +182,8 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-        ]
       } else if (raid.toLowerCase() === 'golemagg the incinerator') {
-        bossEmbed = [
-          new MessageEmbed()
+        bossEmbed
           .setURL(`https://www.youtube.com/watch?v=ROWDsUan29g`)
           .setImage(`https://www.warcrafttavern.com/wp-content/uploads/2021/11/Golemagg-WoW-Classic-Season-of-Mastery-Strategy-Guide-1024x506.jpg`)
           .setTitle(`${raid}`)
@@ -209,10 +196,8 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-        ]
       } else if (raid.toLowerCase() === 'sulfuron harbringer') {
-        bossEmbed = [
-          new MessageEmbed()
+        bossEmbed
           .setURL(`https://www.youtube.com/watch?v=JoRxL-Qbv_Y`)
           .setImage(`https://www.warcrafttavern.com/wp-content/uploads/2021/11/Sulfuron-Harbringer-WoW-Classic-Season-of-Mastery-Strategy-Guide.jpg`)
           .setTitle(`${raid}`)
@@ -225,10 +210,8 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-        ]
       } else if (raid.toLowerCase() === 'majordomo executus') {
-        bossEmbed = [
-          new MessageEmbed()
+        bossEmbed
           .setURL(`https://www.youtube.com/watch?v=PsTyxYwKlic`)
           .setImage(`https://www.wow-freakz.com/img/screenshots/wowhead_332853.jpg`)
           .setTitle(`${raid}`)
@@ -241,10 +224,8 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-        ]
       } else if (raid.toLowerCase() === 'ragnaros') {
-        bossEmbed = [
-          new MessageEmbed()
+        bossEmbed
           .setURL(`https://www.youtube.com/watch?v=4Wu8KbNOoPg`)
           .setImage(`https://wow.zamimg.com/uploads/screenshots/normal/1061-ragnaros-ragnaros-after-killing-us.jpg`)
           .setTitle(`${raid}`)
@@ -257,10 +238,8 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-        ]
       } else if (raid.toLowerCase() === `c'thun`) {
-        bossEmbed = [
-          new MessageEmbed()
+        bossEmbed
           .setURL(`https://www.youtube.com/watch?v=vZcR-OcrJGg`)
           .setImage(``)
           .setTitle(`${raid}`)
@@ -273,7 +252,8 @@ client.on("interactionCreate", async interaction => {
               value: 'Killing is better than dying!',
               inline: false,
             }
-          ),
+          )
+          /*
           new MessageEmbed()
           .setDescription(`<Many Whelps> strategy for ${raid}`)
           .setURL(`https://www.youtube.com/watch?v=vZcR-OcrJGg`)
@@ -286,7 +266,7 @@ client.on("interactionCreate", async interaction => {
           .setDescription(`<Many Whelps> strategy for ${raid}`)
           .setURL(`https://www.youtube.com/watch?v=vZcR-OcrJGg`)
           .setImage(`https://cdn.discordapp.com/attachments/800716895417532526/985353334758178856/Dark_Glare.png`),
-        ]
+          */
       } else {
         bossEmbed
           .addFields(
