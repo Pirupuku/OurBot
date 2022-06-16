@@ -95,7 +95,7 @@ client.on("interactionCreate", async interaction => {
       await interaction.values.forEach(async values => {
         raid += `${values} `;
       })
-      await interaction.reply({ content: `Your fav colour are: ${raid}` })
+      await interaction.reply({ content: `The strategy for **${raid}** is currently missing.` })
     }
   }
 });
