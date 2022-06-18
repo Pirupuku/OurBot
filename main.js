@@ -90,7 +90,7 @@ client.on("interactionCreate", async interaction => {
   } else if (interaction.isSelectMenu()) {
 
     var bossEmbed = new MessageEmbed();
-    var interactionContent = "";
+    var interactionAttachment = '';
 
     if (interaction.customId === 'boss') {
       let raid = "";
@@ -266,7 +266,7 @@ client.on("interactionCreate", async interaction => {
           )    
       }
 
-      await interaction.reply({ content: interactionContent, embeds: [bossEmbed] })
+      await interaction.reply({ embeds: [bossEmbed], files: [interactionAttachment] })
     }
   }
 });
