@@ -254,7 +254,7 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-        interactionContent = 'https://cdn.discordapp.com/attachments/800716895417532526/984182070588895272/CthunClowns.mp4';
+        interactionAttachment = 'https://cdn.discordapp.com/attachments/800716895417532526/984182070588895272/CthunClowns.mp4';
       } else {
         bossEmbed
           .addFields(
@@ -266,7 +266,11 @@ client.on("interactionCreate", async interaction => {
           )    
       }
 
-      await interaction.reply({ embeds: [bossEmbed], files: [interactionAttachment] })
+      if (interactionAttachment === '') {
+        await interaction.reply({ embeds: [bossEmbed] });
+      } else {
+        await interaction.reply({ embeds: [bossEmbed], files: [interactionAttachment] });
+      }  
     }
   }
 });
