@@ -241,9 +241,9 @@ client.on("interactionCreate", async interaction => {
       } else if (raid.toLowerCase() === `c'thun`) {
         bossEmbed
           .setURL(`https://www.youtube.com/watch?v=vZcR-OcrJGg`)
-          .setImage(``)
+          .setImage(`https://cdn.discordapp.com/attachments/807313418293608482/987832286668005487/CThun.png`)
           .setTitle(`${raid}`)
-          .setThumbnail('https://2img.net/u/2512/28/98/52/album/pr/310_800x600.jpg')
+          //.setThumbnail('https://2img.net/u/2512/28/98/52/album/pr/310_800x600.jpg')
           .setDescription(`<Many Whelps> strategy for ${raid}`)
           .setColor(`#004A94`)
           .addFields(
