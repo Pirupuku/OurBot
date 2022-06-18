@@ -90,6 +90,7 @@ client.on("interactionCreate", async interaction => {
   } else if (interaction.isSelectMenu()) {
 
     var bossEmbed = new MessageEmbed();
+    var interactionContent = "";
 
     if (interaction.customId === 'boss') {
       let raid = "";
@@ -253,20 +254,7 @@ client.on("interactionCreate", async interaction => {
               inline: false,
             }
           )
-          /*
-          new MessageEmbed()
-          .setDescription(`<Many Whelps> strategy for ${raid}`)
-          .setURL(`https://www.youtube.com/watch?v=vZcR-OcrJGg`)
-          .setImage(`https://cdn.discordapp.com/attachments/800716895417532526/985353334414274570/CThun_Run_In.png`),
-          new MessageEmbed()
-          .setDescription(`<Many Whelps> strategy for ${raid}`)
-          .setURL(`https://www.youtube.com/watch?v=vZcR-OcrJGg`)
-          .setImage(`https://cdn.discordapp.com/attachments/808984734939742228/985634623415529572/unknown.png`),
-          new MessageEmbed()
-          .setDescription(`<Many Whelps> strategy for ${raid}`)
-          .setURL(`https://www.youtube.com/watch?v=vZcR-OcrJGg`)
-          .setImage(`https://cdn.discordapp.com/attachments/800716895417532526/985353334758178856/Dark_Glare.png`),
-          */
+        interactionContent = 'https://cdn.discordapp.com/attachments/800716895417532526/984182070588895272/CthunClowns.mp4';
       } else {
         bossEmbed
           .addFields(
@@ -278,7 +266,7 @@ client.on("interactionCreate", async interaction => {
           )    
       }
 
-      await interaction.reply({ embeds: [bossEmbed] })
+      await interaction.reply({ content: interactionContent, embeds: [bossEmbed] })
     }
   }
 });
