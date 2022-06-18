@@ -267,9 +267,16 @@ client.on("interactionCreate", async interaction => {
       }
 
       if (interactionAttachment === '') {
-        await interaction.reply({ embeds: [bossEmbed] });
+        await interaction.reply({
+          embeds: [bossEmbed],
+          ephemeral: true,
+        });
       } else {
-        await interaction.reply({ embeds: [bossEmbed], files: [interactionAttachment] });
+        await interaction.reply({
+          embeds: [bossEmbed],
+          files: [interactionAttachment],
+          ephemeral: true,
+        });
       }  
     }
   }
