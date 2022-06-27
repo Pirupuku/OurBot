@@ -124,7 +124,7 @@ module.exports = {
     const result = Math.ceil(Math.abs(today - endDate)) + oneDay;
     const resultDays = Math.ceil(Math.abs((today - endDate) / oneDay));
 
-      if (isNaN(startDay) || isNaN(startMonth) || isNaN(startYear) || isNaN(endDay) || isNaN(endMonth) || isNaN(endYear)) {
+    if (isNaN(startDay) || isNaN(startMonth) || isNaN(startYear) || isNaN(endDay) || isNaN(endMonth) || isNaN(endYear)) {
         await interaction.reply({
             content: 'Typo, you entered not only numbers in your dates',
             ephemeral: true,
@@ -163,13 +163,11 @@ module.exports = {
         
         // for deleting
         channelAbsence.send({ embeds: [absenceEmbed] })
-        /*
             .then(repliedMessage => {
-                setTimeout(() => repliedMessage.delete(), result);
+                setTimeout(() => repliedMessage.delete(), result/10000);
             })
-        
         .catch();
-        */
+
         await interaction.reply({
             content: 'Your message is being send to #longterm-absence and will be deleted automatically.',
             ephemeral: true,
